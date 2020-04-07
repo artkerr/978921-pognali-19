@@ -1,0 +1,32 @@
+.step-by-step {
+  max-width: 85%;
+  margin: 0 auto;
+}
+.step-by-step__list {
+  list-style: none;
+  padding: 0;
+}
+.step-by-step__item {
+  background-color: @light-gold;
+  padding: 30px;
+  margin-top: -20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  &:first-child {
+    background-color: @mango;
+  }
+  &:nth-child(2){
+    background-color: @mango-three;
+  }
+  &:nth-child(3){
+    background-color: @mango-two;
+  }
+  &:last-child {
+    border-radius: 10px;
+  }
+}
+.step-by-step__link {
+  color: @dark-two;
+  font-size: 18px;
+  font-weight: bold;
+}

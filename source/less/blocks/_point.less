@@ -1,0 +1,49 @@
+.point {
+}
+.point__image {
+  min-width: 100%;
+  height: auto;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.point__content {
+  position: relative;
+  background-color: @white;
+  border-radius: 30px;
+  padding: 0 9%;
+  margin-top: -60px;
+  z-index: 1;
+}
+.point__icon {
+  width: 35px;
+  height: 24px;
+  position: absolute;
+  top: -10px;
+  left: 35px;
+}
+.point__title {
+  font-size: 21px;
+  font-weight: bold;
+  color: @dark-two;
+  line-height: 1;
+}
+.point__text {
+  font-weight: 500;
+  line-height: 1.88;
+  color: @point-text;
+}
+.point__counter {
+  position: relative;
+  font-weight: 500;
+  line-height: 1.88;
+  color: @point-text;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 1px;
+    left: 2px;
+    width: 11px;
+    height: 11px;
+    background-image: url("../img/user.svg") no-repeat;
+  }
+}
