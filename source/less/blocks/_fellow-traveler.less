@@ -1,12 +1,18 @@
 .fellow-traveler {
-  background: @dark-blue url("../img/smolov-back-desktop@1x.png") no-repeat;
+  background:
+  url("../img/smolov-back-desktop@1x.png") no-repeat,
+  url("../img/rogovaya-back-mobile@1x.png") no-repeat;
+  background-position: 90% 1%, 0 20%;
+  background-color:@dark-blue;
+  margin-top: -20px;
 }
 .fellow-traveler__text-wrapper {
   max-width: 66%;
-  padding-left: 15%;
-  background: url("../img/rogovaya-back-mobile@1x.png") no-repeat;
+  padding-left: 18%;
 }
 .fellow-traveler__title {
+  margin: 0;
+  padding-top: 20px;
   .title ()
 }
 .fellow-traveler__text {
