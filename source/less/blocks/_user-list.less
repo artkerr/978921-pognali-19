@@ -1,0 +1,32 @@
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  position: absolute;
+  top: 500px;
+  left: 10px;
+  padding: 0;
+}
+
+.user-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @light-gold;
+  margin-right: 10px;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+
+  &:last-child {
+    width: 192px;
+  }
+}
+
+.user-list__link {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.76;
+  text-transform: uppercase;
+  color: @dark-two;
+}

@@ -1,0 +1,115 @@
+.traveler {
+  background-color: @white;
+  border-radius: 20px;
+  max-width: 84%;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.traveler__name {
+  font-size: 20px;
+  font-weight: bold;
+  color: @dark-blue;
+}
+
+.traveler__photo {
+  border-radius: 50%;
+}
+
+.traveler__favorite {
+  content: "";
+  background: @pale-gray;
+  border-radius: 50%;
+  width: 31px;
+  height: 31px;
+  border: none;
+  fill: @greyish;
+}
+
+.traveler__like {
+  font-size: 14px;
+  font-weight: bold;
+  color: @dark-two;
+}
+
+.traveler__tag-list {
+  max-width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.traveler__tag-item {
+  list-style: none;
+  font-size: 15px;
+  color: @greyish;
+  line-height: 1.2;
+  margin-right: 6px;
+}
+
+.traveler__tag-link {
+  color: @greyish;
+  line-height: 1.13;
+  text-align: center;
+}
+
+.traveler__text {
+  font-size: 15px;
+  color: @greyish;
+  line-height: 1.2;
+}
+
+.traveler__flag-list {
+  list-style: none;
+  padding: 0;
+}
+
+.traveler__flag-item {
+  font-size: 15px;
+  font-weight: 500;
+  color: @dark-slate-blue;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.traveler__country-name {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.traveler__transport_list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.traveler__transport_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: @pale-gray;
+  border-radius: 50%;
+  width: 33px;
+  height: 32px;
+  border: none;
+  fill: @point-text;
+}
+
+.traveler__transport-active {
+  fill: @dark-slate-blue;
+}
+
+.traveler__btn {
+  width: 230px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: @light-gold;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: bold;
+  color: @dark-two;
+  line-height: 2;
+}
