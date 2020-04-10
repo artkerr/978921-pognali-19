@@ -1,6 +1,6 @@
 .directions {
   max-width: 85%;
-  background-color: @pale-gray;
+  background: @pale-gray;
   padding: 15%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -28,4 +28,25 @@
   color: @dark-slate-blue;
   text-align: left;
   border-radius: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .directions {
+    padding: 10%;
+    background: @pale-gray url("../img/flags-back@1x.png") no-repeat 80% 10%;
+  }
+
+  .directions__title {
+    font-size: 45px;
+  }
+
+  .directions__text {
+    font-size: 28px;
+    max-width: 55%;
+    padding: 40px 0;
+  }
+  .directions-btn {
+    min-width: 618px;
+    font-size: 24px;
+  }
 }

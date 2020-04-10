@@ -6,8 +6,21 @@ body {
   font-size: 16px;
   line-height: 1.38;
   font-family: "BloggerSans", "Open Sans", sans-serif;
-  font-style: normal;
   color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    min-width: @mobile-width;
+    font-size: 28px;
+    line-height: 1.18;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    min-width: @desktop-width;
+  }
 }
 
 img {
