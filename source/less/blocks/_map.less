@@ -3,6 +3,7 @@
   padding: 20px 0;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  text-align: center;
 }
 
 .map-adress {
@@ -20,4 +21,15 @@
   border: 3px solid @black;
   background-color: @light-gold;
   padding-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .map-adress {
+    font-size: 28px;
+    min-width: 56%;
+  }
+  .map-adress__btn {
+    width: 618px;
+
+  }
 }

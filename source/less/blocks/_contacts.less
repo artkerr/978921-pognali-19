@@ -40,7 +40,9 @@
   fill: @light-gold;
   margin-left: 15%;
 }
-
+.contacts__form {
+  margin: 0 auto;
+}
 .contacts__phone,
 .contacts__email {
   text-transform: uppercase;
@@ -51,7 +53,27 @@
 
 .contacts__btn {
   width: 60px;
-  line-height: 3;
+  height: 75px;
   border-radius: 10px;
   background-color: @light-gold;
+}
+
+@media (min-width: @tablet-width) {
+
+  .contacts__title {
+    font-size: 45px;
+  }
+
+  .contacts__text {
+    font-size: 28px;
+    min-width: 79%;
+  }
+
+  .contacts__input {
+    min-width: 536px;
+  }
+
+  .contacts__link-wrapper {
+    font-size: 28px;
+  }
 }
