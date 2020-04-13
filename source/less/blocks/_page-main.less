@@ -15,10 +15,21 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-main {
+    max-width: @tablet-width;
+    margin: 0 auto;
+  }
 
   .page-main__title {
     font-size: 60px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    width: @desktop-width;
+    margin: 0 auto;
   }
 }

@@ -26,6 +26,7 @@
     background: @dark-blue url("../img/about-tablet@1x.png") no-repeat right 70%;
     padding: 10%;
   }
+
   .about-servise__title {
     font-size: 45px;
   }
@@ -34,9 +35,16 @@
     font-size: 28px;
     max-width: 50%;
   }
+
   .about-servise__text-bold {
     font-size: 28px;
     max-width: 50%;
   }
+}
 
+@media (min-width: @desktop-width) {
+  .about-servise {
+    min-width: @desktop-width;
+    margin: 0 auto;
+  }
 }
