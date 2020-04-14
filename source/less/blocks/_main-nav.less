@@ -1,5 +1,4 @@
 
-
 .main-nav__wrapper {
   display: none;
 }
@@ -8,7 +7,21 @@
   display: none;
 }
 
+@media (min-width: @tablet-width) {
+  .main-nav {
+    min-width: 60%;
+  }
+
+  .main-nav__toggle {
+    margin-right: auto;
+  }
+}
+
 @media (min-width: @desktop-width) {
+  .main-nav {
+    width: 80%;
+  }
+
   .main-nav__wrapper {
     display: block;
   }
@@ -17,7 +30,8 @@
     display: none;
   }
 
-  .main-nav_user-list {
-    display: block;
+  .main-nav__user-list {
+    margin-left: auto;
+    margin-right: 60px;
   }
 }
