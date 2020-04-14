@@ -3,7 +3,6 @@
     url("../img/smolov-back-desktop@1x.png") no-repeat 90% 1%,
     url("../img/rogovaya-back-mobile@1x.png") no-repeat 0 20%;
   background-color: @dark-blue;
-  margin-top: -10px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   text-align: center;
@@ -100,4 +99,26 @@
     font-size: 24px;
     margin: 0 auto;
   }
+}
+
+@media (min-width: @desktop-width) {
+  .fellow-traveler {
+    display: flex;
+    text-align: left;
+  }
+
+  .fellow-traveler__text-wrapper {
+
+  }
+
+  .fellow-traveler__text {
+    width: 480px;
+    padding-right: 20px;
+  }
+
+  .fellow-traveler__list {
+    max-width: 630px;
+    justify-content: flex-start;
+  }
+
 }
