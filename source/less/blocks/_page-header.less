@@ -4,11 +4,32 @@
   position: relative;
   background-color: @dark-two;
   min-width: @mobile-width;
-  padding: 10px;
-  box-sizing: border-box;
 }
 
 .page-header__logo-image {
   max-width: 100%;
   height: auto;
+  padding: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    min-width: @tablet-width;
+    margin: 0 auto;
+  }
+
+  .page-header__nav {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+
+  .page-header-nav {
+    width: 100%;
+  }
 }

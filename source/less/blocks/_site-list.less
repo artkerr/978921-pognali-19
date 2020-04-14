@@ -1,3 +1,20 @@
-.site-list {
-  background: transparent;
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  .site-list__item {
+    margin-right: 15px;
+  }
+
+  .site-list__link {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: @white;
+  }
 }

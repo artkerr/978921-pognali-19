@@ -1,6 +1,3 @@
-.rate {
-  min-width: 84%;
-}
 
 .rate__wrapper {
   background-color: @pale-gray;
@@ -14,6 +11,8 @@
 .rate__title {
   .title ();
   max-width: 50%;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 .rate__list {
@@ -42,4 +41,20 @@
   font-weight: bold;
   color: @dark-blue;
   padding: 10px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .rate__title {
+    font-size: 45px;
+    min-width: 70%;
+    text-align: center;
+  }
+
+  .rate_text {
+    font-size: 28px;
+  }
+
+  .rate__link {
+    font-size: 20px;
+  }
 }

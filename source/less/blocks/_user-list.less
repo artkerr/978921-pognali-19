@@ -1,6 +1,5 @@
 .user-list {
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
   position: absolute;
   top: 500px;
@@ -13,7 +12,6 @@
   justify-content: center;
   align-items: center;
   background-color: @light-gold;
-  margin-right: 10px;
   border-radius: 20px;
   width: 40px;
   height: 40px;
@@ -29,4 +27,20 @@
   line-height: 1.76;
   text-transform: uppercase;
   color: @dark-two;
+}
+
+@media (min-width: @tablet-width) {
+  .user-list {
+    position: static;
+  }
+
+  .user-list__item:not(:last-child) {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-list__item:not(:last-child) {
+    display: flex;
+  }
 }

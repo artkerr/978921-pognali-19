@@ -1,6 +1,6 @@
 .directions {
   max-width: 85%;
-  background-color: @pale-gray;
+  background: @pale-gray;
   padding: 15%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -14,12 +14,12 @@
   color: @greyish;
 }
 
-.directions-point__list {
+.directions__point-list {
   list-style: none;
   padding: 0;
 }
 
-.directions-btn {
+.directions__btn {
   width: 270px;
   background-color: @light-gold;
   font-size: 18px;
@@ -28,4 +28,50 @@
   color: @dark-slate-blue;
   text-align: left;
   border-radius: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .directions {
+    padding: 10%;
+    background: @pale-gray url("../img/flags-back@1x.png") no-repeat 80% 10%;
+  }
+
+  .directions__title {
+    font-size: 45px;
+  }
+
+  .directions__text {
+    font-size: 28px;
+    max-width: 55%;
+    padding: 40px 0;
+  }
+
+  .directions__btn {
+    min-width: 618px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .directions {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .directions__text-wrapper {
+    padding-left: 160px;
+  }
+
+  .directions__text {
+    max-width: 336px;
+    padding: 0;
+  }
+
+  .directions__btn {
+    max-width: 274px;
+    position: absolute;
+    right: 0;
+  }
 }

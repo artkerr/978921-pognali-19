@@ -1,11 +1,11 @@
 .fellow-traveler {
-  background: url("../img/smolov-back-desktop@1x.png") no-repeat,
-    url("../img/rogovaya-back-mobile@1x.png") no-repeat;
-  background-position: 90% 1%, 0 20%;
+  background:
+    url("../img/smolov-back-desktop@1x.png") no-repeat 90% 1%,
+    url("../img/rogovaya-back-mobile@1x.png") no-repeat 0 20%;
   background-color: @dark-blue;
-  margin-top: -10px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  text-align: center;
 }
 
 .fellow-traveler__text-wrapper {
@@ -49,4 +49,71 @@
   color: @dark-slate-blue;
   text-align: left;
   border-radius: 10px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .fellow-traveler {
+    background:
+      url("../img/rogovaya-back-desktop@1x.png") no-repeat 90% 1%,
+      url("../img/smolov-back-desktop@1x.png") no-repeat 2% 20%;
+    background-color: @dark-blue;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .fellow-traveler__text-wrapper {
+    max-width: 55%;
+    padding-left: 10%;
+  }
+
+  .fellow-traveler__text {
+    font-size: 28px;
+    line-height: 1.18;
+  }
+
+  .fellow-traveler__title {
+    font-size: 45px;
+    padding: 20px 0;
+  }
+
+  .fellow-traveler__text-bold {
+    font-size: 21px;
+    max-width: 55%;
+  }
+
+  .fellow-traveler__list {
+    min-width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .fellow-traveler__item {
+    margin: 0;
+  }
+
+  .fellow-traveler-btn {
+    min-width: 618px;
+    font-size: 24px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fellow-traveler {
+    display: flex;
+    text-align: left;
+  }
+
+  .fellow-traveler__text {
+    width: 480px;
+    padding-right: 20px;
+  }
+
+  .fellow-traveler__list {
+    max-width: 630px;
+    justify-content: flex-start;
+  }
 }
