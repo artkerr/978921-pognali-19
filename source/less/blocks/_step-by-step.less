@@ -42,12 +42,11 @@
 
 @media (min-width: @tablet-width) {
   .step-by-step {
-    max-width: 90%;
     margin: 0 auto;
   }
 
   .step-by-step__list {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
@@ -56,7 +55,6 @@
     border-radius: 0;
     margin: 0;
     padding: 25px 0;
-
 
     &:first-child {
       border-top-left-radius: 10px;
@@ -87,5 +85,45 @@
       font-size: 22px;
       padding-left: 20px;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .step-by-step {
+    margin-top: 220px;
+    padding-bottom: 135px;
+  }
+
+  .step-by-step__list {
+    flex-wrap: unset;
+    width: 1290px;
+    height: 107px;
+  }
+
+  .step-by-step__item {
+    border-radius: 20px;
+    max-width: 200px;
+    flex-basis: 200px;
+
+    &:first-child {
+      max-width: 200px;
+    }
+
+    &:nth-child(2) {
+      max-width: 200px;
+    }
+
+    &:nth-child(3) {
+      max-width: 200px;
+    }
+
+    &:last-child {
+      max-width: 200px;
+    }
+  }
+
+  .step-by-step__link {
+    font-size: 24px;
+    width: 198px;
   }
 }

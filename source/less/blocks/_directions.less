@@ -14,12 +14,12 @@
   color: @greyish;
 }
 
-.directions-point__list {
+.directions__point-list {
   list-style: none;
   padding: 0;
 }
 
-.directions-btn {
+.directions__btn {
   width: 270px;
   background-color: @light-gold;
   font-size: 18px;
@@ -46,8 +46,33 @@
     padding: 40px 0;
   }
 
-  .directions-btn {
+  .directions__btn {
     min-width: 618px;
     font-size: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .directions {
+    width: @desktop-width;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .directions__text-wrapper {
+    padding-left: 160px;
+  }
+
+  .directions__text {
+    max-width: 336px;
+    padding: 0;
+  }
+
+  .directions__btn {
+    max-width: 274px;
+    position: absolute;
+    right: 0;
   }
 }
