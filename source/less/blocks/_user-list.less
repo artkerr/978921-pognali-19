@@ -60,4 +60,30 @@
   .user-list__item:not(:last-child) {
     display: flex;
   }
+
+  .user-list__item:first-child {
+    background-color: @mango;
+
+    &:hover {
+      background-color: @dusty-orange;
+    }
+  }
+
+  .user-list__item:nth-child(2){
+    background-color: @mango-two;
+
+    &:hover {
+      background-color: @mango;
+    }
+  }
+
+  .user-list__item:last-child {
+    &:hover {
+      background-color: @mango-two;
+    }
+  }
+
+  .user-list__link:active {
+    opacity: 0.3;
+  }
 }
