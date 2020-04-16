@@ -3,8 +3,10 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   position: relative;
-  top: -1px;
+  margin-top: -30px;
   z-index: -5;
+  padding-top: 30px;
+  min-width: @mobile-width;
 }
 
 .contacts__title {
@@ -28,6 +30,8 @@
   border-radius: 10px;
   background: @white;
   margin: 20px auto;
+  padding: 0;
+  border: none;
 
   &::placeholder {
     font-size: 18px;
@@ -46,6 +50,7 @@
 
 .contacts__form {
   text-align: center;
+  position: relative;
 }
 
 .contacts__phone,
@@ -57,10 +62,24 @@
 }
 
 .contacts__btn {
+  position: absolute;
+  top: 20px;
+  right: 35px;
   width: 60px;
-  height: 75px;
+  height: 62px;
   border-radius: 10px;
   background-color: @light-gold;
+}
+
+.contacts__btn::after {
+  display: block;
+  position: relative;
+  left: 20px;
+  content: "";
+  width: 10px;
+  height: 14px;
+  fill: @dark-slate-blue;
+  background: url("../img/triangle-arrow-right.svg") no-repeat;
 }
 
 @media (min-width: @tablet-width) {
@@ -71,6 +90,10 @@
   .contacts__text {
     font-size: 28px;
     min-width: 79%;
+
+    br {
+      display: none;
+    }
   }
 
   .contacts__input {

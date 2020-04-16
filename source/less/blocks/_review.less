@@ -1,11 +1,12 @@
 .review {
-  max-width: 60%;
-  min-height: 200px;;
+  min-width: @mobile-width;
   margin-bottom: 20px;
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .review__citation {
+  max-width: 60%;
+  min-height: 200px;
   margin: 0;
   margin-top: -30px;
   margin-left: 25%;
@@ -22,7 +23,10 @@
 
 @media (min-width: @tablet-width) {
   .review {
-    max-width: 45%;
+    max-width: 60%;
+    margin-top: -2px;
+    background: transparent;
+    padding-top: 50px;
   }
 
   .review_author {
