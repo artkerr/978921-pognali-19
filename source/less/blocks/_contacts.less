@@ -24,13 +24,19 @@
   }
 }
 
+.contacts__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
 .contacts__input {
-  width: 270px;
+  min-width: 84%;
+  max-width: 536px;
   height: 62px;
   border-radius: 10px;
   background: @white;
-  margin: 20px auto;
-  padding: 0;
   border: none;
 
   &::placeholder {
@@ -48,11 +54,6 @@
   margin-left: 15%;
 }
 
-.contacts__form {
-  text-align: center;
-  position: relative;
-}
-
 .contacts__phone,
 .contacts__email {
   text-transform: uppercase;
@@ -62,9 +63,7 @@
 }
 
 .contacts__btn {
-  position: absolute;
-  top: 20px;
-  right: 35px;
+  margin-left: -60px;
   width: 60px;
   height: 62px;
   border-radius: 10px;
@@ -78,7 +77,6 @@
   content: "";
   width: 10px;
   height: 14px;
-  fill: @dark-slate-blue;
   background: url("../img/triangle-arrow-right.svg") no-repeat;
 }
 
