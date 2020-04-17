@@ -49,4 +49,27 @@
     background: @dark-blue url("../img/about-desktop@1x.png") no-repeat right 70%;
     max-width: @desktop-width;
   }
+
+  .about-servise__btn {
+    position: relative;
+    width: 274px;
+    background-color: @light-gold;
+    font-size: 24;
+    font-weight: bold;
+    line-height: 3;
+    color: @dark-slate-blue;
+    text-align: left;
+    border-radius: 20px;
+    padding-left: 20px;
+
+    &::after {
+      position: absolute;
+      top: 35px;
+      right: 30px;
+      content: "";
+      width: 10px;
+      height: 14px;
+      background: url("../img/triangle-arrow-right.svg") no-repeat;
+    }
+  }
 }

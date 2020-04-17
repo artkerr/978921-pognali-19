@@ -26,6 +26,7 @@
 }
 
 .directions__btn {
+  position: relative;
   display: block;
   width: 270px;
   background-color: @light-gold;
@@ -37,6 +38,17 @@
   border-radius: 10px;
   padding-left: 20px;
   margin: 0 auto;
+
+  &::after {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    content: "";
+    width: 10px;
+    height: 14px;
+    background: url("../img/triangle-arrow-right.svg") no-repeat;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -58,10 +70,14 @@
   }
 
   .directions__btn {
-    min-width: 618px;
+    width: 618px;
     font-size: 24px;
     padding-left: 50px;
     border-radius: 20px;
+
+    &::after {
+      top: 30px;
+    }
   }
 }
 
@@ -85,6 +101,6 @@
   .directions__btn {
     max-width: 274px;
     position: absolute;
-    right: 0;
+    right: 140px;
   }
 }
