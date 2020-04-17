@@ -1,9 +1,13 @@
 .introduction {
-  background:
-    url("../img/traveller-illustration-mobile@1x.png") no-repeat 60% 30%,
-    url("../img/globe-back-mobile@1x.jpg") no-repeat;
-  background-color: @dark-two;
+  background: url("../img/globe-back-mobile@1x.jpg") no-repeat 50% -10%;
+  background-size: contain;
   min-width: @mobile-width;
+}
+
+.introduction-wrapper {
+  background: @dark-two url("../img/traveller-illustration-mobile@1x.png") no-repeat 60% 20%;
+  display: flex;
+  flex-direction: column;
 }
 
 .introduction__title {
@@ -16,16 +20,18 @@
 }
 
 .introduction__review {
-  margin-top: 400px;
+  margin-top: 240px;
   background-color: @dark-blue;
 }
 
 @media (min-width: @tablet-width) {
   .introduction {
-    background:
-      url("../img/traveller-illustration-tablet@1x.png") no-repeat 100% 28%,
-      url("../img/globe-back-tablet@1x.jpg") no-repeat 0 0;
+    background: url("../img/globe-back-tablet@1x.jpg") no-repeat 0 0;
     min-width: @tablet-width;
+  }
+
+  .introduction-wrapper {
+    background: url("../img/traveller-illustration-tablet@1x.png") no-repeat 70% 60%;
   }
 
   .introduction__title {
