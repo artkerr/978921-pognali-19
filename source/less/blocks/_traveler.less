@@ -1,38 +1,73 @@
 .traveler {
+  display: flex;
+  flex-direction: column;
   background-color: @white;
   border-radius: 20px;
   max-width: 84%;
+  position: relative;
   margin: 0 auto;
-  padding-left: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.traveler__header {
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .traveler__name {
+  max-width: 30%;
   font-size: 20px;
   font-weight: bold;
   color: @dark-blue;
+  line-height: 1;
+  order: 2;
+  align-items: flex-start;
+  margin: 0;
+
+  &::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: @salmon;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 .traveler__photo {
   border-radius: 50%;
+  order: 1;
+  margin-right: 20px;
 }
 
 .traveler__favorite {
-  background: @pale-gray;
   border-radius: 50%;
   width: 31px;
   height: 31px;
   border: none;
   fill: @greyish;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  background: @pale-gray url("../img/heart.svg") no-repeat center center / 15px;
 }
 
 .traveler__like {
   font-size: 14px;
   font-weight: bold;
   color: @dark-two;
+  position: absolute;
+  top: 45px;
+  left: 90px;
 }
 
 .traveler__tag-list {
-  max-width: 50%;
+  max-width: 60%;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -56,6 +91,20 @@
   font-size: 15px;
   color: @greyish;
   line-height: 1.2;
+  text-transform: lowercase;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    width: 320px;
+    height: 1px;
+    background-color: @pale-grey-four;
+    position: absolute;
+    top: 7px;
+    left: -16px;
+    z-index: -1;
+  }
 }
 
 .traveler__flag-list {
@@ -77,6 +126,15 @@
   padding: 0;
   margin-bottom: 5px;
   margin-left: 10px;
+}
+
+.traveler__footer {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.traveler__transport-wrapper {
+  margin-right: auto;
 }
 
 .traveler__transport_list {
@@ -105,6 +163,7 @@
   color: @dark-slate-blue;
   font-size: 24px;
   font-weight: bold;
+  margin-left: auto;
 }
 
 .traveler__btn {
@@ -117,33 +176,52 @@
   font-weight: bold;
   color: @dark-two;
   vertical-align: center;
+  position: absolute;
+  left: 250px;
+  top: 175px;
 }
 
 @media (min-width: @tablet-width) {
   .traveler {
     max-width: 90%;
+    padding: 30px;
   }
 
   .traveler__name {
+    min-width: 40%;
     font-size: 30px;
+    position: relative;
+
+    &::after {
+      right: 40px;
+      top: 11px;
+    }
   }
 
   .traveler__photo {
     border-radius: 20px;
     min-width: 190px;
+    margin-right: 30px;
   }
 
   .traveler__favorite {
     width: 50px;
     height: 50px;
+    left: 380px;
+    top: 145px;
   }
 
   .traveler__like {
     font-size: 20px;
+    left: 440px;
+    top: 160px;
   }
 
   .traveler__tag-list {
     max-width: 30%;
+    position: absolute;
+    left: 250px;
+    top: 100px;
   }
 
   .traveler__tag-link {
@@ -153,6 +231,11 @@
 
   .traveler__text {
     font-size: 15px;
+
+    &::before {
+      width: 100vw;
+      left: -30px;
+    }
   }
 
   .traveler__flag-list {
@@ -179,9 +262,28 @@
     background: transparent;
   }
 
+  .traveler__footer {
+    flex-direction: column;
+    position: absolute;
+    right: 30px;
+  }
+
+  .traveler__transport-wrapper {
+    margin: 0;
+  }
+
+  .traveler__level .traveler__text {
+    display: none;
+  }
+
+  .traveler__transport-wrapper .traveler__text {
+    display: none;
+  }
+
   .traveler__btn {
     width: 148px;
-    line-height: 2.5;
+    height: 50px;
+    border-radius: 30px;
   }
 }
 

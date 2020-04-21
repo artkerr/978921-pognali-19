@@ -18,7 +18,7 @@
       </picture>
     </a>
     <nav class="page-header__nav main-nav">
-      <button class="main-nav__toggle">Открыть меню</button>
+      <button class="main-nav__toggle" aria-label="Кнопка меню"></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__site-list site-list">
           <li class="site-list__item">
@@ -79,7 +79,7 @@
       </ul>
     </nav>
   </header>
-  <main class="page-main">
+  <main class="page-main catalog">
     <h1 class="page-main__title">Попутчики</h1>
       <section class="country-filter">
         <h2 class="country-filter__title">Фильтрация по странам</h2>
@@ -94,7 +94,7 @@
             <div class="traveler__header">
               <h3 class="traveler__name">Таня Фирсова</h3>
               <img class="traveler__photo" src="img/firsova-desktop@1x.jpg" alt="Таня Фирсова" width="70" height="70">
-              <button type="button" class="traveler__favorite"></button>
+              <button type="button" class="traveler__favorite "></button>
               <span class="traveler__like">1.5 М</span>
             </div>
             <ul class="traveler__tag-list">
@@ -120,8 +120,10 @@
                 <p class="traveler__country-name">Сейшелы</p>
               </li>
             </ul>
-            <p class="traveler__text">Транспорт:</p>
-            <ul class="traveler__transport_list">
+            <div class="traveler__footer">
+            <div class="traveler__transport-wrapper">
+              <p class="traveler__text">Транспорт:</p>
+              <ul class="traveler__transport_list">
               <li class="traveler__transport_item traveler__transport-active">
                 <svg width="14" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 19 21" style="enable-background:new 0 0 19 21;" xml:space="preserve">
@@ -166,10 +168,12 @@
                   </g>
                   </svg>
               </li>
-            </ul>
-            <p class="traveler__text">Левел:</p>
+              </ul>
+            </div>
             <div class="traveler__level">
+              <p class="traveler__text">Левел:</p>
               <span class="traveler__score">99</span>
+            </div>
             </div>
             <button type="button" class="btn traveler__btn">Позвать!</button>
           </li>
@@ -198,8 +202,10 @@
                 <p class="traveler__country-name">Чехия</p>
               </li>
             </ul>
-            <p class="traveler__text">Транспорт:</p>
-            <ul class="traveler__transport_list">
+            <div class="traveler__footer">
+              <div class="traveler__transport-wrapper">
+                <p class="traveler__text">Транспорт:</p>
+                <ul class="traveler__transport_list">
               <li class="traveler__transport_item traveler__transport-active">
                 <svg width="14" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 19 21" style="enable-background:new 0 0 19 21;" xml:space="preserve">
@@ -245,10 +251,12 @@
                   </g>
                   </svg>
               </li>
-            </ul>
-            <p class="traveler__text">Левел:</p>
-            <div class="traveler__level">
-              <span class="traveler__score">80</span>
+                </ul>
+              </div>
+              <div class="traveler__level">
+                <p class="traveler__text">Левел:</p>
+                <span class="traveler__score">80</span>
+              </div>
             </div>
             <button type="button" class="btn traveler__btn">Позвать!</button>
           </li>
@@ -281,8 +289,10 @@
                 <p class="traveler__country-name">Доминикана</p>
               </li>
             </ul>
-            <p class="traveler__text">Транспорт:</p>
-            <ul class="traveler__transport_list">
+            <div class="traveler__footer">
+              <div class="traveler__transport-wrapper">
+                <p class="traveler__text">Транспорт:</p>
+                <ul class="traveler__transport_list">
               <li class="traveler__transport_item traveler__transport-active">
                 <svg width="14" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 19 21" style="enable-background:new 0 0 19 21;" xml:space="preserve">
@@ -328,10 +338,12 @@
                   </g>
                   </svg>
               </li>
-            </ul>
-            <p class="traveler__text">Левел:</p>
+                </ul>
+              </div>
             <div class="traveler__level">
+              <p class="traveler__text">Левел:</p>
               <span class="traveler__score">25</span>
+            </div>
             </div>
             <button type="button" class="btn traveler__btn">Позвать!</button>
           </li>
@@ -359,8 +371,10 @@
                 <p class="traveler__country-name">Германия</p>
               </li>
             </ul>
-            <p class="traveler__text">Транспорт:</p>
-            <ul class="traveler__transport_list">
+            <div class="traveler__footer">
+                <div class="traveler__transport-wrapper">
+                <p class="traveler__text">Транспорт:</p>
+                <ul class="traveler__transport_list">
               <li class="traveler__transport_item traveler__transport-active">
                 <svg width="14" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 19 21" style="enable-background:new 0 0 19 21;" xml:space="preserve">
@@ -406,10 +420,12 @@
                   </g>
                   </svg>
               </li>
-            </ul>
-            <p class="traveler__text">Левел:</p>
-            <div class="traveler__level">
-              <span class="travaler__score">50</span>
+                </ul>
+            </div>
+              <div class="traveler__level">
+                <p class="traveler__text">Левел:</p>
+                <span class="traveler__score">50</span>
+              </div>
             </div>
             <button type="button" class="btn traveler__btn">Позвать!</button>
           </li>
