@@ -20,7 +20,7 @@
 }
 
 .rate__wrapper {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   margin-left: 15%;
 }
 
@@ -86,6 +86,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .rate::after {
+    top: 390px;
+    right: 70px;
+  }
+
   .rate__wrapper {
     display: table;
     margin-left: 10%;
@@ -169,6 +174,40 @@
       height: 67px;
       border-radius: 50%;
       background: @pale-grey-four url("../img/business.svg") no-repeat center center / 15px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .rate {
+    &::after {
+      width: 198px;
+      height: 198px;
+      right: 200px;
+      top: 180px;
+    }
+  }
+  .rate__item {
+    &::before {
+      left: 90px;
+    }
+
+    &:nth-child(3)::after {
+      width: 444px;
+      height: 300px;
+      right: 270px;
+    }
+  }
+
+  .rate__link {
+    &::before {
+      left: -75px;
+    }
+  }
+
+  .rate_text {
+    &:nth-child(1) {
+      padding-right: 350px;
     }
   }
 

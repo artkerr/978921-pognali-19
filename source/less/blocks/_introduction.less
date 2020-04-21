@@ -1,13 +1,14 @@
 .introduction {
-  background: url("../img/globe-back-mobile@1x.jpg") no-repeat 50% -10%;
-  background-size: contain;
   min-width: @mobile-width;
 }
 
 .introduction-wrapper {
-  background: @dark-two url("../img/traveller-illustration-mobile@1x.png") no-repeat 60% 20%;
+  background:
+    url("../img/traveller-illustration-mobile@1x.png") no-repeat 60% 20%,
+    url("../img/globe-back-mobile@1x.jpg") no-repeat 0 0 / contain;
   display: flex;
   flex-direction: column;
+  background-color: @dark-two;
 }
 
 .introduction__title {
@@ -21,7 +22,7 @@
 
 .introduction__review {
   margin-top: 240px;
-  background-color: @dark-blue;
+  background-color: @dark-two;
 }
 
 @media (min-width: @tablet-width) {
