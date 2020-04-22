@@ -42,6 +42,14 @@
     top: 0;
     right: 0;
   }
+
+  &:hover {
+    color: @dark-slate-blue-70;
+  }
+
+  &:active {
+    color: @dark-slate-blue-30;
+  }
 }
 
 .traveler__photo {
@@ -59,7 +67,11 @@
   position: absolute;
   top: 40px;
   left: 50px;
-  background: @pale-gray url("../img/heart.svg") no-repeat center center / 15px;
+  background:@pale-gray  url("../img/heart.svg") no-repeat center center / 15px;
+}
+
+.traveler__favorite--active {
+  background: @very-light-pink-two url("../img/heart-active.svg") no-repeat center center / 15px;
 }
 
 .traveler__like {
@@ -181,6 +193,15 @@
   font-weight: bold;
   color: @dark-two;
   vertical-align: center;
+
+  &:hover {
+    background-color: @mango-two;
+  }
+
+  &:active {
+    background-color: @mango-two;
+    color: @dark-two-30;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -212,6 +233,7 @@
     left: 380px;
     top: 145px;
   }
+
 
   .traveler__like {
     font-size: 20px;

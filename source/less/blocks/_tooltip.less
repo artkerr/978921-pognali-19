@@ -1,0 +1,47 @@
+.tooltip {
+  position: relative;
+  z-index: 1;
+
+  &:hover::before {
+    content: "";
+    background-color: @dark-blue-grey-three;
+    color: @white;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 4px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+  }
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent @dark-blue-grey-three transparent;
+  }
+}
+
+.tooltip__avia:hover::before  {
+  content: "Авиаперелет";
+  margin-left: -80px;
+}
+
+.tooltip__auto:hover::before  {
+  content: "Автотранспорт";
+  margin-left: -85px;
+}
+
+.tooltip__bicycle:hover::before  {
+  content: "Велосипед";
+  margin-left: -70px;
+}
+
+.tooltip__afoot:hover::before  {
+  content: "Пешком";
+  margin-left: -60px;
+}

@@ -1,6 +1,11 @@
 .traveler-overview {
   position: relative;
   margin-bottom: 10px;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 6px 21px 0 rgba(0, 0, 0, 0.08);
+  }
 }
 
 .traveler-overview_card {
@@ -68,6 +73,14 @@
   text-align: center;
   margin: 0;
   padding-bottom: 5px;
+
+  &:hover {
+    color: @dark-slate-blue-70;
+  }
+
+  &:active {
+    color: @dark-slate-blue-30;
+  }
 }
 
 .traveler-overview__tag_list {
@@ -104,6 +117,8 @@
 .traveler-overview__transport_item {
   margin-right: 15px;
   fill: @point-text;
+  position: relative;
+  cursor: pointer;
 }
 
 .traveler-overview__transport-item-active {
