@@ -59,7 +59,7 @@
     position: relative;
     width: 274px;
     background-color: @light-gold;
-    font-size: 24;
+    font-size: 24px;
     font-weight: bold;
     line-height: 3;
     color: @dark-slate-blue;
@@ -69,12 +69,21 @@
 
     &::after {
       position: absolute;
-      top: 35px;
+      top: 30px;
       right: 30px;
       content: "";
       width: 10px;
       height: 14px;
       background: url("../img/triangle-arrow-right.svg") no-repeat;
+    }
+
+    &:hover {
+      background-color: @mango-two;
+    }
+
+    &:active {
+      color: @dark-slate-blue-30;
+      background-color: @mango-two;
     }
   }
 }
