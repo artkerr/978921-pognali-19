@@ -13,6 +13,7 @@
   &:hover {
     transform: scale(1.01);
     box-shadow: 0 6px 21px 0 @black-08;
+    transition: 300ms;
   }
 }
 
@@ -176,7 +177,17 @@
   fill: @dark-slate-blue;
 }
 
+.traveler__level-wrapper .traveler__text{
+  margin-bottom: 0;
+}
+
 .traveler__level {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
@@ -184,11 +195,24 @@
   color: @dark-slate-blue;
   font-size: 24px;
   font-weight: bold;
-  margin-left: auto;
+  line-height: 1;
 }
 
 .traveler__score-text {
   display: none;
+  margin: 0;
+  line-height: 1;
+
+  &::after {
+    content: "";
+    width: 31px;
+    height: 1px;
+    opacity: 0.3;
+    background-color: @point-text;
+    position: absolute;
+    top: 33px;
+    left: 14px;
+  }
 }
 
 .traveler__btn {
@@ -241,7 +265,6 @@
     left: 380px;
     top: 145px;
   }
-
 
   .traveler__like {
     font-size: 20px;
@@ -303,15 +326,17 @@
 
   .traveler__footer {
     flex-direction: column;
+    align-items: center;
     position: absolute;
     right: 30px;
   }
 
   .traveler__transport-wrapper {
     margin: 0;
+    margin-bottom: 20px;
   }
 
-  .traveler__level .traveler__text {
+  .traveler__level-wrapper .traveler__text {
     display: none;
   }
 
@@ -331,7 +356,7 @@
 
 @media (min-width: @desktop-width) {
   .traveler {
-    min-width: 950px;
+    width: 950px;
     padding: 0;
     margin: 0;
     margin-bottom: 20px;
@@ -380,13 +405,13 @@
     flex-direction: column;
     position: relative;
     top: 35px;
-    left: 150px;
+    left: 100px;
   }
 
   .traveler__footer {
     flex-direction: row;
-    bottom: 40px;
-    right: 75px;
+    top: 205px;
+    right: 40px;
   }
 
   .traveler__transport_list {
@@ -394,7 +419,7 @@
   }
 
   .traveler__level {
-    margin-left: 40px;
+    margin-left: 20px;
   }
 
   .traveler__btn {
