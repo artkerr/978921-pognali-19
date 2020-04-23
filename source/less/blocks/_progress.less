@@ -1,0 +1,51 @@
+.progress__circle {
+  height: 60px;
+  width: 60px;
+  clip: rect(auto, auto, auto, auto);
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.progress__half-circle {
+  width: 60px;
+  height: 60px;
+  border: 3px solid @mango;
+  border-radius: 50%;
+  clip: rect(0, 30px, 60px, 0);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.progress__99 .progress__left-side {
+  transform: rotate(180deg);
+}
+
+.progress__99 .progress__right-side {
+  transform: rotate(350deg);
+}
+
+.progress__80 .progress__left-side {
+  transform: rotate(180deg);
+}
+
+.progress__80 .progress__right-side {
+  transform: rotate(300deg);
+}
+
+.progress__25 .progress__left-side {
+  display: none;
+}
+
+.progress__25 .progress__right-side {
+  transform: rotate(80deg);
+}
+
+.progress__50 .progress__left-side {
+  display: none;
+}
+
+.progress__50 .progress__right-side {
+  transform: rotate(180deg);
+}

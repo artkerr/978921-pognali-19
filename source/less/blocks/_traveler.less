@@ -176,11 +176,19 @@
   fill: @dark-slate-blue;
 }
 
+.traveler__level {
+  position: relative;
+}
+
 .traveler__score {
   color: @dark-slate-blue;
   font-size: 24px;
   font-weight: bold;
   margin-left: auto;
+}
+
+.traveler__score-text {
+  display: none;
 }
 
 .traveler__btn {
@@ -277,6 +285,13 @@
       height: 24px;
     }
   }
+
+  .traveler__score-text {
+    display: block;
+    color: @point-text;
+    font-size: 14px;
+  }
+
 
   .traveler__transport_list {
     flex-direction: column;
