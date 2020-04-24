@@ -3,8 +3,10 @@
   list-style: none;
   position: absolute;
   top: 400px;
-  left: 7.6%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 0;
+  z-index: 1;
 }
 
 .user-list__item {
@@ -32,6 +34,7 @@
 @media (min-width: @tablet-width) {
   .user-list {
     position: static;
+    transform: translateX(0);
   }
 
   .user-list__item {
