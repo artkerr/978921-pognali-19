@@ -8,17 +8,31 @@
 
   .site-list__item {
     margin-right: 15px;
+    overflow: hidden;
   }
 
   .site-list__link {
+    display: inline-block;
+    position: relative;
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.5;
     color: @white;
+    transition: transform 0.3s;
+
+    &::before {
+      content: attr(data-hover);
+      position: absolute;
+      top: 100%;
+      line-height: 1;
+      font-weight: 500;
+    }
 
     &:hover {
       color: @light-gold;
+      transform: translateY(-100%);
+      cursor: pointer;
     }
 
     &:active {

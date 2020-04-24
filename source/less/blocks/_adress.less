@@ -11,16 +11,18 @@
 
 .adress__text {
   position: relative;
-  max-width: 70%;
+  max-width: 50%;
   margin-left: 30%;
   text-transform: uppercase;
   font-weight: bold;
   color: @dark-blue;
   text-align: left;
+  position: relative;
 
   &::before {
     position: absolute;
-    left: 45px;
+    top: 0;
+    left: -50px;
     display: block;
     content: "";
     width: 45px;
@@ -81,8 +83,8 @@
     margin-bottom: 50px;
 
     &::before {
-      left: 150px;
-      top: -15px;
+      left: -80px;
+      top: -20px;
       width: 67px;
       height: 67px;
       background-size: 30%;
