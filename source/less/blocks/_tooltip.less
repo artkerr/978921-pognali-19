@@ -27,21 +27,21 @@
 }
 
 .tooltip__avia:hover::before {
-  content: "Авиаперелет";
-  margin-left: -80px;
+  content: attr(data-label);
+  transform: translateX(-50%);
 }
 
 .tooltip__auto:hover::before {
-  content: "Автотранспорт";
-  margin-left: -85px;
+  content: attr(data-label);
+  transform: translateX(-50%);
 }
 
 .tooltip__bicycle:hover::before {
-  content: "Велосипед";
-  margin-left: -70px;
+  content: attr(data-label);
+  transform: translateX(-50%);
 }
 
 .tooltip__afoot:hover::before {
-  content: "Пешком";
-  margin-left: -60px;
+  content: attr(data-label);
+  transform: translateX(-50%);
 }

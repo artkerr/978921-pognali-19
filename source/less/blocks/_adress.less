@@ -12,7 +12,7 @@
 .adress__text {
   position: relative;
   max-width: 70%;
-  padding-left: 30%;
+  margin-left: 30%;
   text-transform: uppercase;
   font-weight: bold;
   color: @dark-blue;
@@ -107,14 +107,20 @@
 @media (min-width: @desktop-width) {
   .adress {
     flex-direction: row;
-    padding: 30px 0;
+    align-items: baselinel;
+    padding: 40px 0 20px 0;
   }
 
   .adress__btn {
     max-width: 324px;
+    height: 81px;
     border-radius: 20px;
     font-size: 24px;
     font-weight: bold;
-    vertical-align: middle;
+    line-height: 2;
+
+    &::after {
+      top: 30px;
+    }
   }
 }
