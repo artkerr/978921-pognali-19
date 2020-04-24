@@ -1,5 +1,6 @@
 .introduction {
   min-width: @mobile-width;
+  background-color: @dark-two;
 }
 
 .introduction-wrapper {
@@ -8,7 +9,6 @@
     url("../img/globe-back-mobile@1x.jpg") no-repeat 0 0 / contain;
   display: flex;
   flex-direction: column;
-  background-color: @dark-two;
 }
 
 .introduction__title {
@@ -46,7 +46,7 @@
 @media (min-width: @desktop-width) {
   .introduction {
     background: url("../img/globe-back-desktop@1x.jpg") no-repeat;
-    max-width: @desktop-width;
+    min-width: @desktop-width;
   }
 
   .introduction-wrapper {
