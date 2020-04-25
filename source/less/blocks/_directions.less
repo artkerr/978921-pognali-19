@@ -67,6 +67,10 @@
     background: @pale-gray url("../img/flags-back@1x.png") no-repeat 80% 10%;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: @pale-gray url("../img/flags-back@2x.png") no-repeat 80% 10%;
+    }
   }
 
   .directions__title {
