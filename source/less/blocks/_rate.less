@@ -16,6 +16,11 @@
     height: 99px;
     background: url("../img/rates@1x.png") no-repeat;
     background-size: contain;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/rates@2x.png") no-repeat;
+      background-size: contain;
+    }
   }
 }
 
