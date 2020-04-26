@@ -69,14 +69,15 @@
   margin: 0 auto;
 
   &::after {
+    content: "";
     display: flex;
     position: absolute;
-    top: 20px;
-    right: 30px;
-    content: "";
-    width: 10px;
-    height: 14px;
-    background: url("../img/triangle-arrow-right.svg") no-repeat;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 7px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent @dark-slate-blue;
   }
 
   &:hover {
@@ -86,6 +87,11 @@
   &:active {
     color: @dark-slate-blue-30;
     background-color: @mango-two;
+  }
+
+  &:active::after {
+    color: @dark-slate-blue-30;
+    border-color: transparent transparent transparent @dark-slate-blue-30;
   }
 }
 
@@ -145,10 +151,6 @@
     font-size: 24px;
     border-radius: 20px;
     margin-top: 40px;
-
-    &::after {
-      top: 30px;
-    }
   }
 }
 

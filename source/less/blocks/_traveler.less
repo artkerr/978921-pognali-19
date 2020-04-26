@@ -61,15 +61,32 @@
 }
 
 .traveler__favorite {
+  display: flex;
+  align-self: center;
+  justify-content: center;
   border-radius: 50%;
+  background-color: @pale-grey;
   width: 31px;
   height: 31px;
   border: none;
-  background: @pale-gray  url("../img/heart.svg") no-repeat center center / 15px;
+}
+
+.traveler__favorite-icon {
+  fill: @dark-blue-grey;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .traveler__favorite--active {
-  background: @very-light-pink-two url("../img/heart-active.svg") no-repeat center center / 15px;
+  background: @very-light-pink-two;
+  fill: @tomato;
 }
 
 .traveler__like {
@@ -250,6 +267,12 @@
   .traveler__like {
     font-size: 20px;
     line-height: 2.6;
+  }
+
+  .traveler__favorite-icon,
+  .traveler__favorite-icon--active {
+    width: 20px;
+    height: 17px;
   }
 
   .traveler__tag-list {

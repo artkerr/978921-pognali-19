@@ -39,31 +39,38 @@
   color: @dark-blue-grey;
   font-weight: bold;
   border-radius: 10px;
-  border: 3px solid @black;
+  border: 3px solid @dark-blue-grey;
   background-color: @light-gold;
   text-align: left;
   padding-right: 50px;
 
   &::after {
-    position: absolute;
-    right: 15px;
-    top: 17px;
     content: "";
-    width: 10px;
-    height: 14px;
-    background: url("../img/triangle-arrow-right.svg") no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 7px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent @dark-slate-blue;
   }
 
   &:hover {
     color: @white;
     background-color: @dark-blue-grey;
-    border-color: @dark-blue-grey;
   }
 
   &:active {
     color: @white-30;
     background-color: @dark-blue-grey;
-    border-color: @dark-blue-grey;
+  }
+
+  &:hover::after {
+    border-color: transparent transparent transparent @white;
+  }
+
+  &:active::after {
+    border-color: transparent transparent transparent @white-30;
   }
 }
 
@@ -86,7 +93,7 @@
       top: -20px;
       width: 67px;
       height: 67px;
-      background-size: 30%;
+      background-size: 40%;
       background-position: center;
     }
   }
@@ -98,10 +105,6 @@
     border-radius: 20px;
     margin: 0 auto;
     line-height: 1.5;
-
-    &::after {
-      top: 25px;
-    }
   }
 }
 
@@ -119,9 +122,5 @@
     font-size: 24px;
     font-weight: bold;
     line-height: 2;
-
-    &::after {
-      top: 30px;
-    }
   }
 }

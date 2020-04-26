@@ -13,22 +13,62 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: @light-gold;
+  background-color: @mango;
   border-radius: 20px;
   width: 40px;
   height: 40px;
 
-  &:last-child {
+  &:nth-child(2) {
+    background-color: @mango-two;
+
+    &:hover {
+      background-color: @mango;
+    }
+
+    &:active {
+      background-color: @mango;
+    }
+  }
+
+  &:nth-child(3) {
     width: 192px;
+    background-color: @light-gold;
+
+    &:hover {
+      background-color: @dusty-orange;
+    }
+
+    &:active {
+      background-color: @dusty-orange;
+    }
+  }
+
+  &:hover {
+    background-color: @mango-two;
+  }
+
+  &:active {
+    background-color: @mango-two;
   }
 }
 
 .user-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 17px;
   font-weight: bold;
   line-height: 1.76;
   text-transform: uppercase;
   color: @dark-two;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.user-list__icon {
+  fill: @dark-two;
 }
 
 @media (min-width: @tablet-width) {
