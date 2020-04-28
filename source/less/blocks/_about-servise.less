@@ -34,20 +34,34 @@
 
 @media (min-width: @tablet-width) {
   .about-servise {
-    background: @dark-blue url("../img/about-tablet@1x.png") no-repeat right 70%;
+    background: @dark-blue url("../img/about-tablet@1x.png") no-repeat 110% 70%;
+    background-size: auto 500px;
     padding: 10%;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background: @dark-blue url("../img/about-tablet@2x.png") no-repeat right 70%;
-      background-size: 30%;
+      background: @dark-blue url("../img/about-tablet@2x.png") no-repeat 110% 70%;
+      background-size: auto 500px;
     }
   }
 
 
   .about-servise__title {
     font-size: 45px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 688px;
+      height: 213px;
+      border-radius: 20px;
+      background-color: @dark-blue-grey-four;
+      z-index: -1;
+    }
   }
 
   .about-servise__text {
@@ -68,6 +82,15 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background: @dark-blue url("../img/about-desktop@2x.png") no-repeat right 70%;
       background-size: 30%;
+    }
+  }
+
+  .about-servise__title {
+    &::after {
+      width: 213px;
+      height: 213px;
+      left: 200px;
+      top: 100px;
     }
   }
 

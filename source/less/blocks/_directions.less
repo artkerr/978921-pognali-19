@@ -9,8 +9,8 @@
 }
 
 .directions__text-wrapper {
-  max-width: 60%;
-  margin-left: 15%;
+  margin-left: 10%;
+  max-width: 70%;
 }
 
 .directions__title {
@@ -19,6 +19,7 @@
 
 .directions__text {
   color: @greyish;
+  line-height: 1.18;
 }
 
 .directions__point-list {
@@ -67,13 +68,15 @@
 
 @media (min-width: @tablet-width) {
   .directions {
-    padding: 10%;
+    margin: 0;
     background: @pale-gray url("../img/flags-back@1x.png") no-repeat 80% 10%;
+    background-size: 290px 575px;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background: @pale-gray url("../img/flags-back@2x.png") no-repeat 80% 10%;
+      background-size: 290px 575px;
     }
   }
 
@@ -99,12 +102,15 @@
   .directions {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
     position: relative;
+    background: @pale-gray url("../img/flags-back@1x.png") no-repeat 96% 10%;
+    background-size: 290px 575px;
+
   }
 
   .directions__text-wrapper {
     padding-left: 160px;
+    margin-right: 240px;
   }
 
   .directions__text {
@@ -115,6 +121,7 @@
   .directions__btn {
     max-width: 274px;
     position: absolute;
-    right: 140px;
+    right: 230px;
+    bottom: 50px;
   }
 }
