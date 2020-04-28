@@ -1,29 +1,34 @@
 .introduction {
   min-width: @mobile-width;
-  background-color: @dark-two;
-}
-
-.introduction-wrapper {
   background:
-    url("../img/traveller-illustration-mobile@1x.png") no-repeat 60% 20%,
-    url("../img/globe-back-mobile@1x.jpg") no-repeat center -80px;
+    url("../img/traveller-illustration-mobile@1x.png") no-repeat,
+    url("../img/globe-back-mobile@1x.jpg") no-repeat;
+  background-size: 192px 255px, 100%;
+  background-position: 70% 142px, center -80px;
+  background-color: @dark-two;
   display: flex;
   flex-direction: column;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background:
-      url("../img/traveller-illustration-mobile@2x.png") no-repeat 60% 20%,
-      url("../img/globe-back-mobile@2x.jpg") no-repeat center;
+      url("../img/traveller-illustration-mobile@2x.png") no-repeat,
+      url("../img/globe-back-mobile@2x.jpg") no-repeat;
+    background-size: 192px 255px, 100%;
+    background-position: 70% 142px, center -100px;
+    background-color: @dark-two;
   }
 }
 
 .introduction__title {
+  max-width: 80%;
+  min-height: 114px;
   font-size: 36px;
   font-weight: bold;
   line-height: 1.11;
   text-align: center;
   margin: 0;
   padding-top: 30px;
+  margin: 0 auto;
   margin-bottom: 250px;
 }
 
@@ -39,20 +44,21 @@
 @media (min-width: @tablet-width) {
   .introduction {
     min-width: @tablet-width;
-    background-color: @dark-blue-grey;
-  }
-
-  .introduction-wrapper {
     background:
-      url("../img/traveller-illustration-tablet@1x.png") no-repeat 290px 250px,
-      url("../img/globe-back-tablet@1x.jpg") no-repeat center 250px;
-    background-size: 350px, auto;
+      url("../img/traveller-illustration-tablet@1x.png") no-repeat,
+      url("../img/globe-back-tablet@1x.jpg") no-repeat ;
+    background-position: 70% 250px, center 220px;
+    background-size: 380px 452px, 100%;
+    background-color: @dark-blue-grey;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background:
-        url("../img/traveller-illustration-tablet@2x.png") no-repeat 290px 250px,
-        url("../img/globe-back-tablet@2x.jpg") no-repeat center 250px;
-    }
+        url("../img/traveller-illustration-tablet@2x.png") no-repeat,
+        url("../img/globe-back-tablet@2x.jpg") no-repeat;
+      background-position: 70% 250px, center 220px;
+      background-size: 380px 452px, 200%;
+      background-color: @dark-blue-grey;
+  }
   }
 
   .introduction__title {
@@ -64,15 +70,19 @@
 }
 
 @media (min-width: @desktop-width) {
-  .introduction-wrapper {
-    background:
-      url("../img/traveller-illustration-desktop@1x.png") no-repeat 60% 0,
-      url("../img/globe-back-desktop@1x.jpg") no-repeat 0 0 / cover;
+  .introduction {
+    background-image:
+      url("../img/traveller-illustration-desktop@1x.png") no-repeat,
+      url("../img/globe-back-desktop@1x.jpg") no-repeat;
+      background-size: 430px 640px, auto;
+      background-position: 60% -20%, cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background:
-        url("../img/traveller-illustration-desktop@2x.png") no-repeat 60% 0 / 100px,
-        url("../img/globe-back-desktop@2x.jpg") no-repeat 0 0 / cover;
+      background-image:
+        url("../img/traveller-illustration-desktop@2x.png") no-repeat,
+        url("../img/globe-back-desktop@2x.jpg") no-repeat;
+      background-size: auto 440px, auto;
+      background-position: 60% -30%, 0 0;
     }
   }
 
