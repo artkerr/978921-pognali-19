@@ -2,6 +2,10 @@
   max-width: 85%;
   margin: 0 auto;
   margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 30px;
+  }
 }
 
 .point__image {
@@ -12,11 +16,12 @@
 }
 
 .point__content {
+  min-height: 90px;
   position: relative;
   background-color: @white;
   border-radius: 10px;
   padding: 0 9%;
-  margin-top: -15px;
+  margin-top: -20px;
   z-index: 1;
 }
 
@@ -24,8 +29,8 @@
   width: 35px;
   height: 24px;
   position: absolute;
-  top: -10px;
-  left: 35px;
+  top: -15px;
+  left: 25px;
 }
 
 .point__title {
@@ -34,7 +39,7 @@
   color: @dark-two;
   line-height: 1;
   margin: 0;
-  padding-top: 20px;
+  padding-top: 25px;
 }
 
 .point__text {
@@ -45,12 +50,15 @@
 }
 
 .point__counter {
-  position: relative;
+  position: absolute;
   font-weight: 500;
   line-height: 1.88;
   color: @point-text;
   padding-left: 15px;
   margin: 0;
+  top: 22px;
+  right: 27px;
+
 
   &::before {
     position: absolute;
@@ -130,5 +138,4 @@
     border-radius: 20px;
     margin-left: 100px;
   }
-
 }

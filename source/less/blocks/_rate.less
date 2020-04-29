@@ -1,6 +1,6 @@
 .rate {
   background-color: @pale-gray;
-  padding-top: 20px;
+  padding-top: 38px;
   position: relative;
   margin-top: -25px;
   z-index: 3;
@@ -9,8 +9,8 @@
 
   &::after {
     position: absolute;
-    top: 40px;
-    right: 20px;
+    top: 65px;
+    right: 25px;
     content: "";
     width: 99px;
     height: 99px;
@@ -25,15 +25,16 @@
 }
 
 .rate__wrapper {
-  padding-bottom: 40px;
+  padding-bottom: 35px;
   margin-left: 15%;
 }
 
 .rate__title {
   .title ();
-  max-width: 50%;
+  max-width: 45%;
   padding-top: 20px;
   margin-left: 15%;
+  margin-bottom: 45px;
 }
 
 .rate__list {
@@ -55,8 +56,8 @@
   &::before {
     content: "1";
     position: absolute;
-    top: 15px;
-    right: -50px;
+    top: 0;
+    right: -56px;
     text-align: center;
     padding-top: 12px;
     font-size: 16px;
@@ -70,11 +71,13 @@
   &:nth-child(2)::before {
     content: "2";
     background-color: @mango-two;
+    top: 3px;
   }
 
   &:nth-child(3)::before {
     content: "3";
     background-color: @light-gold;
+    top: 4px;
   }
 }
 
