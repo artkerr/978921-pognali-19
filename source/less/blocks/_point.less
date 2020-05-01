@@ -75,18 +75,30 @@
 @media (min-width: @tablet-width) {
   .point {
     position: relative;
-    min-width: 85%;
+    max-width: 80%;
     min-height: 140px;
     display: flex;
     flex-direction: row-reverse;
+    margin-bottom: 1px;
+
+    &:first-child::after {
+      content: "";
+      width: 141px;
+      height: 141px;
+      border-radius: 20px;
+      background-color: @pale-grey-four;
+      position: absolute;
+      top: -40px;
+      left: -39px;
+    }
   }
 
   .point__image {
     max-height: 140px;
     width: auto;
     border-radius: 0;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     z-index: 2;
   }
 
@@ -95,18 +107,24 @@
     flex-grow: 1;
     border-radius: 0;
     margin: 0;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     position: relative;
+    padding-left: 30px;
   }
 
   .point__title {
     font-size: 24px;
+    padding-top: 30px;
   }
 
   .point__text {
     font-size: 20px;
+    font-weight: 500;
     padding: 0;
+    line-height: 0.88;
+    padding-top: 5px;
+    margin-left: -2px;
   }
 
   .point__counter {
@@ -127,8 +145,17 @@
     position: absolute;
     width: 70px;
     height: 47px;
-    top: 35px;
-    left: 92%;
+    top: 15px;
+    left: 92.5%;
+  }
+
+  .point__counter {
+    top: 5px;
+    left: 1px;
+
+    &::before {
+      left: -1px;
+    }
   }
 }
 

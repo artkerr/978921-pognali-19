@@ -98,7 +98,7 @@
   }
 }
 
-.traveler-overview__tag_list {
+.traveler-overview__tag-list {
   max-width: 200px;
   list-style: none;
   line-height: 1.13;
@@ -144,8 +144,12 @@
 
 @media (min-width: @tablet-width) {
   .traveler-overview {
-    max-width: 45%;
+    max-width: 285px;
     margin: 0;
+
+    &:first-child {
+      margin-right: 8px;
+    }
   }
 
   .traveler-overview__photo {
@@ -158,11 +162,32 @@
     border-bottom-right-radius: 20px;
   }
 
+  .traveler-overview__flag-item {
+    margin-top: -15px;
+  }
+
   .traveler-overview__title {
     font-size: 24px;
+    padding-top: 7px;
+    margin-left: -2px;
+    margin-bottom: 10px;
+  }
+
+  .traveler-overview__tag-list {
+    max-width: 230px;
+    margin-bottom: 15px;
   }
 
   .traveler-overview__tag-item {
     font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .traveler-overview__transport-list {
+    padding-bottom: 20px;
+  }
+
+  .traveler-overview__transport_item {
+    margin-right:15px;
   }
 }

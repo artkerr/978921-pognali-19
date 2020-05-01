@@ -36,21 +36,23 @@
 
 @media (min-width: @tablet-width) {
   .about-servise {
-    background: @dark-blue url("../img/about-tablet@1x.png") no-repeat 110% 70%;
+    background: @dark-blue url("../img/about-tablet@1x.png") no-repeat 91% 165px;
     background-size: auto 500px;
     padding: 10%;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    padding-bottom: 90px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background: @dark-blue url("../img/about-tablet@2x.png") no-repeat 110% 70%;
+      background: @dark-blue url("../img/about-tablet@2x.png") no-repeat 91.5% 164px;
       background-size: auto 500px;
     }
   }
 
-
   .about-servise__title {
     font-size: 45px;
+    margin-top: 60px;
+    margin-bottom: 39px;
 
     &::after {
       position: absolute;
@@ -62,38 +64,24 @@
       height: 213px;
       border-radius: 20px;
       background-color: @dark-blue-grey-four;
-      z-index: -1;
+      z-index: -10;
     }
   }
 
   .about-servise__text {
     font-size: 28px;
-    max-width: 50%;
+    line-height: 1.18;
+    max-width: 52%;
+    margin-left: -2px;
+    margin-bottom: 35px;
   }
 
   .about-servise__text-bold {
-    font-size: 28px;
+    font-size: 21px;
+    line-height: 1.19;
     max-width: 50%;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .about-servise {
-    background: @dark-blue url("../img/about-desktop@1x.png") no-repeat right 70%;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background: @dark-blue url("../img/about-desktop@2x.png") no-repeat right 70%;
-      background-size: 30%;
-    }
-  }
-
-  .about-servise__title {
-    &::after {
-      width: 213px;
-      height: 213px;
-      left: 200px;
-      top: 100px;
-    }
+    margin-left: -2px;
+    margin-bottom: 35px;
   }
 
   .about-servise__btn {
@@ -103,16 +91,16 @@
     background-color: @light-gold;
     font-size: 24px;
     font-weight: bold;
-    line-height: 3;
+    line-height: 3.3;
     color: @dark-slate-blue;
     text-align: left;
     border-radius: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
 
     &::after {
       content: "";
       position: absolute;
-      right: 10px;
+      right: 29px;
       top: 50%;
       transform: translateY(-50%);
       border-width: 7px 10px;
@@ -132,6 +120,26 @@
     &:active::after {
       color: @dark-slate-blue-30;
       border-color: transparent transparent transparent @dark-slate-blue-30;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-servise {
+    background: @dark-blue url("../img/about-desktop@1x.png") no-repeat right 70%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: @dark-blue url("../img/about-desktop@2x.png") no-repeat right 70%;
+      background-size: 30%;
+    }
+  }
+
+  .about-servise__title {
+    &::after {
+      width: 213px;
+      height: 213px;
+      left: 200px;
+      top: 100px;
     }
   }
 }
