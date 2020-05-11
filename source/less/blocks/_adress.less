@@ -9,6 +9,11 @@
   z-index: 1;
 }
 
+.adress__wrapper {
+  max-width: @mobile-width;
+  margin: 0 auto;
+}
+
 .adress__text {
   position: relative;
   max-width: 50%;
@@ -77,8 +82,6 @@
 
 @media (min-width: @tablet-width) {
   .adress {
-    display: flex;
-    flex-direction: column;
     font-size: 28px;
     min-width: 56%;
     border-bottom-left-radius: 60px;
@@ -88,9 +91,16 @@
     padding-bottom: 85px;
   }
 
+  .adress__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: @tablet-width;
+    margin: 0 auto;
+  }
+
   .adress__text {
     max-width: 100%;
-    margin-bottom: 56px;
+    margin-bottom: 57px;
     margin-left: 155px;
     padding-left: 13px;
 
@@ -105,6 +115,7 @@
   }
 
   .adress__btn {
+    display:inline-block;
     width: 618px;
     font-size: 24px;
     font-weight: bold;
@@ -121,17 +132,38 @@
 
 @media (min-width: @desktop-width) {
   .adress {
+    padding-bottom: 10px;
+  }
+
+  .adress__wrapper {
+    max-width: @desktop-width;
     flex-direction: row;
-    align-items: baselinel;
-    padding: 40px 0 20px 0;
+    margin-left: 208px;
+  }
+
+  .adress__text {
+    line-height: 2.4;
+    padding-left: 40px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      top: -12px;
+      background-size: 28px 43px;
+    }
   }
 
   .adress__btn {
-    max-width: 324px;
+    align-self: flex-start;
+    display: inline-block;
+    width: 324px;
     height: 81px;
     border-radius: 20px;
     font-size: 24px;
     font-weight: bold;
-    line-height: 2;
+    line-height: 3;
+    padding: 2px 0 0 32px;
+    margin-top: 10px;
+    margin-left: 150px;
   }
 }

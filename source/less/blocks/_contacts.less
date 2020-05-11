@@ -9,6 +9,11 @@
   min-width: @mobile-width;
 }
 
+.contacts__wrapper {
+  max-width: @mobile-width;
+  margin: 0 auto;
+}
+
 .contacts__title {
   .title();
   text-align: center;
@@ -44,8 +49,7 @@
 }
 
 .contacts__input {
-  min-width: 84%;
-  max-width: 536px;
+  width: 270px;
   height: 62px;
   border-radius: 10px;
   background: @white;
@@ -128,12 +132,20 @@
   }
 }
 
+.contacts__btn-text {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .contacts {
     margin-top: -55px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     padding-bottom: 60px;
+  }
+
+  .contacts__wrapper {
+    max-width: @tablet-width;
   }
 
   .contacts__title {
@@ -160,7 +172,7 @@
   }
 
   .contacts__input {
-    min-width: 600px;
+    width: 600px;
     height: 81px;
     border-radius: 20px;
 
@@ -205,5 +217,82 @@
     height: 27px;
     width: auto;
     left: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    padding-bottom: 115px;
+  }
+
+  .contacts__wrapper {
+    max-width: @desktop-width;
+  }
+
+  .contacts__title {
+    margin-bottom: 55px;
+    margin-top: 125px;
+  }
+
+  .contacts__text {
+
+    &:last-of-type {
+      font-size: 29.5px;
+      line-height: 1.37;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+
+  .contacts__form {
+    margin-top: 60px;
+    margin-bottom: 65px;
+  }
+
+  .contacts__input {
+    width: 910px;
+  }
+
+  .contacts__btn {
+    width: 324px;
+
+    &::after {
+      transform: translate(115px, -50%)
+    }
+  }
+
+  .contacts__btn-text {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: @dark-slate-blue;
+    transform: translateX(-60px);
+  }
+
+  .contacts__link-wrapper {
+    flex-direction: row;
+    width: 1000px;
+    margin-left: 285px;
+    margin-top: 50px;
+  }
+
+  .contacts__phone,
+  .contacts__email {
+    padding-left: 120px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .contacts__phone {
+    margin-right: 110px;
+  }
+
+  .contacts__icon {
+    width: 36px;
+    height: auto;
+    left: 27px;
   }
 }

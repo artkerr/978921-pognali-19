@@ -179,22 +179,26 @@
 }
 
 @media (min-width: @desktop-width) {
+  .step-by-step {
+    position: absolute;
+    top: 470px;
+  }
+
   .step-by-step__list {
     margin: 0 auto;
     max-width: 92%;
-    transform: translateY(-35px);
   }
 
   .step-by-step__item {
     width: 25%;
     border-radius: 0;
-    padding: 30px 120px 30px 30px;
+    padding: 30px 120px 27px 30px;
 
     &:nth-child(1) {
-      margin-right: -15px;
       border-radius: 0;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
+      margin-right: -15px;
     }
 
     &:nth-child(1)::after {
@@ -226,7 +230,7 @@
     }
 
     &:nth-child(3) {
-      margin-right: -15px;
+      margin-right: -25px;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
       flex-grow: 1;
@@ -244,6 +248,8 @@
 
     &:nth-child(4) {
       border-radius: 20px;
+      margin-right: -15px;
+      min-width: 325px;
     }
 
     &:nth-child(4)::after {
@@ -255,5 +261,9 @@
       top: -20%;
       left: 85%;
     }
+  }
+
+  .step-by-step__link {
+    margin-left: 5px;
   }
 }

@@ -1,10 +1,10 @@
 .page-header {
+  max-width: @mobile-width;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   background-color: @dark-two;
-  min-width: @mobile-width;
   padding: 0 25px;
   padding-top: 25px;
   box-sizing: border-box;
@@ -18,7 +18,8 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    min-width: @tablet-width;
+    max-width: @tablet-width;
+    margin: 0 auto;
     padding: 11px 40px;
     background-color: @dark-blue-grey;
   }
@@ -34,6 +35,9 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
+    margin: 0;
+    margin: 0 auto;
+    max-width: @desktop-width;
     padding: 0 60px;
     padding-top: 20px;
     background-color: @dark-two;

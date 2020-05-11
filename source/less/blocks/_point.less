@@ -3,8 +3,23 @@
   margin: 0 auto;
   margin-bottom: 10px;
 
-  &:last-of-type {
+  &:last-child {
     margin-bottom: 30px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      z-index: 1;
+      height: 81px;
+      width: 100%;
+      background-image: linear-gradient(to top, @pale-gray, transparent);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
   }
 }
 
@@ -163,6 +178,22 @@
   .point {
     min-width: 559px;
     border-radius: 20px;
-    margin-left: 100px;
+  }
+
+  .point__icon {
+    top: 20px;
+    left: 340px;
+  }
+
+  .point__title {
+    padding-top: 24px;
+  }
+
+  .point__text {
+    margin: 0;
+  }
+
+  .point__counter {
+    margin-left: 3px;
   }
 }

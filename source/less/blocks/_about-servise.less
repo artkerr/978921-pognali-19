@@ -1,12 +1,18 @@
 .about-servise {
-  background: @dark-blue url("../img/about-mobile@1x.png") no-repeat center;
-  background-size: contain;
-  margin-top: -1px;
-  padding: 14% 15%;
+  background-color: @dark-blue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   position: relative;
   z-index: 6;
+  padding-bottom: 10px;
+}
+
+.about-servise__wrapper {
+  max-width: @mobile-width;
+  margin: 0 auto;
+  padding: 40px  50px;
+  background: url("../img/about-mobile@1x.png") no-repeat center;
+  background-size: contain;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background: @dark-blue url("../img/about-mobile@2x.png") no-repeat center;
@@ -36,15 +42,19 @@
 
 @media (min-width: @tablet-width) {
   .about-servise {
-    background: @dark-blue url("../img/about-tablet@1x.png") no-repeat 91% 165px;
-    background-size: auto 500px;
-    padding: 10%;
-    padding-bottom: 90px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    padding-bottom: 50px;
+  }
+  .about-servise__wrapper {
+    max-width: @tablet-width;
+    background: url("../img/about-tablet@1x.png") no-repeat 91% 165px;
+    background-size: auto 500px;
+    padding-top: 80px;
+    padding-left: 75px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background: @dark-blue url("../img/about-tablet@2x.png") no-repeat 91.5% 164px;
+      background: url("../img/about-tablet@2x.png") no-repeat 91.5% 164px;
       background-size: auto 500px;
     }
   }
@@ -71,15 +81,15 @@
   .about-servise__text {
     font-size: 28px;
     line-height: 1.18;
-    max-width: 52%;
+    max-width: 300px;
     margin-left: -2px;
-    margin-bottom: 35px;
+    margin-bottom: 33px;
   }
 
   .about-servise__text-bold {
     font-size: 21px;
     line-height: 1.19;
-    max-width: 50%;
+    max-width: 310px;
     margin-left: -2px;
     margin-bottom: 35px;
   }
@@ -125,21 +135,47 @@
 }
 
 @media (min-width: @desktop-width) {
-  .about-servise {
-    background: @dark-blue url("../img/about-desktop@1x.png") no-repeat right 70%;
+  .about-servise__wrapper {
+    max-width: @desktop-width;
+    padding-left: 133px;
+    background: @dark-blue url("../img/about-desktop@1x.png") no-repeat 92.5% 85px;
+    padding-bottom: 115px;
+    position: relative;
+    z-index: 10;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background: @dark-blue url("../img/about-desktop@2x.png") no-repeat right 70%;
-      background-size: 30%;
+      background: @dark-blue url("../img/about-desktop@2x.png") no-repeat 92.5% 91px;
+      background-size: 630px 655px;
     }
   }
 
   .about-servise__title {
+    margin-top: 55px;
+    margin-bottom: 55px;
+
     &::after {
       width: 213px;
       height: 213px;
       left: 200px;
       top: 100px;
+    }
+  }
+
+  .about-servise__text {
+    max-width: 611px;
+    margin-bottom: 40px;
+  }
+
+  .about-servise__text-bold {
+    max-width: 410px;
+    margin-bottom: 68px;
+  }
+
+  .about-servise__btn {
+    line-height: 3.35;
+
+    &::after {
+      right: 26px;
     }
   }
 }
