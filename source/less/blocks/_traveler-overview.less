@@ -88,6 +88,7 @@
   text-align: center;
   margin: 0;
   padding: 5px 0;
+  position: relative;
 
   &:hover {
     color: @dark-slate-blue-70;
@@ -95,6 +96,32 @@
 
   &:active {
     color: @dark-slate-blue-30;
+  }
+}
+
+.traveler-overview__offline {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 55px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: @salmon;
+  }
+}
+
+.traveler-overview__online {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 65px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: @green-apple;
   }
 }
 
@@ -171,6 +198,24 @@
     padding-top: 7px;
     margin-left: -2px;
     margin-bottom: 10px;
+  }
+
+  .traveler-overview__offline {
+    &::before {
+      top: 20px;
+      left: 47px;
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+  .traveler-overview__online {
+    &::before {
+      top: 20px;
+      left: 57px;
+      width: 7px;
+      height: 7px;
+    }
   }
 
   .traveler-overview__tag-list {
