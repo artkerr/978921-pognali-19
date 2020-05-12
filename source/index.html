@@ -9,70 +9,71 @@
 </head>
 <body>
   <header class="page-header">
-      <a class="page-header__logo">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp, img/logo-desktop-white@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp, img/logo-tablet-white@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 320px)" srcset="img/logo-mobile-white@1x.webp, img/logo-mobile-white@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
-          <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип Погнали">
-        </picture>
-      </a>
-      <nav class="page-header__nav main-nav">
-        <button class="main-nav__toggle" aria-label="Кнопка меню"></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__site-list site-list">
-            <li class="site-list__item">
-              <a href="#" class="site-list__link" data-hover="О сервисе">О сервисе</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html" class="site-list__link" data-hover="Направления">Направления</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html" class="site-list__link" data-hover="Попутчики">Попутчики</a>
-            </li>
-          </ul>
-        </div>
-        <ul class="main-nav__user-list user-list">
-          <li class="user-list__item">
-            <a class="user-list__link" href="tel:88005558628">
-              <svg class="user-list__icon" width="18" height="18">
-                <use xlink:href="img/sprite.svg#topmenu-phone"></use>
-              </svg>
-            </a>
+    <a class="page-header__logo">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp, img/logo-desktop-white@2x.webp 2x" type="image/webp">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp, img/logo-tablet-white@2x.webp 2x" type="image/webp">
+        <source media="(min-width: 320px)" srcset="img/logo-mobile-white@1x.webp, img/logo-mobile-white@2x.webp 2x" type="image/webp">
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
+        <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип Погнали">
+      </picture>
+    </a>
+    <nav class="page-header__nav main-nav">
+      <button class="main-nav__toggle" aria-label="Кнопка меню"></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__site-list site-list">
+          <li class="site-list__item">
+            <a href="#" class="site-list__link" data-hover="О сервисе">О сервисе</a>
           </li>
-          <li class="user-list__item">
-            <a class="user-list__link" href="mailto:mail@htmlacademy.ru">
-              <svg class="user-list__icon" width="18" height="14">
-                <use xlink:href="img/sprite.svg#topmenu-mail"></use>
-              </svg>
-            </a>
+          <li class="site-list__item">
+            <a href="form.html" class="site-list__link" data-hover="Направления">Направления</a>
           </li>
-          <li class="user-list__item">
-            <a class="user-list__link" href="sign-in.html">Авторизация</a>
+          <li class="site-list__item">
+            <a href="catalog.html" class="site-list__link" data-hover="Попутчики">Попутчики</a>
           </li>
         </ul>
-      </nav>
-
+      </div>
+      <ul class="main-nav__user-list user-list">
+        <li class="user-list__item">
+          <a class="user-list__link" href="tel:88005558628">
+            <svg class="user-list__icon" width="18" height="18">
+              <use xlink:href="img/sprite.svg#topmenu-phone"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="user-list__item">
+          <a class="user-list__link" href="mailto:mail@htmlacademy.ru">
+            <svg class="user-list__icon" width="18" height="14">
+              <use xlink:href="img/sprite.svg#topmenu-mail"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="user-list__item">
+          <a class="user-list__link" href="sign-in.html">Авторизация</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Сервис для поиска попутчиков для путешествий - Погнали</h1>
     <header class="introduction">
-      <h2 class="introduction__title">В путешествие с крутыми попутчиками!</h2>
-      <div class="introduction__review review">
-        <blockquote class="review__citation">
-          <p class="review__text">«Лучшее приложение, <br> что я видел в жизни!»</p>
-          <p class="review_author">Мурат Эльтазин <br> главный редактор газеты «гаджетлайф»</p>
-        </blockquote>
-      </div>
-      <div class="introduction__step step-by-step">
-        <ul class="step-by-step__list">
-          <li class="step-by-step__item"><a class="step-by-step__link" data-number="1" href="#">Выберите направление</a></li>
-          <li class="step-by-step__item"><a class="step-by-step__link" data-number="2" href="#">Изучите идеи путешественников</a></li>
-          <li class="step-by-step__item"><a class="step-by-step__link" data-number="3" href="#">Находите тех,<br> кто похож на вас</a></li>
-          <li class="step-by-step__item"><a class="step-by-step__link" data-number="4" href="#">Путешествуйте вместе!</a></li>
-        </ul>
+      <div class="introduction__wrapper">
+        <h2 class="introduction__title">В путешествие с крутыми попутчиками!</h2>
+        <div class="introduction__review review">
+          <blockquote class="review__citation">
+            <p class="review__text">«Лучшее приложение, <br> что я видел в жизни!»</p>
+            <p class="review_author">Мурат Эльтазин <br> главный редактор газеты «гаджетлайф»</p>
+          </blockquote>
+        </div>
+        <div class="introduction__step step-by-step">
+          <ul class="step-by-step__list">
+            <li class="step-by-step__item"><a class="step-by-step__link" data-number="1" href="#">Выберите направление</a></li>
+            <li class="step-by-step__item"><a class="step-by-step__link" data-number="2" href="#">Изучите идеи путешественников</a></li>
+            <li class="step-by-step__item"><a class="step-by-step__link" data-number="3" href="#">Находите тех,<br> кто похож на вас</a></li>
+            <li class="step-by-step__item"><a class="step-by-step__link" data-number="4" href="#">Путешествуйте вместе!</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <section class="about-servise">

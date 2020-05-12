@@ -1,17 +1,43 @@
 .page-main {
   margin-top: -1px;
+  background-color: @pale-gray;
+}
+
+.page-main__header {
+  background-color: @dark-two;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.page-main__header-wrapper {
+  max-width: @mobile-width;
+  margin: 0 auto;
 }
 
 .page-main__title {
   font-size: 36px;
   font-weight: bold;
   line-height: 1.11;
-  background-color: @dark-two;
   padding: 0;
   margin: 0;
-  padding-left: 10px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    width: 173px;
+    height: 5px;
+    border-radius: 2.4px;
+    background-color: @mango;
+  }
+}
+.page-main__return-link {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -20,18 +46,73 @@
     margin-top: -1px;
   }
 
+  .page-main__header {
+    padding: 0 60px;
+    background-color: @dark-two;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .page-main__header-wrapper {
+    max-width: @tablet-width;
+    display: flex;
+  }
+
   .page-main__title {
     font-size: 60px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    margin-right: auto;
+
+    &::after {
+      width: 287px;
+      height: 8px;
+      border-radius: 4px;
+    }
+  }
+
+  .page-main__return-link {
+    display: inline;
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: @white;
+    margin-top: 65px;
+    padding-right: 40px;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      right: -10px;
+      top: 1px;
+      content: "";
+      width: 32px;
+      height: 16px;
+      background: url("../img/return.svg") no-repeat;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .page-main__return-icon {
+    fill: @white;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main {
-    margin: 0 auto;
     margin-top: -1px;
   }
+
+  .page-main__header-wrapper {
+    max-width: @desktop-width;
+    padding: 0 60px;
+    }
 
   .page-main__content-wrapper {
     display: flex;
