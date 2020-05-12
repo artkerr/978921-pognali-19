@@ -156,7 +156,7 @@
             </div>
             </div>
           </li>
-          <!-- <li class="profile-catalog__item traveler">
+          <li class="profile-catalog__item traveler">
             <div class="traveler__header">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp, img/demin-desktop@2x.webp 2x" type="image/webp">
@@ -166,37 +166,42 @@
                 <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
                 <img class="traveler__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Димин" width="70" height="70">
               </picture>
-              <h3 class="traveler__name traveler__offline">Петя Демин</h3>
-              <div class="traveler__like-wrapper">
-                <button type="button" class="traveler__favorite">
-                  <svg class="traveler__favorite-icon" width="13" height="11">
-                    <use xlink:href="img/sprite.svg#heart"></use>
-                  </svg>
-                </button>
-                <span class="traveler__like">1500</span>
+              <div class="traveler__user-info">
+                <h3 class="traveler__name traveler__offline">Петя Демин</h3>
+                <ul class="traveler__tag-list">
+                  <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#бургер</a></li>
+                  <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#бар</a></li>
+                  <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#футбол</a></li>
+                  <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#концерт</a></li>
+                  <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#крафт</a></li>
+                </ul>
+                <div class="traveler__like-wrapper">
+                  <button type="button" class="btn traveler__btn">Позвать!</button>
+                  <button type="button" class="traveler__favorite">
+                    <svg class="traveler__favorite-icon" width="13" height="11">
+                      <use xlink:href="img/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <span class="traveler__like">1500</span>
+                </div>
               </div>
             </div>
-            <ul class="traveler__tag-list">
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#бургер</a></li>
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#бар</a></li>
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#футбол</a></li>
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#концерт</a></li>
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#крафт</a></li>
-            </ul>
-            <h4 class="traveler__sub-title">Хочет посетить:</h4>
-            <ul class="traveler__flag-list">
-              <li class="traveler__flag-item">
-                <img src="img/flag-belgium.svg" alt="Бельгия" width="26" height="18">
-                <p class="traveler__country-name">Бельгия</p>
-              </li>
-              <li class="traveler__flag-item">
-                <img src="img/flag-czech.svg" alt="Чехия" width="26" height="18">
-                <p class="traveler__country-name">Чехия</p>
-              </li>
-            </ul>
+            <div class="traveler__country-wrapper">
+              <h4 class="traveler__sub-title"><span class="traveler__sub-text">Хочет посетить:</span></h4>
+              <ul class="traveler__flag-list">
+                <li class="traveler__flag-item">
+                  <img src="img/flag-belgium.svg" alt="Бельгия" width="26" height="18">
+                  <p class="traveler__country-name">Бельгия</p>
+                </li>
+                <li class="traveler__flag-item">
+                  <img src="img/flag-czech.svg" alt="Чехия" width="26" height="18">
+                  <p class="traveler__country-name">Чехия</p>
+                </li>
+              </ul>
+            </div>
             <div class="traveler__footer">
               <div class="traveler__transport-wrapper">
-                <h4 class="traveler__sub-title">Транспорт:</h4>
+                <h4 class="traveler__sub-title"><span class="traveler__sub-text">Транспорт:</span></h4>
                 <ul class="traveler__transport-list">
                   <li class="traveler__transport-item traveler__transport-active tooltip tooltip__text" data-label="Авиаперелет" aria-label="Авиаперелет">
                     <svg class="traveler__transport-icon" width="14" height="16">
@@ -221,7 +226,7 @@
                 </ul>
               </div>
               <div class="traveler__level-wrapper">
-                <h4 class="traveler__sub-title">Левел:</h4>
+                <h4 class="traveler__sub-title"><span class="traveler__sub-text">Левел:</span></h4>
                 <div class="traveler__level traveler__progress-80 traveler__progress">
                   <span class="traveler__score">80</span>
                   <p class="traveler__score-text">level</p>
@@ -232,7 +237,6 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="btn traveler__btn">Позвать!</button>
           </li>
           <li class="profile-catalog__item traveler">
             <div class="traveler__header">
@@ -244,41 +248,46 @@
                 <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg, img/smolov-tablet@2x.jpg 2x">
                 <img class="traveler__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Марк Смолов" width="70" height="70">
               </picture>
-              <h3 class="traveler__name traveler__offline">Марк Смолов</h3>
-              <div class="traveler__like-wrapper">
-                <button type="button" class="traveler__favorite">
-                  <svg class="traveler__favorite-icon" width="13" height="11">
-                    <use xlink:href="img/sprite.svg#heart"></use>
-                  </svg>
-                </button>
-                <span class="traveler__like">1700</span>
+              <div class="traveler__user-info">
+                <h3 class="traveler__name traveler__offline">Марк Смолов</h3>
+                <ul class="traveler__tag-list">
+                  <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#рэп</a></li>
+                  <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#тату</a></li>
+                  <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#хайпбист</a></li>
+                  <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#кроссовки</a></li>
+                  <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#суприм</a></li>
+                </ul>
+                <div class="traveler__like-wrapper">
+                  <button type="button" class="btn traveler__btn">Позвать!</button>
+                  <button type="button" class="traveler__favorite">
+                    <svg class="traveler__favorite-icon" width="13" height="11">
+                      <use xlink:href="img/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <span class="traveler__like">1700</span>
+                </div>
               </div>
             </div>
-            <ul class="traveler__tag-list">
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#рэп</a></li>
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#тату</a></li>
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#хайпбист</a></li>
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#кроссовки</a></li>
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#суприм</a></li>
-            </ul>
-            <h4 class="traveler__sub-title">Хочет посетить:</h4>
-            <ul class="traveler__flag-list">
-              <li class="traveler__flag-item">
-                <img src="img/flag-usa.svg" alt="США" width="26" height="18">
-                <p class="traveler__country-name">США</p>
-              </li>
-              <li class="traveler__flag-item">
-                <img src="img/flag-australia.svg" alt="Австралия" width="26" height="18">
-                <p class="traveler__country-name">Австралия</p>
-              </li>
-              <li class="traveler__flag-item">
-                <img src="img/flag-dominica.svg" alt="Доминикана" width="26" height="18">
-                <p class="traveler__country-name">Доминикана</p>
-              </li>
-            </ul>
+            <div class="traveler__country-wrapper">
+              <h4 class="traveler__sub-title"><span class="traveler__sub-text"></span>Хочет посетить:</h4>
+              <ul class="traveler__flag-list">
+                <li class="traveler__flag-item">
+                  <img src="img/flag-usa.svg" alt="США" width="26" height="18">
+                  <p class="traveler__country-name">США</p>
+                </li>
+                <li class="traveler__flag-item">
+                  <img src="img/flag-australia.svg" alt="Австралия" width="26" height="18">
+                  <p class="traveler__country-name">Австралия</p>
+                </li>
+                <li class="traveler__flag-item">
+                  <img src="img/flag-dominica.svg" alt="Доминикана" width="26" height="18">
+                  <p class="traveler__country-name">Доминикана</p>
+                </li>
+              </ul>
+            </div>
             <div class="traveler__footer">
               <div class="traveler__transport-wrapper">
-                <h4 class="traveler__sub-title">Транспорт:</h4>
+                <h4 class="traveler__sub-title"><span class="traveler__sub-text">Транспорт:</span></h4>
                 <ul class="traveler__transport-list">
                   <li class="traveler__transport-item traveler__transport-active tooltip tooltip__text" data-label="Авиаперелет" aria-label="Авиаперелет">
                     <svg class="traveler__transport-icon" width="14" height="16">
@@ -303,7 +312,7 @@
                 </ul>
               </div>
               <div class="traveler__level-wrapper">
-                <h4 class="traveler__sub-title">Левел:</h4>
+                <h4 class="traveler__sub-title"><span class="traveler__sub-text">Левел:</span></h4>
                 <div class="traveler__level traveler__progress-25 traveler__progress">
                   <span class="traveler__score">25</span>
                   <p class="traveler__score-text">level</p>
@@ -314,7 +323,6 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="btn traveler__btn">Позвать!</button>
           </li>
           <li class="profile-catalog__item traveler">
             <div class="traveler__header">
@@ -326,36 +334,41 @@
                 <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg, img/rogovaya-tablet@2x.jpg 2x">
                 <img class="traveler__photo" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" alt="Лариса Роговая" width="70" height="70">
               </picture>
-              <h3 class="traveler__name traveler__online">Лариса Роговая</h3>
-              <div class="traveler__like-wrapper">
-                <button type="button" class="traveler__favorite">
-                  <svg class="traveler__favorite-icon" width="13" height="11">
-                    <use xlink:href="img/sprite.svg#heart"></use>
-                  </svg>
-                </button>
-                <span class="traveler__like">23</span>
+              <div class="traveler__user-info">
+                <h3 class="traveler__name traveler__online">Лариса Роговая</h3>
+               <ul class="traveler__tag-list">
+                <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#образование</a></li>
+                <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#краьера</a></li>
+                <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#учеба</a></li>
+                <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#линкедин</a></li>
+              </ul>
+                <div class="traveler__like-wrapper">
+                  <button type="button" class="btn traveler__btn">Позвать!</button>
+                  <button type="button" class="traveler__favorite">
+                    <svg class="traveler__favorite-icon" width="13" height="11">
+                      <use xlink:href="img/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <span class="traveler__like">23</span>
+                </div>
               </div>
             </div>
-            <ul class="traveler__tag-list">
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#образование</a></li>
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#краьера</a></li>
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#учеба</a></li>
-              <li class="traveler__tag-item"><a class="traveler__tag-link" href="#">#линкедин</a></li>
-            </ul>
-            <h4 class="traveler__sub-title">Хочет посетить:</h4>
-            <ul class="traveler__flag-list">
-              <li class="traveler__flag-item">
-                <img src="img/flag-united-kingdom.svg" alt="Великобритания" width="26" height="18">
-                <p class="traveler__country-name">Великобритания</p>
-              </li>
-              <li class="traveler__flag-item">
-                <img src="img/flag-germany.svg" alt="Германия" width="26" height="18">
-                <p class="traveler__country-name">Германия</p>
-              </li>
-            </ul>
+            <div class="traveler__country-wrapper">
+              <h4 class="traveler__sub-title"><span class="traveler__sub-text">Хочет посетить:</span></h4>
+              <ul class="traveler__flag-list">
+                <li class="traveler__flag-item">
+                  <img src="img/flag-united-kingdom.svg" alt="Великобритания" width="26" height="18">
+                  <p class="traveler__country-name">Великобритания</p>
+                </li>
+                <li class="traveler__flag-item">
+                  <img src="img/flag-germany.svg" alt="Германия" width="26" height="18">
+                  <p class="traveler__country-name">Германия</p>
+                </li>
+              </ul>
+            </div>
             <div class="traveler__footer">
                 <div class="traveler__transport-wrapper">
-                <h4 class="traveler__sub-title">Транспорт:</h4>
+                <h4 class="traveler__sub-title"><span class="traveler__sub-text">Транспорт:</span></h4>
                 <ul class="traveler__transport-list">
                   <li class="traveler__transport-item traveler__transport-active tooltip tooltip__text" data-label="Авиаперелет" aria-label="Авиаперелет">
                     <svg class="traveler__transport-icon" width="14" height="16">
@@ -380,7 +393,7 @@
                 </ul>
             </div>
             <div class="traveler__level-wrapper">
-              <h4 class="traveler__sub-title">Левел:</h4>
+              <h4 class="traveler__sub-title"><span class="traveler__sub-text">Левел:</span></h4>
               <div class="traveler__level traveler__progress-50 traveler__progress">
                 <span class="traveler__score">50</span>
                 <p class="traveler__score-text">level</p>
@@ -391,8 +404,7 @@
               </div>
             </div>
             </div>
-            <button type="button" class="btn traveler__btn">Позвать!</button>
-          </li> -->
+          </li>
         </ul>
         <div class="profile-catalog__more load-profile">
           <button type="button" class="btn load-profile__btn">
