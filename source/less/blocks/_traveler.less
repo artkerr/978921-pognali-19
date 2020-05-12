@@ -5,8 +5,10 @@
   background-color: @white;
   border-radius: 20px;
   margin: 0 auto;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-bottom: 21px;
+  margin-bottom: 12px;
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -20,7 +22,7 @@
 
 .traveler__header {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .traveler__name {
@@ -67,8 +69,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 2px;
-    right: -70px;
+    top: 8px;
+    right: -68px;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -78,13 +80,13 @@
 
 .traveler__photo {
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 .traveler__like-wrapper {
   display: flex;
-  margin-left: -115px;
-  margin-top: 40px;
+  align-items: center;
+  transform: translate(-112px, 18px);
 }
 
 .traveler__favorite {
@@ -128,8 +130,10 @@
 .traveler__tag-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 60%;
+  max-width: 180px;
   padding: 0;
+  margin-left: 5px;
+
 }
 
 .traveler__tag-item {
@@ -146,17 +150,24 @@
   text-align: center;
 }
 
-.traveler__text {
+.traveler__sub-title {
   font-size: 15px;
   color: @greyish;
   line-height: 1.2;
   text-transform: lowercase;
   position: relative;
+  font-weight: normal;
+  margin-top: 13px;
+  margin-bottom: 10px;
+  margin-left: 5px;
 }
 
 .traveler__flag-list {
   list-style: none;
   padding: 0;
+  margin-left: 5px;
+  margin-bottom: -1px;
+  margin-top: 5px;
 }
 
 .traveler__flag-item {
@@ -166,37 +177,44 @@
   text-transform: uppercase;
   display: flex;
   align-items: flex-start;
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .traveler__country-name {
   margin: 0;
   line-height: 1.5;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .traveler__footer {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .traveler__transport-wrapper {
   margin-right: auto;
 }
 
-.traveler__transport_list {
+.traveler__transport-list {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  margin-top: 12px;
+  margin-left: 5px;
 }
 
-.traveler__transport_item {
+.traveler__transport-item {
   display: flex;
   align-items: center;
   justify-content: center;
   background: @pale-gray;
   border-radius: 50%;
   width: 33px;
-  height: 32px;
+  height: 33px;
   border: none;
   fill: @point-text;
   cursor: pointer;
@@ -206,18 +224,23 @@
   fill: @dark-slate-blue;
 }
 
-.traveler__level-wrapper .traveler__text {
+.traveler__level-wrapper {
+  margin-right: 20px;
+}
+
+.traveler__level-wrapper .traveler__sub-title {
   margin-bottom: 0;
 }
 
 .traveler__level {
-  height: 60px;
-  width: 60px;
+  height: 45px;
+  width: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-top: 5px;
 }
 
 .traveler__score {
@@ -225,6 +248,7 @@
   font-size: 24px;
   font-weight: bold;
   line-height: 1;
+  margin-top: 4px;
 }
 
 .traveler__score-text {
@@ -244,9 +268,62 @@
   }
 }
 
+.traveler__progress-circle {
+  height: 45px;
+  width: 45px;
+  clip: rect(auto, auto, auto, auto);
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.traveler__progress-half-circle {
+  width: 45px;
+  height: 45px;
+  border: 2px solid @mango;
+  border-radius: 50%;
+  clip: rect(0, 30px, 60px, 0);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.traveler__progress-99 .traveler__progress-left-side {
+  transform: rotate(180deg);
+}
+
+.traveler__progress-99 .traveler__progress-right-side {
+  transform: rotate(350deg);
+}
+
+.traveler__progress-80 .traveler__progress-left-side {
+  transform: rotate(180deg);
+}
+
+.traveler__progress-80 .traveler__progress-right-side {
+  transform: rotate(300deg);
+}
+
+.traveler__progress-25 .traveler__progress-left-side {
+  display: none;
+}
+
+.traveler__progress-25 .traveler__progress-right-side {
+  transform: rotate(80deg);
+}
+
+.traveler__progress-50 .traveler__progress-left-side {
+  display: none;
+}
+
+.traveler__progress-50 .traveler__progress-right-side {
+  transform: rotate(180deg);
+}
+
+
 .traveler__btn {
   width: 230px;
-  line-height: 2.5;
+  line-height: 2.2;
   border-radius: 20px;
   background-color: @light-gold;
   text-transform: uppercase;
@@ -269,19 +346,19 @@
 @media (min-width: @tablet-width) {
   .traveler {
     max-width: 688px;
-    padding: 30px;
-    padding-bottom: 50px;
+    display: block;
+    padding-top: 35px;
+    padding-left: 35px;
   }
-
   .traveler__name {
-    min-width: 40%;
+    max-width: 220px;
     font-size: 30px;
   }
 
   .traveler__offline,
   .traveler__online {
     &::before {
-      right: 30px;
+      right: -30px;
       top: 10px;
       width: 7px;
       height: 7px;
@@ -291,12 +368,11 @@
   .traveler__photo {
     border-radius: 20px;
     min-width: 190px;
-    margin-right: 30px;
+
   }
 
   .traveler__like-wrapper {
-    margin-top: 140px;
-    margin-left: -100px;
+
   }
 
   .traveler__favorite {
@@ -316,10 +392,7 @@
   }
 
   .traveler__tag-list {
-    max-width: 225px;
-    margin-left: 225px;
-    margin-top: -150px;
-    margin-bottom: 100px;
+    max-width: 230px;
   }
 
   .traveler__tag-link {
@@ -327,19 +400,19 @@
     line-height: 1.2;
   }
 
-  .traveler__text {
+  .traveler__sub-title {
     font-size: 15px;
   }
 
   .traveler__flag-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
   }
 
   .traveler__flag-item {
     font-size: 20px;
     font-weight: 500;
-    margin-right: 10px;
+    margin-right: 30px;
 
     img {
       width: 35px;
@@ -347,54 +420,73 @@
     }
   }
 
+
   .traveler__score-text {
+    display: inline-block;
     color: @point-text;
     font-size: 14px;
   }
 
-  .traveler__transport_list {
+  .traveler__transport-list {
     flex-direction: column;
   }
 
-  .traveler__transport_item {
+  .traveler__transport-item {
     background: transparent;
   }
 
   .traveler__footer {
     flex-direction: column;
-    align-items: center;
-    max-width: 60px;
-    align-self: flex-end;
-    margin-top: -290px;
   }
+
+  .traveler__transport-icon {
+    width: 21px;
+    height: auto;
+    }
 
   .traveler__transport-wrapper {
     margin: 0;
 
-    .traveler__text {
+    .traveler__sub-title {
       display: none;
     }
   }
 
-  .traveler__level-wrapper .traveler__text {
+  .traveler__level {
+    padding-left: 14px;
+    padding-top: 10px;
+  }
+
+  .traveler__level-wrapper .traveler__sub-title {
     display: none;
   }
+
+  .traveler__progress-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .traveler__progress-half-circle {
+    width: 60px;
+    height: 60px;
+    border: 3px solid @mango;
+    }
 
   .traveler__btn {
     width: 148px;
     border-radius: 25px;
-    margin-left: 220px;
-    transform: translateY(-60px);
+    line-height: 2.5;
+    font-size: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .traveler {
-    min-width: 66%;
+    display: flex;
+    flex-direction: row;
     padding: 0;
     margin: 0;
-    margin-bottom: 20px;
-    flex-direction: row;
+
   }
 
   .traveler__header {
@@ -405,53 +497,46 @@
     border-radius: 0;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
-    width: 285px;
-    height: 285px;
+
     margin: 0;
   }
 
   .traveler__name {
-    margin-top: 30px;
-    margin-left: 30px;
-    min-width: 50%;
+
   }
 
   .traveler__tag-list {
     margin: 0;
-    max-width: 330px;
-    align-self: center;
-    transform: translate(-240px, -30px);
+
   }
 
   .traveler__like-wrapper {
     margin: 0;
   }
 
-  .traveler__text {
+  .traveler__sub-title {
     display: none;
     margin: 0;
   }
 
   .traveler__flag-list {
-    flex-direction: column;
-    min-width: 200px;
+
     margin: 0;
-    transform: translate(-100px, -50px);
-    align-self: center;
+
   }
 
   .traveler__footer {
-    flex-direction: row;
+
     margin: 0;
-    min-width: 200px;
+
   }
 
   .traveler__transport-wrapper {
-    flex-direction: row;
+
   }
 
-  .traveler__transport_list {
-    flex-direction: row;
+  .traveler__transport-list {
+
     margin: 0;
   }
 
@@ -461,6 +546,6 @@
 
   .traveler__btn {
     margin: 0;
-    align-self: flex-end;
+
   }
 }
