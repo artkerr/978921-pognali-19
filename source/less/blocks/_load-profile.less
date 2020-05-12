@@ -33,31 +33,15 @@
   text-transform: uppercase;
   font-size: 17px;
   font-weight: bold;
-  position: relative;
   padding-left: 30px;
   margin-bottom: 30px;
   margin-top: 30px;
+}
 
-
-  &::before {
-    position: absolute;
-    content: "";
-    left: 10.5px;
-    top: 0;
-    width: 2px;
-    height: 17px;
-    background-color: @dark-two;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    left: 3px;
-    top: 7.5px;
-    width: 17px;
-    height: 2px;
-    background-color: @dark-two;
-  }
+.load-profile__btn-icon {
+  fill: @dark-slate-blue;
+  width: 18px;
+  height: 18px;
 }
 
 @media (min-width: @tablet-width) {

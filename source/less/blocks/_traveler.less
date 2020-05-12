@@ -7,7 +7,7 @@
   margin: 0 auto;
   padding-top: 15px;
   padding-left: 20px;
-  padding-bottom: 21px;
+  padding-bottom: 60px;
   margin-bottom: 12px;
   overflow: hidden;
   position: relative;
@@ -22,11 +22,15 @@
 
 .traveler__header {
   display: flex;
-  margin-bottom: 8px;
+}
+
+.traveler__user-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .traveler__name {
-  max-width: 30%;
+  max-width: 70px;
   font-size: 20px;
   font-weight: bold;
   color: @dark-blue;
@@ -57,7 +61,7 @@
     content: "";
     position: absolute;
     top: 2px;
-    right: -70px;
+    right: -74px;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -70,7 +74,7 @@
     content: "";
     position: absolute;
     top: 8px;
-    right: -68px;
+    right: -74px;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -86,7 +90,7 @@
 .traveler__like-wrapper {
   display: flex;
   align-items: center;
-  transform: translate(-112px, 18px);
+  margin-left: -38px;
 }
 
 .traveler__favorite {
@@ -95,6 +99,7 @@
   justify-content: center;
   border-radius: 50%;
   background-color: @pale-grey;
+  padding-top: 10px;
   width: 31px;
   height: 31px;
   border: none;
@@ -131,8 +136,9 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 180px;
+  order: 2;
   padding: 0;
-  margin-left: 5px;
+  margin: 14px 0 0 -80px;
 }
 
 .traveler__tag-item {
@@ -158,15 +164,33 @@
   font-weight: normal;
   margin-top: 13px;
   margin-bottom: 10px;
-  margin-left: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 8px;
+    z-index: -1;
+    width: 270px;
+    height: 1px;
+    background-color: #edeff6;
+  }
+}
+
+.traveler__sub-text {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  padding: 0 6px;
+  background-color: @white;
 }
 
 .traveler__flag-list {
   list-style: none;
   padding: 0;
   margin-left: 5px;
+  margin-top: 15px;
   margin-bottom: -1px;
-  margin-top: 5px;
 }
 
 .traveler__flag-item {
@@ -224,7 +248,7 @@
 }
 
 .traveler__level-wrapper {
-  margin-right: 20px;
+  margin-right: 16px;
 }
 
 .traveler__level-wrapper .traveler__sub-title {
@@ -319,7 +343,6 @@
   transform: rotate(180deg);
 }
 
-
 .traveler__btn {
   width: 230px;
   line-height: 2.2;
@@ -331,6 +354,9 @@
   color: @dark-two;
   vertical-align: center;
   cursor: pointer;
+  position: absolute;
+  top: 355px;
+  left: 20px;
 
   &:hover {
     background-color: @mango-two;
@@ -344,22 +370,24 @@
 
 @media (min-width: @tablet-width) {
   .traveler {
+    flex-direction: row;
+    flex-wrap: wrap;
     max-width: 688px;
-    display: block;
-    padding-top: 35px;
-    padding-left: 35px;
+    padding: 35px;
+    padding-right: 25px;
   }
 
   .traveler__name {
     max-width: 220px;
     font-size: 30px;
+    margin-bottom: 16px;
   }
 
   .traveler__offline,
   .traveler__online {
     &::before {
-      right: -30px;
-      top: 10px;
+      right: 3px;
+      top: 9px;
       width: 7px;
       height: 7px;
     }
@@ -368,11 +396,18 @@
   .traveler__photo {
     border-radius: 20px;
     min-width: 190px;
+    margin-right: 33px;
+  }
+
+  .traveler__like-wrapper {
+    margin: 0;
+    margin-left: 145px;
   }
 
   .traveler__favorite {
     width: 50px;
     height: 50px;
+    padding-top: 18px;
   }
 
   .traveler__like {
@@ -388,6 +423,10 @@
 
   .traveler__tag-list {
     max-width: 230px;
+    margin: 0;
+    order: 0;
+    margin-left: 3px;
+    margin-bottom: 45px;
   }
 
   .traveler__tag-link {
@@ -397,6 +436,20 @@
 
   .traveler__sub-title {
     font-size: 15px;
+    margin-left: 42px;
+
+    &::before {
+      width: 700px;
+      margin-left: -50px;
+    }
+  }
+
+  .traveler__country-wrapper {
+    margin-right: auto;
+  }
+
+  .traveler__country-name {
+    margin-left: 8px;
   }
 
   .traveler__flag-list {
@@ -407,12 +460,17 @@
   .traveler__flag-item {
     font-size: 20px;
     font-weight: 500;
-    margin-right: 30px;
+    margin-right: 26px;
 
     img {
       width: 35px;
       height: 24px;
     }
+  }
+
+  .traveler__footer {
+    margin-top: -215px;
+    flex-direction: column;
   }
 
   .traveler__score-text {
@@ -423,18 +481,15 @@
 
   .traveler__transport-list {
     flex-direction: column;
+    margin-left: 14px;
   }
 
   .traveler__transport-item {
     background: transparent;
   }
 
-  .traveler__footer {
-    flex-direction: column;
-  }
-
   .traveler__transport-icon {
-    width: 21px;
+    width: 20px;
     height: auto;
   }
 
@@ -471,11 +526,15 @@
     border-radius: 25px;
     line-height: 2.5;
     font-size: 20px;
+    position: static;
+    margin-left: -150px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .traveler {
+    max-width: 950px;
+    max-height: 285px;
     display: flex;
     flex-direction: row;
     padding: 0;
@@ -486,15 +545,36 @@
     margin: 0;
   }
 
+  .traveler__user-info {
+    margin-top: 48px;
+  }
+
   .traveler__photo {
+    min-width: 285px;
     border-radius: 0;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     margin: 0;
+    margin-right: 60px;
+  }
+
+  .traveler__name {
+    margin-bottom: 20px;
+  }
+
+  .traveler__offline,
+  .traveler__online {
+    &::before {
+      left: -18px;
+      top: 9px;
+      width: 7px;
+      height: 7px;
+    }
   }
 
   .traveler__tag-list {
     margin: 0;
+    margin-bottom: 48px;
   }
 
   .traveler__like-wrapper {
@@ -506,16 +586,39 @@
     margin: 0;
   }
 
+  .traveler__country-wrapper {
+    margin-top: 48px;
+    margin-left: 100px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -50px;
+      width: 1px;
+      height: 187px;
+      background-color: @point-text;
+      background-image: linear-gradient(to bottom, white, black 25%, black 75%, white);
+      opacity: 0.1;
+    }
+  }
+
   .traveler__flag-list {
     margin: 0;
+    flex-direction: column;
   }
 
   .traveler__footer {
     margin: 0;
+    flex-direction: row;
+    margin-left: 670px;
+    margin-top: -100px;
   }
 
   .traveler__transport-list {
-    margin: 0;
+    flex-direction: row;
+    margin-right: 40px;
   }
 
   .traveler__level {
@@ -523,6 +626,7 @@
   }
 
   .traveler__btn {
+    width: 148px;
     margin: 0;
   }
 }
