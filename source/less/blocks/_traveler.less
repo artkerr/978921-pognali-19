@@ -312,27 +312,28 @@
 }
 
 .traveler__progress-99 .traveler__progress-left-side {
-  transform: rotate(180deg);
+  transform: rotate(-30deg);
 }
 
 .traveler__progress-99 .traveler__progress-right-side {
-  transform: rotate(350deg);
+  transform: rotate(-160deg);
 }
 
 .traveler__progress-80 .traveler__progress-left-side {
-  transform: rotate(180deg);
+  transform: rotate(200deg);
 }
 
 .traveler__progress-80 .traveler__progress-right-side {
   transform: rotate(300deg);
 }
 
-.traveler__progress-25 .traveler__progress-left-side {
-  display: none;
+.traveler__progress-25 .traveler__progress-right-side {
+  transform: rotate(45deg);
+  clip: rect(0, 35px, 12px, auto);
 }
 
-.traveler__progress-25 .traveler__progress-right-side {
-  transform: rotate(80deg);
+.traveler__progress-25 .traveler__progress-left-side {
+  display: none;
 }
 
 .traveler__progress-50 .traveler__progress-left-side {
@@ -341,6 +342,7 @@
 
 .traveler__progress-50 .traveler__progress-right-side {
   transform: rotate(180deg);
+  clip: rect(0, 25px, 45px, auto);
 }
 
 .traveler__btn {
@@ -380,6 +382,7 @@
   }
 
   .traveler__name {
+    min-width: 70px;
     max-width: 220px;
     font-size: 30px;
     margin-bottom: 16px;
@@ -388,7 +391,7 @@
   .traveler__offline,
   .traveler__online {
     &::before {
-      right: 3px;
+      right: 0;
       top: 9px;
       width: 7px;
       height: 7px;
@@ -520,6 +523,40 @@
     width: 60px;
     height: 60px;
     border: 3px solid @mango;
+  }
+
+  .traveler__progress-99 .traveler__progress-left-side {
+    transform: rotate(180deg);
+  }
+
+  .traveler__progress-99 .traveler__progress-right-side {
+    transform: rotate(350deg);
+  }
+
+  .traveler__progress-80 .traveler__progress-left-side {
+    transform: rotate(180deg);
+  }
+
+  .traveler__progress-80 .traveler__progress-right-side {
+    transform: rotate(300deg);
+  }
+
+  .traveler__progress-25 .traveler__progress-right-side {
+    transform: rotate(80deg);
+    clip: rect(0, 35px, 30px, auto);
+  }
+
+  .traveler__progress-25 .traveler__progress-left-side {
+    display: none;
+  }
+
+  .traveler__progress-50 .traveler__progress-left-side {
+    display: none;
+  }
+
+  .traveler__progress-50 .traveler__progress-right-side {
+    transform: rotate(180deg);
+    clip: rect(0, 30px, 60px, auto);
   }
 
   .traveler__btn {
