@@ -71,7 +71,7 @@
   }
 
   .page-main__return-link {
-    display: inline;
+    display: inline-block;
     font-size: 20px;
     line-height: 1.2;
     text-transform: uppercase;
@@ -116,8 +116,10 @@
   }
 
   .page-main__content-wrapper {
+    max-width: @desktop-width;
     display: flex;
     flex-direction: row-reverse;
     padding: 0 60px;
+    margin: 0 auto;
   }
 }
