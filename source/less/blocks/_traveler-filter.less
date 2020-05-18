@@ -6,15 +6,202 @@
   margin: 0 auto;
   position: relative;
   z-index: 10;
-  margin-top: 80px;
+  margin-top: 26px;
   margin-bottom: 25px;
-  padding: 10px 30px;
+  padding: 8px 26px;
 }
 
 .traveler-filter__title {
-  color: @dark-blue;
+  color: @dark-slate-blue;
+  line-height: 1;
+  font-size: 22.5px;
+  font-weight: bold;
+  margin-bottom: 35px;
 }
 
+.traveler-filter__fieldset {
+  width: 220px;
+  border: none;
+  border-top: 1px solid  @macaroni-and-cheese;
+  margin: 0;
+  padding: 0;
+  padding: 10px 0;
+}
+
+.traveler-filter__hobby-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.traveler-filter__music-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.traveler-filter__food-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.traveler-filter__transport-wrapper {
+  display: flex
+}
+
+.traveler-filter__legend {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.13;
+  text-transform: uppercase;
+  color: @dark-slate-blue;
+  margin-bottom: 15px;
+}
+
+.traveler-filter__checkbox-label {
+  display: flex;
+  align-items: center;
+  color: @greyish;
+  font-size: 15px;
+  line-height: 1;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: @white;
+    margin-right: 5px;
+  }
+}
+
+.traveler-filter__checkbox:checked + .traveler-filter__checkbox-label::before {
+  background: url("../img/tick.svg") no-repeat 9px 9px center;
+}
+
+.traveler-filter__checkbox-transport {
+  width: 33px;
+  height: 33px;
+  background-color: @white;
+  border-radius: 50%;
+  display: flex;
+}
+
+.traveler-filter__icon {
+  margin: auto;
+  opacity: 0.15;
+}
+
+.traveler-filter__level-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.traveler-filter__level-scale {
+  width: 220px;
+  height: 2px;
+  border-radius: 0.5px;
+  background-color: @dark-slate-blue-20;
+}
+
+.traveler-filter__level-bar {
+  width: 144px;
+  height: 2px;
+  margin-left: auto;
+  background: @dark-slate-blue;
+  opacity: 1;
+  position: relative;
+}
+
+.traveler-filter__level-toggle {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  background-color: @dark-slate-blue;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.traveler-filter__level-toggle-max {
+  right: 0;
+}
+
+.traveler-filter__level-toggle-min {
+  left: 0;
+}
+
+.traveler-filter__level-value {
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 7px;
+    height: 11px;
+    background-color: @white;
+  }
+
+  &::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 16px;
+    height: 1px;
+    background-color: @cloudy-blue;
+  }
+}
+
+.traveler-filter__level-value-min {
+  width: 111px;
+  height: 35px;
+  border: solid 1px @cloudy-blue;
+  background-color: @white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: @dark-slate-blue;
+
+}
+.traveler-filter__level-value-max {
+  width: 111px;
+  height: 35px;
+  border: solid 1px @cloudy-blue;
+  background-color: @white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: @dark-slate-blue;
+}
+
+.traveler-filter__btn {
+  width: 230px;
+  background-color: @white;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 2;
+  color: @dark-two;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
 
 @media (min-width: @tablet-width) {
   .traveler-filter {
@@ -27,10 +214,58 @@
   }
 
   .traveler-filter__title {
-    max-width: 96%;
+    max-width: 618px;
     font-size: 30px;
     padding: 30px 0;
     border-bottom: 1px solid @macaroni-and-cheese;
+  }
+
+  .traveler-filter__fieldset {
+    border: none;
+    width: 100%;
+  }
+
+  .traveler-filter__legend {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-right: 40px;
+    margin-top: 10px;
+  }
+
+  .traveler-filter__checkbox-label {
+    font-size: 20px;
+    line-height: 1;
+    margin-right: 20px;
+  }
+
+
+  .traveler-filter__hobby-wrapper {
+    flex-direction: row;
+  }
+
+  .traveler-filter__music-wrapper {
+    flex-direction: row;
+  }
+
+  .traveler-filter__food-wrapper {
+    flex-direction: row;
+  }
+
+  .traveler-filter__fieldset-transport {
+    display: flex;
+  }
+
+  .traveler-filter__level-wrapper {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .traveler-filter__btn {
+    width: 618px;
+    line-height: 2.5;
+    font-size: 20px;
+    font-weight: bold;
   }
 }
 
@@ -40,5 +275,21 @@
     height: 815px;
     margin: 0;
     padding: 0 30px;
+  }
+
+  .traveler-filter__hobby-wrapper {
+    flex-direction: column;
+  }
+
+  .traveler-filter__music-wrapper {
+    flex-direction: column;
+  }
+
+  .traveler-filter__food-wrapper {
+    flex-direction: column;
+  }
+
+  .traveler-filter__fieldset-transport {
+    display: block;
   }
 }
