@@ -16,8 +16,20 @@
   color: @greyish;
   line-height: 1.38;
 }
+
 @media (min-width: @tablet-width) {
   .alphabet-letter-list {
     font-size: 20px;
+    top: 0;
+    left: 450px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .alphabet-letter-list {
+    display: block;
+    position: static;
+    margin-left: 80px;
+    margin-top: 40px;
   }
 }

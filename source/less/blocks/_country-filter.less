@@ -4,7 +4,8 @@
   border-bottom-right-radius: 20px;
   position: relative;
   z-index: 10;
-  height: 900px;
+  min-height: 800px;
+  padding-bottom: 150px;
 }
 
 .country-filter__wrapper {
@@ -121,6 +122,9 @@
     color: @dark-blue-grey;
     line-height: 1.2;
     font-weight: bold;
+    position: absolute;
+    top: 35px;
+    left: 500px;
   }
 
   .country-filter__btn-text {
@@ -140,12 +144,23 @@
   .country-filter__country-wrapper {
     margin-right: auto;
   }
+
+  .country-filter__btn {
+    width: 618px;
+    height: 100px;
+
+    &::before {
+      width: 19px;
+      height: 19px;
+      top: 40px;
+      left: 240px
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .country-filter__wrapper {
     max-width: @desktop-width;
-    padding-left: 400px;
     position: relative;
   }
 
@@ -161,5 +176,9 @@
       height: 15px;
       top: 2px;
     }
+  }
+
+  .country-filter__open-btn {
+    left: 1150px;
   }
 }

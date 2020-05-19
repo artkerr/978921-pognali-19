@@ -34,10 +34,16 @@
 }
 
 @media (min-width: @tablet-width) {
+  .alphabet-list__list {
+    max-width: 400px;
+    margin: 0;
+  }
+
   .alphabet-list__item {
     background-color: transparent;
     border: none;
-
+    margin-bottom: 40px;
+    margin-right: 35px;
   }
 
   .alphabet-list__link  {
@@ -49,5 +55,28 @@
   .alphabet-list__link--selected {
     color: @dark-blue-grey;
 
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .alphabet-list__list {
+    max-width: 1100px;
+    margin-top: 50px;
+
+  }
+
+  .alphabet-list__item {
+    width: 200px;
+    height: auto;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  .alphabet-list__link {
+    color: @dark-blue-grey;
+  }
+
+  .alphabet-list__empty-item {
+    display: none;
   }
 }
