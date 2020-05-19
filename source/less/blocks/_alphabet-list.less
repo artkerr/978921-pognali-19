@@ -1,0 +1,53 @@
+.alphabet-list__list{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
+.alphabet-list__item {
+  width: 45px;
+  height: 42px;
+  border: solid 1px @cloudy-blue;
+  background-color: @white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.alphabet-list__item--selected {
+  background-color: @dark-slate-blue;
+  border-color: @dark-slate-blue;
+}
+
+
+.alphabet-list__link {
+  font-size: 14px;
+  font-weight: 500;
+  color: @dark-slate-blue;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+}
+
+.alphabet-list__link--selected {
+  color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .alphabet-list__item {
+    background-color: transparent;
+    border: none;
+
+  }
+
+  .alphabet-list__link  {
+    font-size: 60px;
+    line-height: 0.4;
+    color: @dark-blue-grey-20;
+  }
+
+  .alphabet-list__link--selected {
+    color: @dark-blue-grey;
+
+  }
+}
