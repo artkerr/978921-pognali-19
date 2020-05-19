@@ -1,5 +1,6 @@
 .traveler-filter {
   width: 272px;
+  min-height: 800px;
   border-radius: 20px;
   background-color: @light-gold;
   margin: 0 auto;
@@ -8,6 +9,7 @@
   margin-top: 26px;
   margin-bottom: 25px;
   padding: 8px 26px;
+
 }
 
 .traveler-filter__title {
@@ -27,23 +29,9 @@
   padding: 10px 0;
 }
 
-.traveler-filter__hobby-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.traveler-filter__music-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.traveler-filter__food-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.traveler-filter__transport-wrapper {
-  display: flex
+.traveler-filter__list {
+  list-style: none;
+  padding: 0;
 }
 
 .traveler-filter__legend {
@@ -53,6 +41,10 @@
   text-transform: uppercase;
   color: @dark-slate-blue;
   margin-bottom: 15px;
+
+  span {
+    display: none;
+  }
 }
 
 .traveler-filter__checkbox-label {
@@ -74,8 +66,23 @@
   }
 }
 
-.traveler-filter__checkbox:checked + .traveler-filter__checkbox-label::before {
-  background: url("../img/tick.svg") no-repeat 9px 9px center;
+.traveler-filter__checkbox:checked + .traveler-filter__checkbox-label::before  {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  margin-right: 5px;
+  background-color: @white;
+  background-image: url("../img/tick.svg");
+  background-size: 9px 9px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.traveler-filter__transport-wrapper {
+  .traveler-filter__list {
+    display: flex;
+  }
 }
 
 .traveler-filter__checkbox-transport {
@@ -83,12 +90,17 @@
   height: 33px;
   background-color: @white;
   border-radius: 50%;
-  display: flex;
+  display: flex;;
+}
+
+.traveler-filter__checkbox:checked + .traveler-filter__icon {
+  opacity: 1;
 }
 
 .traveler-filter__icon {
   margin: auto;
   opacity: 0.15;
+  fill: @dark-slate-blue;
 }
 
 .traveler-filter__level-wrapper {
@@ -229,34 +241,113 @@
     line-height: 1.5;
     margin-right: 40px;
     margin-top: 10px;
+    padding-top: 12px;
+
+    span {
+      display: inline;
+    }
+  }
+
+  .traveler-filter__hobby-wrapper {
+    display: flex;
+
+    .traveler-filter__legend {
+      margin-right: 60px;
+    }
+  }
+
+  .traveler-filter__music-wrapper {
+    display: flex;
+
+    .traveler-filter__legend {
+      margin-right: 46px;
+    }
+  }
+
+  .traveler-filter__food-wrapper {
+    display: flex;
+
+    .traveler-filter__legend {
+      margin-right: 86px;
+    }
+  }
+
+  .traveler-filter__transport-wrapper {
+    display: flex;
+  }
+
+  .traveler-filter__level-wrapper {
+    flex-direction: row;
+  }
+
+  .traveler-filter__scale-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .traveler-filter__level-scale {
+    width: 277px;
+    height: 3px;
+  }
+
+  .traveler-filter__level-bar {
+    width: 201px;
+    height: 3px;
+  }
+
+  .traveler-filter__level-toggle {
+    width: 13px;
+    height: 13px;
+    top: -5px;
+  }
+
+  .traveler-filter__level-value {
+    margin: 0;
+    margin-left: 40px;
+  }
+
+  .traveler-filter__level-value-max,
+  .traveler-filter__level-value-min {
+    width: 75px;
+    height: 46px;
   }
 
   .traveler-filter__checkbox-label {
     font-size: 20px;
     line-height: 1;
     margin-right: 20px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+    }
+  }
+  .traveler-filter__checkbox:checked + .traveler-filter__checkbox-label::before  {
+    width: 24px;
+    height: 24px;
+    background-size: 12px 12px;
+  }
+
+  .traveler-filter__checkbox-transport {
+    width: 43px;
+    height: 43px;
+  }
+
+  .traveler-filter__icon {
+    width: 21px;
+    height: auto;
+  }
+
+  .traveler-filter__icon-bike {
+    width: 23px;
+    height: auto;
   }
 
 
-  .traveler-filter__hobby-wrapper {
-    flex-direction: row;
-  }
-
-  .traveler-filter__music-wrapper {
-    flex-direction: row;
-  }
-
-  .traveler-filter__food-wrapper {
-    flex-direction: row;
-  }
-
-  .traveler-filter__fieldset-transport {
+  .traveler-filter__list {
     display: flex;
-  }
-
-  .traveler-filter__level-wrapper {
-    flex-direction: row-reverse;
-    align-items: center;
   }
 
   .traveler-filter__btn {
@@ -277,22 +368,65 @@
 
   .traveler-filter__hobby-wrapper {
     flex-direction: column;
+
+    .traveler-filter__list {
+      flex-direction: column;
+    }
+  }
+
+  .traveler-filter__legend {
+    span {
+      display: none;
+    }
   }
 
   .traveler-filter__music-wrapper {
-    flex-direction: column;
+     flex-direction: column;
+
+    .traveler-filter__list {
+      flex-direction: column;
+    }
   }
 
   .traveler-filter__food-wrapper {
     flex-direction: column;
+
+    .traveler-filter__list {
+      flex-direction: column;
+    }
   }
 
-  .traveler-filter__fieldset-transport {
-    display: block;
+  .traveler-filter__transport-wrapper {
+    flex-direction: column;
   }
+
 
   .traveler-filter__level-wrapper {
     flex-direction: column;
+  }
+
+  .traveler-filter__scale-wrapper {
+    flex-direction: column;
+  }
+
+  .traveler-filter__level-value {
+    margin: 0;
+    margin-bottom: 36px;
+  }
+
+  .traveler-filter__level-scale {
+    width: 191px;
+    height: 3px;
+  }
+
+  .traveler-filter__level-bar {
+    width: 125px;
+    height: 3px;
+  }
+
+  .traveler-filter__level-value-max,
+  .traveler-filter__level-value-min {
+    width: 96px;
   }
 
   .traveler-filter__btn {

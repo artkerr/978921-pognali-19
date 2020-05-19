@@ -412,94 +412,113 @@
         <form class="traveler-filter__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="traveler-filter__fieldset">
             <div class="traveler-filter__hobby-wrapper">
-              <legend class="traveler-filter__legend">Хобби:</legend>
-
-              <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="gym" checked>
-              <label class="traveler-filter__checkbox-label" for="gym">Спортзал</label>
-
-              <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="hookah">
-              <label class="traveler-filter__checkbox-label"  for="hookah">Кальян</label>
-
-              <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="sofa">
-              <label class="traveler-filter__checkbox-label"  for="sofa">Диван</label>
-          </div>
-          </fieldset>
-          <fieldset class="traveler-filter__fieldset">
-            <div class="traveler-filter__music-wrapper">
-              <legend class="traveler-filter__legend">Музыка:</legend>
-              <label class="traveler-filter__checkbox-label" for="hard-rock">
-                <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="hard-rock" checked>
-                Тяжелый рок
-              </label>
-              <label class="traveler-filter__checkbox-label"  for="rus-rap">
-                <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="rus-rap">
-                Русский рэп
-              </label>
-              <label class="traveler-filter__checkbox-label"  for="eurodance">
-                <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="eurodance">
-                Евроденс
-              </label>
+              <legend class="traveler-filter__legend">Хобби<span>:</span></legend>
+              <ul class="traveler-filter__list">
+                <li class="traveler-filter__item">
+                  <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="gym" checked>
+                  <label class="traveler-filter__checkbox-label" for="gym">Спортзал</label>
+                </li>
+                <li class="traveler-filter__item">
+                  <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="hookah">
+                  <label class="traveler-filter__checkbox-label"  for="hookah">Кальян</label>
+                </li>
+                <li class="traveler-filter__item">
+                  <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="sofa">
+                  <label class="traveler-filter__checkbox-label"  for="sofa">Диван</label>
+                </li>
+              </ul>
             </div>
           </fieldset>
           <fieldset class="traveler-filter__fieldset">
             <div class="traveler-filter__music-wrapper">
-              <legend class="traveler-filter__legend">Еда:</legend>
-              <label class="traveler-filter__checkbox-label" for="meat">
-                <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="meat" checked>
-                Мясоед
-              </label>
-              <label class="traveler-filter__checkbox-label"  for="healthy">
-                <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="healthy">
-                Сидит на ПП
-              </label>
-              <label class="traveler-filter__checkbox-label"  for="vegan">
-                <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="vegan">
-                Веган-сыроед
-              </label>
+              <legend class="traveler-filter__legend">Музыка<span>:</span></legend>
+              <ul class="traveler-filter__list">
+                <li class="traveler-filter__item">
+                  <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="hard-rock" checked>
+                  <label class="traveler-filter__checkbox-label" for="hard-rock">Тяжелый рок </label>
+                </li>
+                <li class="traveler-filter__item">
+                  <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="rus-rap">
+                  <label class="traveler-filter__checkbox-label"  for="rus-rap">Русский рэп</label>
+                </li>
+                <li class="traveler-filter__item">
+                  <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="eurodance">
+                  <label class="traveler-filter__checkbox-label"  for="eurodance"> Евроденс</label>
+                </li>
+              </ul>
             </div>
           </fieldset>
           <fieldset class="traveler-filter__fieldset">
-            <div class="traveler-filter__fieldset-transport">
-              <legend class="traveler-filter__legend">Транспорт:</legend>
+            <div class="traveler-filter__food-wrapper">
+            <legend class="traveler-filter__legend">Еда<span>:</span></legend>
+              <ul class="traveler-filter__list">
+                <li class="traveler-filter__item">
+                  <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="meat" checked>
+                  <label class="traveler-filter__checkbox-label" for="meat">Мясоед</label>
+                </li>
+                <li class="traveler-filter__item">
+                  <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="healthy">
+                  <label class="traveler-filter__checkbox-label"  for="healthy">Сидит на ПП</label>
+                </li>
+                <li class="traveler-filter__item">
+                  <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="vegan">
+                  <label class="traveler-filter__checkbox-label"  for="vegan">Веган-сыроед</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset class="traveler-filter__fieldset">
             <div class="traveler-filter__transport-wrapper">
-            <label class="traveler-filter__checkbox-transport" for="plane">
-              <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="plane" checked>
-              <svg width="14" height="16" class="traveler-filter__icon">
-                <use xlink:href="img/sprite.svg#plane"></use>
-              </svg>
-            </label>
-            <label class="traveler-filter__checkbox-transport"  for="bus">
-              <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="bus">
-              <svg width="13" height="16" class="traveler-filter__icon">
-                <use xlink:href="img/sprite.svg#bus"></use>
-              </svg>
-            </label>
-            <label class="traveler-filter__checkbox-transport" for="bike">
-              <input class="traveler-filter__checkbox  visually-hidden" type="checkbox" id="bike">
-              <svg width="19" height="17" class="traveler-filter__icon">
-                <use xlink:href="img/sprite.svg#bike"></use>
-              </svg>
-            </label>
-            <label class="traveler-filter__checkbox-transport"  for="run">
-              <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="run">
-              <svg width="15" height="17" class="traveler-filter__icon">
-                <use xlink:href="img/sprite.svg#run"></use>
-              </svg>
-            </label>
-            </div>
+              <legend class="traveler-filter__legend">Транспорт<span>:</span></legend>
+              <ul class="traveler-filter__list">
+                <li class="traveler-filter__item">
+                  <label class="traveler-filter__checkbox-transport" for="plane">
+                    <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="plane" checked>
+                    <svg width="14" height="16" class="traveler-filter__icon">
+                      <use xlink:href="img/sprite.svg#plane"></use>
+                    </svg>
+                  </label>
+                </li>
+                <li class="traveler-filter__item">
+                  <label class="traveler-filter__checkbox-transport"  for="bus">
+                    <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="bus">
+                    <svg width="13" height="16" class="traveler-filter__icon">
+                      <use xlink:href="img/sprite.svg#bus"></use>
+                    </svg>
+                  </label>
+                </li>
+                <li class="traveler-filter__item">
+                  <label class="traveler-filter__checkbox-transport" for="bike">
+                    <input class="traveler-filter__checkbox  visually-hidden" type="checkbox" id="bike">
+                    <svg width="19" height="17" class="traveler-filter__icon traveler-filter__icon-bike">
+                      <use xlink:href="img/sprite.svg#bike"></use>
+                    </svg>
+                  </label>
+                </li>
+                <li class="traveler-filter__item">
+                  <label class="traveler-filter__checkbox-transport"  for="run">
+                  <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="run">
+                  <svg width="15" height="17" class="traveler-filter__icon">
+                    <use xlink:href="img/sprite.svg#run"></use>
+                  </svg>
+                </label>
+              </li>
+              </ul>
             </div>
           </fieldset>
           <fieldset class="traveler-filter__fieldset traveler-filter__level">
             <div class="traveler-filter__level-wrapper">
               <legend class="traveler-filter__legend">Левел:</legend>
-              <div class="traveler-filter__level-value">
-                <input class="traveler-filter__level-value-min" type="text" value="30">
-                <input class="traveler-filter__level-value-max" type="text" value="100">
-              </div>
-              <div class="traveler-filter__level-scale">
-                <div class="traveler-filter__level-bar">
-                  <div class="traveler-filter__level-toggle traveler-filter__level-toggle-min"></div>
-                  <div class="traveler-filter__level-toggle traveler-filter__level-toggle-max"></div>
+              <div class="traveler-filter__scale-wrapper">
+                <div class="traveler-filter__level-value">
+                  <input class="traveler-filter__level-value-min" type="text" value="30">
+                  <input class="traveler-filter__level-value-max" type="text" value="100">
+                </div>
+                <div class="traveler-filter__level-scale">
+                  <div class="traveler-filter__level-bar">
+                    <div class="traveler-filter__level-toggle traveler-filter__level-toggle-min"></div>
+                    <div class="traveler-filter__level-toggle traveler-filter__level-toggle-max"></div>
+                  </div>
                 </div>
               </div>
             </div>
