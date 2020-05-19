@@ -64,7 +64,33 @@
       </div>
     </header>
     <section class="country-filter">
-      <h2 class="country-filter__title">Фильтрация по странам</h2>
+      <div class="country-filter__wrapper">
+        <div class="country-filter__title-wrapper">
+          <h2 class="country-filter__title">Фильтрация по странам</h2>
+          <button class="btn country-filter__open-btn" aria-label="Открыть фильтр по странам">
+            Показать все
+            <svg width="14" height="16" class="country-filter__icon">
+              <use xlink:href="img/sprite.svg#dots"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="country-filter__country-wrapper">
+          <ul class="country-filter__list  mainland-list">
+            <li class="mainland-list__item">
+              <a href="#" class="mainland-list__link mainland-list__link--active">Европа</a>
+            </li>
+            <li class="mainland-list__item">
+              <a href="#" class="mainland-list__link">Азия</a>
+            </li>
+            <li class="mainland-list__item">
+              <a href="#" class="mainland-list__link">Америка</a>
+            </li>
+            <li class="mainland-list__item">
+              <a href="#" class="mainland-list__link">Острова</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
     <div class="page-main__content-wrapper">
       <section class="traveler-filter">

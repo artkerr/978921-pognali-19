@@ -1,16 +1,132 @@
+.country-filter {
+  background-color: @pale-grey-four;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.country-filter__wrapper {
+  max-width: @mobile-width;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+
+.country-filter__title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.country-filter__open-btn {
+  background-color: transparent;
+  margin-left: auto;
+  width: 17px;
+  height: 17px;
+  margin-bottom: 8px;
+  font-size: 0;
+}
+
+.country-filter__btn-text {
+  display: none;
+}
+
+.country-filter__icon {
+  fill: @dark-blue-grey;
+  width: 17px;
+  height: 3px;
+
+}
+
 .country-filter__title {
   color: @dark-blue;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.38;
+  text-transform: uppercase;
+  padding-left: 30px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    content: "";
+    width: 15px;
+    height: 10px;
+    background: url("../img/filter.svg") no-repeat;
+  }
+}
+
+.country-filter__country-wrapper {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .country-filter {
-    background-color: @pale-grey-four;
-    min-height: 150px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .country-filter__wrapper {
+    max-width: @tablet-width;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding: 0 60px;
   }
 
   .country-filter__title {
-    visibility: hidden;
+    display: none;
+  }
+
+  .country-filter__open-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: @dark-blue-grey;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+
+  .country-filter__btn-text {
+    display: block;
+  }
+
+  .country-filter__list {
+    padding: 0;
+  }
+
+  .country-filter__icon {
+    width: 27px;
+    height: 5px;
+    margin-left: 20px;
+  }
+
+  .country-filter__country-wrapper {
+    display: block;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .country-filter__wrapper {
+    max-width: @desktop-width;
+    padding-left: 400px;
+    position: relative;
+  }
+
+  .country-filter__title {
+    display: block;
+    position: absolute;
+    left: 80px;
+    top: 16px;
+    font-size: 20px;
+
+    &::before {
+      width: 23px;
+      height: 15px;
+      top: 2px;
+    }
   }
 }

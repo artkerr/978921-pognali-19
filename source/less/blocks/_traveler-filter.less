@@ -1,6 +1,5 @@
 .traveler-filter {
   width: 272px;
-  min-height: 624px;
   border-radius: 20px;
   background-color: @light-gold;
   margin: 0 auto;
@@ -207,7 +206,6 @@
   .traveler-filter {
     background-color: @light-gold;
     width: 688px;
-    min-height: 550px;
     padding-left: 30px;
     border-radius: 20px;
     margin-bottom: 115px;
@@ -266,13 +264,13 @@
     line-height: 2.5;
     font-size: 20px;
     font-weight: bold;
+    border-radius: 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .traveler-filter {
-    max-width: 20%;
-    height: 815px;
+    max-width: 285px;
     margin: 0;
     padding: 0 30px;
   }
@@ -291,5 +289,13 @@
 
   .traveler-filter__fieldset-transport {
     display: block;
+  }
+
+  .traveler-filter__level-wrapper {
+    flex-direction: column;
+  }
+
+  .traveler-filter__btn {
+    width: 196px;
   }
 }
