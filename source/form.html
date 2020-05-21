@@ -152,175 +152,199 @@
           <div class="user-creation-plans__title-wrapper">
             <h2 class="user-creation-plans__title">Добавить план</h2>
             <ul class="user-creation-plans__step-marker-list">
-              <li class="user-creation-plans__step-marker-item">Даты</li>
-              <li class="user-creation-plans__step-marker-item">Маршрут</li>
-              <li class="user-creation-plans__step-marker-item">Развлечения</li>
+              <li class="user-creation-plans__step-marker-item user-creation-plans__step-marker-item--active"><span>Даты</span></li>
+              <li class="user-creation-plans__step-marker-item"><span>Маршрут</span></li>
+              <li class="user-creation-plans__step-marker-item"><span>Развлечения</span></li>
             </ul>
           </div>
           <fieldset class="user-creation-plans__fieldset dates-of-stay">
             <div class="user-creation-plans__fieldset-header">
-              <legend class="user-creation-plans__title">Шаг 1. Даты пребывания</legend>
+              <legend class="user-creation-plans__legend">Шаг 1.<br>Даты пребывания</legend>
               <p class="user-creation-plans__fieldset-description">
                 Укажите предпочтительное количество попутчиков, которых
                 вы хотели бы позвать в поездку и ее предполагаемую длительность.
               </p>
             </div>
-            <div class="dates-of-stay__travaler">
-              <span class="dates-of-stay__travaler-title">Ищу попутчиков</span>
-              <span>Чел.</span>
-              <button class="dates-of-stayn__travaler-del" type="button">-</button>
-              <input type="text" class="dates-of-stay__travaler-num">
-              <button class="dates-of-stayn__travaler-add" type="button">+</button>
-            </div>
-            <div class="dates-of-stay__checkbox">
-              <input class="dates-of-stay__input" type="checkbox" id="kids" checked>
-              <label class="dates-of-stay__label" for="kids">Можно с детьми</label>
+            <div class="dates-of-stay__traveler">
+              <span class="dates-of-stay__traveler-title">Ищу попутчиков:</span>
+              <span class="dates-of-stay__traveler-sum">Чел.</span>
+              <button class="btn dates-of-stay__traveler-del" type="button" aria-label="Убавить">
+                <svg class="dates-of-stay__icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#qty-minus-mobile"></use>
+                </svg>
+              </button>
+              <input type="text" class="dates-of-stay__traveler-num" value="2">
+              <button class="btn dates-of-stay__traveler-add" type="button" aria-label="Прибавить">
+                <svg class="dates-of-stay__icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
+                </svg>
+              </button>
             </div>
             <div class="dates-of-stay__duration">
-              <span class="dates-of-stay__duration-title">Длительность</span>
-              <span>Дн.</span>
-              <button class="dates-of-stay__duration-del" type="button">-</button>
-              <input type="text" class="dates-of-stay__duration-num">
-              <button class="dates-of-stayn__duration-add" type="button">+</button>
+              <span class="dates-of-stay__traveler-title">Длительность:</span>
+              <span class="dates-of-stay__traveler-sum">Дн.</span>
+              <button class="btn dates-of-stay__duration-del" type="button" aria-label="Убавить">
+                <svg class="dates-of-stay__icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#qty-minus-mobile"></use>
+                </svg>
+              </button>
+              <input type="text" class="dates-of-stay__duration-num"  value="2">
+              <button class="btn dates-of-stay__duration-add" type="button" aria-label="Прибавить">
+                <svg class="dates-of-stay__icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="dates-of-stay__checkbox">
+              <input class="dates-of-stay__input visually-hidden" type="checkbox" id="kids" checked>
+              <label class="dates-of-stay__label" for="kids">Можно с детьми</label>
             </div>
             <div class="dates-of-stay__calendar calendar">
               <div class="calendar__month">
-                <button type="button" class="btn calendar__prev-btn">Назад</button>
+                <button type="button" class="btn calendar__prev-btn" aria-label="Предидущий месяц">
+                  <svg class="calendar__icon" width="9" height="18">
+                    <use xlink:href="img/sprite.svg#month-arrow-left"></use>
+                  </svg>
+                </button>
                 <span class="calendar__month-value">Март 2019</span>
-                <button type="button" class="btn calendar__next-btn">Вперед</button>
+                <button type="button" class="btn calendar__next-btn" aria-label="Следующий месяц">
+                  <svg class="calendar__icon" width="9" height="18">
+                    <use xlink:href="img/sprite.svg#month-arrow-right"></use>
+                  </svg>
+                </button>
               </div>
               <div class="calendar__days">
                 <ul class="calendar__days-name-list">
-                  <li class="calendar__days-name-item">п<span>н</span></li>
-                  <li class="calendar__days-name-item">в<span>т</span></li>
-                  <li class="calendar__days-name-item">с<span>р</span></li>
-                  <li class="calendar__days-name-item">ч<span>т</span></li>
-                  <li class="calendar__days-name-item">п<span>т</span></li>
-                  <li class="calendar__days-name-item">с<span>б</span></li>
-                  <li class="calendar__days-name-item">в<span>с</span></li>
+                  <li class="calendar__days-name-item">П<span>н</span></li>
+                  <li class="calendar__days-name-item">В<span>т</span></li>
+                  <li class="calendar__days-name-item">С<span>р</span></li>
+                  <li class="calendar__days-name-item">Ч<span>т</span></li>
+                  <li class="calendar__days-name-item">П<span>т</span></li>
+                  <li class="calendar__days-name-item calendar__days-name-item--output">С<span>б</span></li>
+                  <li class="calendar__days-name-item calendar__days-name-item--output">В<span>с</span></li>
                 </ul>
                 <ul class="calendar__days-date-list">
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="2302" disabled>
                     <label class="calendar__days-label" for="2302">23</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="2402" disabled>
                     <label class="calendar__days-label" for="2402">24</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="2502" disabled>
                     <label class="calendar__days-label" for="2302">25</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="2602" disabled>
                     <label class="calendar__days-label" for="2602">26</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="2702" disabled>
                     <label class="calendar__days-label" for="2702">27</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="2803" disabled>
                     <label class="calendar__days-label" for="0103">28</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="0103" disabled>
                     <label class="calendar__days-label" for="0103">1</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="0203" disabled>
                     <label class="calendar__days-label" for="0203">2</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="0303" disabled>
                     <label class="calendar__days-label" for="0303">3</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="0403" disabled>
                     <label class="calendar__days-label" for="0403">4</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="0503" disabled>
                     <label class="calendar__days-label" for="0503">5</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="0603" disabled>
                     <label class="calendar__days-label" for="0603">6</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="0703" disabled>
                     <label class="calendar__days-label" for="0703">7</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="0803" disabled>
                     <label class="calendar__days-label" for="0803">8</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="0903" disabled>
                     <label class="calendar__days-label" for="0903">9</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="1003" disabled>
                     <label class="calendar__days-label" for="1003">10</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="1103" disabled>
                     <label class="calendar__days-label" for="1103">11</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="1203" disabled>
                     <label class="calendar__days-label" for="1203">12</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="1303" disabled>
                     <label class="calendar__days-label" for="1303">13</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="1403" disabled>
                     <label class="calendar__days-label" for="1403">14</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="1503" disabled>
                     <label class="calendar__days-label" for="1503">15</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="1603" disabled>
                     <label class="calendar__days-label" for="1603">16</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="1703" disabled>
                     <label class="calendar__days-label" for="1703">17</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="1803" disabled>
                     <label class="calendar__days-label" for="1803">18</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="1903" disabled>
                     <label class="calendar__days-label" for="1903">19</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="2003" disabled>
                     <label class="calendar__days-label" for="2003">20</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="2103" disabled>
                     <label class="calendar__days-label" for="2103">21</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="2203" disabled>
                     <label class="calendar__days-label" for="2203">22</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="2303" disabled>
                     <label class="calendar__days-label" for="2303">23</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="2403" disabled>
                     <label class="calendar__days-label" for="2403">24</label>
                   </li>
-                  <li class="calendar__days-date-item">
+                  <li class="calendar__days-date-item calendar__days-date-item--disabled">
                     <input class="calendar__days-input visually-hidden" type="checkbox" id="2503" disabled>
                     <label class="calendar__days-label" for="2503">25</label>
                   </li>
@@ -371,11 +395,11 @@
                 </ul>
               </div>
             </div>
-            <a href="#" class="user-creation-plans__btn">Следующий шаг</a>
+            <!-- <a href="#" class="user-creation-plans__btn">Следующий шаг</a> -->
           </fieldset>
           <fieldset class="user-creation__fieldset route">
             <div class="user-creation__fieldset-header">
-              <legend class="user-creation__title">Шаг 2. Маршрут</legend>
+              <legend class="user-creation__legend">Шаг 2.<br>Маршрут</legend>
               <p class="user-creation__fieldset-description">
                 Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
               </p>
@@ -419,7 +443,7 @@
           </fieldset>
           <fieldset class="user-creation__fieldset entertainment">
             <div class="user-creation__fieldset-header">
-              <legend class="user-creation__title">Шаг 2. Развлечения</legend>
+              <legend class="user-creation__legend">Шаг 2.<br> Развлечения</legend>
               <p class="user-creation__fieldset-description">
                 Наконец, расскажите о своих планах времяпровождения.
                 Можно писать в свободной форме и ставить тэги.

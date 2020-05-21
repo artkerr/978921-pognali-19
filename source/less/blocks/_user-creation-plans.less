@@ -1,3 +1,74 @@
 .user-creation-plans {
   position: relative;
+  background-color: @light-blue-grey-five;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  padding: 25px;
+}
+
+.user-creation-plans__wrapper {
+  margin: 0 auto;
+  max-width: 270px;
+}
+
+.user-creation-plans__title-wrapper {
+  display: flex;
+}
+
+.user-creation-plans__title {
+  margin-top: 5px;
+  margin-bottom: 29px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  color: @dark-slate-blue;
+  margin-right: 38px;
+}
+
+.user-creation-plans__step-marker-list {
+  padding: 0;
+  list-style: none;
+  width: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.user-creation-plans__step-marker-item {
+  position: relative;
+
+  span {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: @steel-grey-30;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+.user-creation-plans__step-marker-item--active {
+
+  &::before {
+    background-color: @dark-slate-blue;
+    cursor: pointer;
+  }
+}
+
+.user-creation-plans__legend {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: @dark-slate-blue;
+}
+
+.user-creation-plans__fieldset-description {
+  line-height: 1.38;
+  color: @greyish;
+  font-size: 16px;
 }

@@ -1,4 +1,104 @@
 .calendar {
   position: relative;
-  background-color: transparent;
+  width: 221px;
+  height: 42px;
+  border-top: 1px solid @cloudy-blue;
+  border-bottom: 1px solid @cloudy-blue;
+  padding: 5px 0;
+}
+
+.calendar__month {
+  display: flex;
+  align-items: center;
+}
+
+.calendar__month-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: @dark-slate-blue;
+  margin: auto;
+}
+
+.calendar__icon {
+  opacity: 0.3;
+}
+
+
+.calendar__days-name-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar__days-name-item {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  color: @greyish;
+
+  span {
+    display: none;
+  }
+}
+
+.calendar__days-name-item--output {
+  color: @orange-red;
+}
+
+.calendar__days-date-list {
+  list-style: none;
+  padding: 0;
+  width: 221px;
+  height: 187px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar__days-date-item {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-color: @pale-grey;
+  border: 1px solid @cloudy-blue;
+  margin-right: -1px;
+
+  &:hover {
+    border: solid 2px @orange-red;
+  }
+}
+
+.calendar__days-label {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  color: @greyish;
+  padding-top: 5px;
+
+}
+
+.calendar__days-date-item:disabled {
+  color: @greyish-brown-30;
+}
+
+.calendar__days-date-item--disabled {
+  background-color: @white;
+
+  .calendar__days-label {
+    opacity: 0.3;
+  }
+}
+
+.calendar__days-input:checked + .calendar__days-label {
+  width: 100%;
+  height: 100%;
+  background-color: @dark-slate-blue;
+  color: @white;
+  margin: auto;
+  padding-top: 5px;
 }
