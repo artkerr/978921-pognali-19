@@ -1,7 +1,133 @@
 .entertainment {
   width: 270px;
-  height: 517px;
   border-radius: 10px;
   background-color: @white;
   border: none;
+  padding: 25px;
+  padding-bottom: 50px;
+}
+
+.entertainment__wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    content: "";
+    width: 2px;
+    height: 281px;
+    background-color: @dark-slate-blue;
+  }
+}
+
+.entertainment__first-country {
+  &::before {
+    position: absolute;
+    top: 8px;
+    left: -15px;
+    content: "";
+    width: 15px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: @dark-slate-blue;
+  }
+
+  &::after {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: @dark-slate-blue;
+    border-radius: 50%;
+  }
+}
+
+
+.entertainment__second-country {
+  &::before {
+    position: absolute;
+    top: 290px;
+    left: -15px;
+    content: "";
+    width: 15px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: @dark-slate-blue;
+  }
+
+  &::after {
+    position: absolute;
+    top: 288px;
+    left: 0;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: @dark-slate-blue;
+    border-radius: 50%;
+  }
+}
+
+.entertainment__title {
+  font-size: 18px;
+  font-weight: 500;
+  color: @dark-slate-blue;
+  line-height: 1;
+  position: relative;
+  margin-left: 10px;
+  margin-top: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 1px;
+    width: 49px;
+    height: 34px;
+    background-color: @white;
+    box-shadow: -7px 0 2px 0 @white-90;
+  }
+}
+
+.entertainment__bosnia {
+  &::after {
+    position: absolute;
+    content: "";
+    top: -3px;
+    right: 0;
+    width: 35px;
+    height: 24px;
+    background-image: url("../img/flag-bosnia.svg");
+    background-size: 35px 24px;
+  }
+}
+
+.entertainment__czech {
+  &::after {
+    position: absolute;
+    content: "";
+    top: -3px;
+    right: 0;
+    width: 35px;
+    height: 24px;
+    background-image: url("../img/flag-czech.svg");
+    background-size: 35px 24px;
+  }
+}
+
+.entertainment__textarea {
+  width: 220px;
+  height: 220px;
+  border-radius: 4px;
+  border: solid 1px @cloudy-blue;
+  background-color: @white;
+  color: @greyish;
+  padding: 13px 30px 15px 15px;
+}
+
+.entertainment__textarea::placeholder {
+  color: @greyish;
+  opacity: 0.3;
 }

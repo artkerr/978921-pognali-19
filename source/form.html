@@ -83,48 +83,50 @@
           </picture>
         </div>
       </div>
-      <button type="button" class="btn user-info__btn"><span>Сменить</span> фото</button>
-      <div class="user-info__tags">
-        <h3 class="user-info__sub-title"><span>Тэги</span></h3>
-        <textarea class="user-info__tags-area" placeholder="#бургер #бар #футбол #концерт #крафт">#бургер #бар #футбол #концерт #крафт
-        </textarea>
-      </div>
-      <div class="user-info__transport">
-        <h3 class="user-info__sub-title"><span>Транспорт</span></h3>
-        <ul class="user-info__transport-list">
-          <li class="user-info__item">
-            <label class="user-info__checkbox-transport" for="plane">
-              <input class="user-info__checkbox visually-hidden" type="checkbox" id="plane" checked>
-              <svg width="14" height="16" class="user-info__icon">
-                <use xlink:href="img/sprite.svg#plane"></use>
+      <div class="user-info__data-wrapper">
+        <button type="button" class="btn user-info__btn"><span>Сменить</span> фото</button>
+        <div class="user-info__tags">
+          <h3 class="user-info__sub-title"><span>Тэги</span></h3>
+          <textarea class="user-info__tags-area" placeholder="#бургер #бар #футбол #концерт #крафт">#бургер #бар #футбол #концерт #крафт
+          </textarea>
+        </div>
+        <div class="user-info__transport">
+          <h3 class="user-info__sub-title"><span>Транспорт</span></h3>
+          <ul class="user-info__transport-list">
+            <li class="user-info__item">
+              <label class="user-info__checkbox-transport" for="plane">
+                <input class="user-info__checkbox visually-hidden" type="checkbox" id="plane" checked>
+                <svg width="14" height="16" class="user-info__icon">
+                  <use xlink:href="img/sprite.svg#plane"></use>
+                </svg>
+              </label>
+            </li>
+            <li class="user-info__item">
+              <label class="user-info__checkbox-transport"  for="bus">
+                <input class="user-info__checkbox visually-hidden" type="checkbox" id="bus" checked>
+                <svg width="13" height="16" class="user-info__icon">
+                  <use xlink:href="img/sprite.svg#bus"></use>
+                </svg>
+              </label>
+            </li>
+            <li class="user-info__item">
+              <label class="user-info__checkbox-transport" for="bike">
+                <input class="user-info__checkbox  visually-hidden" type="checkbox" id="bike">
+                <svg width="19" height="17" class="user-info__icon user-info__icon-bike">
+                  <use xlink:href="img/sprite.svg#bike"></use>
+                </svg>
+              </label>
+            </li>
+            <li class="user-info__item">
+              <label class="user-info__checkbox-transport"  for="run">
+              <input class="user-info__checkbox visually-hidden" type="checkbox" id="run" checked>
+              <svg width="15" height="17" class="user-info__icon">
+                <use xlink:href="img/sprite.svg#run"></use>
               </svg>
             </label>
           </li>
-          <li class="user-info__item">
-            <label class="user-info__checkbox-transport"  for="bus">
-              <input class="user-info__checkbox visually-hidden" type="checkbox" id="bus" checked>
-              <svg width="13" height="16" class="user-info__icon">
-                <use xlink:href="img/sprite.svg#bus"></use>
-              </svg>
-            </label>
-          </li>
-          <li class="user-info__item">
-            <label class="user-info__checkbox-transport" for="bike">
-              <input class="user-info__checkbox  visually-hidden" type="checkbox" id="bike">
-              <svg width="19" height="17" class="user-info__icon user-info__icon-bike">
-                <use xlink:href="img/sprite.svg#bike"></use>
-              </svg>
-            </label>
-          </li>
-          <li class="user-info__item">
-            <label class="user-info__checkbox-transport"  for="run">
-            <input class="user-info__checkbox visually-hidden" type="checkbox" id="run" checked>
-            <svg width="15" height="17" class="user-info__icon">
-              <use xlink:href="img/sprite.svg#run"></use>
-            </svg>
-          </label>
-        </li>
-        </ul>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="user-plans">
@@ -464,20 +466,20 @@
             </div>
             <div class="entertainment__wrapper">
               <div class="entertainment__first-country">
-                <h3 class="entertainment__title">Босния и герцеговина</h3>
-                <textarea name="" id="" cols="30" rows="10" placeholder="План действий">
+                <h3 class="entertainment__title entertainment__bosnia">Босния и герцеговина</h3>
+                <textarea class="entertainment__textarea" name="" id="" cols="30" rows="10" placeholder="План действий">
 
                 </textarea>
               </div>
               <div class="entertainment__second-country">
-                <h3 class="entertainment__title">Чехия</h3>
-                <textarea name="" id="" cols="30" rows="10"> Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                <h3 class="entertainment__title entertainment__czech">Чехия</h3>
+                <textarea class="entertainment__textarea" name="" id="" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
                 </textarea>
               </div>
             </div>
             <a href="#" class="user-creation-plans__btn user-creation-plans__btn--back">На шаг назад<a/>
           </fieldset>
-          <button type="button">Отправить</button>
+          <button type="button" class="btn user-creation-plans__submit-btn">Отправить</button>
         </form>
       </div>
     </section>
