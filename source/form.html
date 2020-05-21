@@ -394,57 +394,70 @@
                   </li>
                 </ul>
               </div>
-            </div>
-            <!-- <a href="#" class="user-creation-plans__btn">Следующий шаг</a> -->
+            <a href="#" class="user-creation-plans__btn">Следующий шаг</a>
           </fieldset>
-          <fieldset class="user-creation__fieldset route">
-            <div class="user-creation__fieldset-header">
-              <legend class="user-creation__legend">Шаг 2.<br>Маршрут</legend>
-              <p class="user-creation__fieldset-description">
+          <fieldset class="user-creation-plans__fieldset route">
+            <div class="user-creation-plans__fieldset-header">
+              <legend class="user-creation-plans__legend">Шаг 2.<br>Маршрут</legend>
+              <p class="user-creation-plans__fieldset-description">
                 Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
               </p>
             </div>
             <div class="route__wrapper">
               <ul class="route__list">
-                <li class="route__item">
+                <li class="route__item route__big-select">
                   <div class="route__country">
                     <select class="route__country-select" name="" id="">
                       <option value="">Выберете страну</option>
-                      <option value="">Босния и герцегов</option>
-                      <option value="">Чехия</option>
+                      <option value="big" selected>Босния и герцеговина</option>
+                      <option value="cz">Чехия</option>
                     </select>
+                    <svg width="12" height="7" class="route__country-icon">
+                      <use xlink:href="img/sprite.svg#dropdown-form"></use>
+                    </svg>
                   </div>
                 </li>
-                <li class="route__item">
+                <li class="route__item route__cz-select">
                   <div class="route__country">
                     <select class="route__country-select" name="" id="">
                       <option value="">Выберете страну</option>
-                      <option value="">Босния и герцегов</option>
-                      <option value="">Чехия</option>
+                      <option value="big">Босния и герцеговина</option>
+                      <option value="cz" selected>Чехия</option>
                     </select>
+                    <svg width="12" height="7" class="route__country-icon">
+                      <use xlink:href="img/sprite.svg#dropdown-form"></use>
+                    </svg>
                   </div>
                 </li>
-                <li class="route__item">
+                <li class="route__item route__country-empty">
                   <div class="route__country">
-                    <select class="route__country-select" name="" id="">
+                    <select class="route__country-select route__country-empty-select" name="" id="">
                       <option value="">Выберете страну</option>
                       <option value="">Босния и герцеговина</option>
                       <option value="">Чехия</option>
                     </select>
+                    <svg width="12" height="7" class="route__country-icon">
+                      <use xlink:href="img/sprite.svg#dropdown-form"></use>
+                    </svg>
                   </div>
                 </li>
-                <li class="route__item">
-                  <button type="button" class="btn route__btn">Добавить страну</button>
+                <li class="route__item route__country-add">
+                  <button type="button" class="btn route__add-btn">
+                    Добавить страну
+                    <svg width="14" height="14" class="route__add-btn-icon">
+                      <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
+                    </svg>
+                  </button>
                 </li>
               </ul>
             </div>
             <a href="#" class="user-creation-plans__btn">Следующий шаг</a>
-            <a href="#" class="user-creation-plans__btn">Шаг назад</a>
+            <a href="#" class="user-creation-plans__btn user-creation-plans__btn--back">На шаг назад</a>
           </fieldset>
-          <fieldset class="user-creation__fieldset entertainment">
-            <div class="user-creation__fieldset-header">
-              <legend class="user-creation__legend">Шаг 2.<br> Развлечения</legend>
-              <p class="user-creation__fieldset-description">
+          <fieldset class="user-creation-plans__fieldset entertainment">
+            <div class="user-creation-plans__fieldset-header">
+              <legend class="user-creation-plans__legend">Шаг 3.<br> Развлечения</legend>
+              <p class="user-creation-plans__fieldset-description">
                 Наконец, расскажите о своих планах времяпровождения.
                 Можно писать в свободной форме и ставить тэги.
               </p>
@@ -462,7 +475,7 @@
                 </textarea>
               </div>
             </div>
-            <a href="#" class="user-creation-plans__btn">Шаг назад<a/>
+            <a href="#" class="user-creation-plans__btn user-creation-plans__btn--back">На шаг назад<a/>
           </fieldset>
           <button type="button">Отправить</button>
         </form>
