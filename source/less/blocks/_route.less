@@ -175,7 +175,6 @@ select {
   }
 }
 
-
 .route__cz-select {
   &::after {
     position: absolute;
@@ -191,5 +190,139 @@ select {
     background-size: 35px 24px;
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .route {
+    width: 618px;
+    height: auto;
+    border-radius: 30px;
+    padding: 43px;
+
+    .user-creation-plans__fieldset-description {
+      width: 406px;
+    }
+  }
+
+  .route__list {
+    border-top: 1px solid  @light-blue-grey-two;
+    padding: 40px 0;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 142px;
+      content: "";
+      width: 1px;
+      height: 400px;
+      background-color: @light-blue-grey-two;
+    }
+  }
+
+  .route__country-select {
+    width: 369px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    padding-left: 27px;
+  }
+
+  .route__country-icon {
+    left: 330px;
+    top: 32px;
+    width: 17px;
+    height: 9px;
+    opacity: 0.3;
+  }
+
+  .route__country-empty-select + .route__country-icon {
+    left: 330px;
+  }
+
+  .route__item {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 28px;
+      right: 135px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: @dark-slate-blue;
+    }
+
+    &::after {
+      background-image: none;
+    }
+  }
+
+  .route__country-empty {
+    &::before {
+      border: solid 1px @cloudy-blue;
+      background-color: @white;
+    }
+  }
+
+  .route__big-select {
+    &::after {
+      top: 12px;
+      right: 50px;
+      width: 70px;
+      height: 47px;
+      border: none;
+      background-image: url("../img/flag-bosnia.svg");
+      background-size: 70px 47px;
+    }
+  }
+
+  .route__cz-select {
+    &::after {
+      top: 12px;
+      right: 50px;
+      width: 70px;
+      height: 47px;
+      border: none;
+      background-image: url("../img/flag-czech.svg");
+      background-size: 70px 47px;
+    }
+  }
+
+  .route__country {
+    position: relative;
+
+    &::after {
+      content: "";
+      top: 24px;
+      right: 0;
+      width: 21px;
+      height: 21px;
+      background-image: url("../img/filter-close.svg");
+      background-color: transparent;
+      background-size: 17px 17px;
+      opacity: 0.1;
+      z-index: 10;
+    }
+  }
+
+  .route__country-add {
+    width: 369px;
+    height: 70px;
+
+    &::before {
+      content: "";
+      right: -28px;
+      background-color: @pale-grey;
+    }
+  }
+
+  .route__add-btn {
+    width: 369px;
+    font-size: 20px;
+    line-height: 3.3;
+    letter-spacing: 2px;
+    padding-left: 26px;
   }
 }

@@ -1,10 +1,9 @@
 .calendar {
   position: relative;
   width: 221px;
-  height: 42px;
-  border-top: 1px solid @cloudy-blue;
-  border-bottom: 1px solid @cloudy-blue;
+  height: auto;
   padding: 5px 0;
+  order: 5;
 }
 
 .calendar__month {
@@ -27,9 +26,12 @@
 .calendar__days-name-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
+  border-top: 1px solid @cloudy-blue;
+  border-bottom: 1px solid @cloudy-blue;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 .calendar__days-name-item {
@@ -102,4 +104,63 @@
   color: @white;
   margin: auto;
   padding-top: 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .calendar {
+    width: 531px;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .calendar__month {
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+
+  .calendar__month-value {
+    font-size: 36px;
+  }
+
+  .calendar__icon {
+    width: 15px;
+    height: 28px;
+  }
+
+  .calendar__days-name-item {
+    width: 75.8px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 1.18px;
+
+    span {
+      display: inline;
+    }
+  }
+
+  .calendar__days-date-list {
+    width: 535px;
+  }
+
+  .calendar__days-date-item {
+    width: 77px;
+    height: 70px;
+
+    &:hover {
+      border: solid 4px @orange-red;
+    }
+  }
+
+  .calendar__days-label {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    padding-top: 26px;
+  }
+
+  .calendar__days-input:checked + .calendar__days-label {
+    padding-top: 26px;
+  }
 }

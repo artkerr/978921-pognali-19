@@ -1,15 +1,24 @@
 .dates-of-stay {
   width: 270px;
-  height: 795px;
+  height: 100%;
   border-radius: 10px;
   background-color: @white;
   border: none;
   padding: 25px;
 }
 
+.dates-of-stay__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .dates-of-stay__traveler {
   position: relative;
   margin-bottom: 20px;
+}
+
+.dates-of-stay__traveler-head {
+  display: flex;
 }
 
 .dates-of-stay__traveler-title {
@@ -19,6 +28,7 @@
   letter-spacing: 1.6px;
   color: @dark-slate-blue;
   text-transform: uppercase;
+  margin-right: auto;
 }
 
 .dates-of-stay__traveler-sum {
@@ -129,4 +139,105 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 9px 9px;
+}
+
+@media (min-width: @tablet-width) {
+  .dates-of-stay {
+    width: 618px;
+    height: 1435px;
+    border-radius: 30px;
+    padding: 44px;
+  }
+
+  .dates-of-stay__traveler {
+    border-top: 1px solid @light-blue-grey-two;
+    padding: 24px 0;
+    order: 2;
+  }
+
+  .dates-of-stay__traveler-head {
+    margin-bottom: 25px;
+  }
+
+  .dates-of-stay__traveler-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+  }
+
+  .dates-of-stay__traveler-sum {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+  }
+
+  .dates-of-stay__traveler-num {
+    width: 531px;
+    height: 70px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .dates-of-stay__traveler-del {
+    bottom: 45px;
+  }
+
+  .dates-of-stay__traveler-add {
+    bottom: 45px;
+  }
+
+  .dates-of-stay__icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.2;
+  }
+
+  .dates-of-stay__duration {
+    border-top: 1px solid @light-blue-grey-two;
+    padding: 24px 0;
+    order: 4;
+  }
+
+  .dates-of-stay__duration-num {
+    width: 531px;
+    height: 70px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .dates-of-stay__duration-del {
+    bottom: 20px;
+  }
+
+  .dates-of-stay__duration-add {
+    bottom: 20px;
+  }
+
+  .dates-of-stay__checkbox {
+    order: 3;
+  }
+
+  .dates-of-stay__label {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: @dark-slate-blue;
+    padding-left: 60px;
+
+    &::before {
+      width: 36px;
+      height: 36px;
+      top: -9px;
+    }
+  }
+
+  .dates-of-stay__input:checked + .dates-of-stay__label::before {
+    top: -9px;
+    width: 36px;
+    height: 36px;
+    background-size: 12px 12px;
+  }
 }
