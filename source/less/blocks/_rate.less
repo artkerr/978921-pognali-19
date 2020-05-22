@@ -77,13 +77,11 @@
   &:nth-child(2)::before {
     content: "2";
     background-color: @mango-two;
-    top: 3px;
   }
 
   &:nth-child(3)::before {
     content: "3";
     background-color: @light-gold;
-    top: 4px;
   }
 }
 
@@ -126,6 +124,7 @@
 
   .rate__list-wrapper {
     position: relative;
+    margin-left: 130px;
   }
 
   .rate__title {
@@ -134,18 +133,19 @@
     text-align: center;
     margin: 0 auto;
     margin-top: 70px;
-    margin-bottom: 70px;
+    margin-bottom: 75px;
   }
 
   .rate__list {
-    display: table;
     margin-bottom: 35px;
   }
 
   .rate__item {
-    display: table-row;
     padding: 20px 0;
-    border: 2px solid black;
+    max-width: 562px;
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
 
     &::before {
       width: 67px;
@@ -153,29 +153,14 @@
       font-size: 28px;
       line-height: 1;
       padding-top: 20px;
-      top: 155px;
-      left: 7%;
+      top: -2px;
+      left: -90px;
     }
 
-    &:nth-child(1)::before {
-      top: 5px;
-      left: -75px;
-    }
-
-    &:nth-child(2)::before {
-      top: 70px;
-      left: -75px;
-    }
-
-    &:nth-child(3)::before {
-      top: 135px;
-      left: -75px;
-    }
-
-    &:nth-child(3)::after {
+    &:nth-child(1)::after {
       position: absolute;
-      right: 40px;
-      top: -35px;
+      right: -35px;
+      top: -45px;
       content: "";
       width: 198px;
       height: 285px;
@@ -186,18 +171,8 @@
   }
 
   .rate_text {
-    display: table-cell;
     font-size: 28px;
-    padding: 20px;
     line-height: 1.18;
-
-    &:nth-child(1) {
-      padding-right: 100px;
-    }
-
-    &:nth-child(2) {
-      text-align: right;
-    }
   }
 
   .rate__link {
@@ -240,14 +215,17 @@
   }
 
   .rate__item {
+    max-width: 813px;
+    margin-left: 90px;
+
     &::before {
-      left: 90px;
+      left: -90px;
     }
 
-    &:nth-child(3)::after {
+    &:nth-child(1)::after {
       width: 444px;
       height: 300px;
-      right: 270px;
+      right: 0;
     }
   }
 
