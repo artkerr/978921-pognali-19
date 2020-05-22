@@ -5,6 +5,10 @@
   border: none;
   padding: 25px;
   padding-bottom: 50px;
+
+  .user-creation-plans__step-marker-list {
+    display: none;
+  }
 }
 
 .entertainment__wrapper {
@@ -208,7 +212,6 @@
 
 
   .entertainment__second-country {
-
     margin-bottom: 50px;
 
     &::before {
@@ -220,6 +223,81 @@
       left: 520px;
       width: 15px;
       height: 15px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .entertainment {
+    width: 1320px;
+    border-radius: 60px;
+    padding: 100px 160px;
+    position: relative;
+
+    .user-creation-plans__btn--back {
+      margin-left: 750px;
+    }
+
+    .user-creation-plans__step-marker-list {
+      display: block;
+      top: 135px;
+      right: 290px;
+    }
+  }
+
+  .entertainment__wrapper {
+    width: 997px;
+    border-top: solid 1px @cloudy-blue;
+
+    &::before {
+      top: 90px;
+      left: 806px;
+    }
+  }
+
+  .entertainment__first-country {
+    margin-top: 80px;
+    position: relative;
+
+    &::after {
+      top: 0;
+      left: 800px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .entertainment__title {
+    margin-bottom: 37px;
+  }
+
+  .entertainment__textarea {
+    width: 730px;
+    height: 142px;
+  }
+
+  .entertainment__second-country {
+    position: relative;
+
+    &::after {
+      top: 0;
+      left: 800px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .entertainment__bosnia {
+    &::after {
+      top: -15px;
+      right: 65px;
+    }
+  }
+
+  .entertainment__czech {
+    &::after {
+      top: -15px;
+      right: 65px;
     }
   }
 }

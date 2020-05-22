@@ -9,6 +9,9 @@
 .calendar__month {
   display: flex;
   align-items: center;
+  border-top: 1px solid @cloudy-blue;
+  border-bottom: 1px solid @cloudy-blue;
+  padding: 10px 0;
 }
 
 .calendar__month-value {
@@ -28,8 +31,6 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid @cloudy-blue;
-  border-bottom: 1px solid @cloudy-blue;
   padding-top: 10px;
   margin-bottom: 10px;
 }
@@ -68,21 +69,21 @@
   border: 1px solid @cloudy-blue;
   margin-right: -1px;
   margin-bottom: -1px;
-
-
-  &:hover {
-    border: solid 2px @orange-red;
-  }
 }
 
+
 .calendar__days-label {
-  width: 100%;
-  height: 100%;
+  width: 31px;
+  height: 30px;
   font-size: 14px;
   line-height: 1.29;
   text-align: center;
   color: @greyish;
   padding-top: 5px;
+
+  &:hover {
+    border: solid 2px @orange-red;
+  }
 }
 
 .calendar__days-date-item:disabled {
@@ -91,6 +92,7 @@
 
 .calendar__days-date-item--disabled {
   background-color: @white;
+
 
   .calendar__days-label {
     opacity: 0.3;
@@ -104,6 +106,10 @@
   color: @white;
   margin: auto;
   padding-top: 5px;
+
+  &:hover {
+    border: solid 2px @orange-red;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -114,7 +120,7 @@
   }
 
   .calendar__month {
-    padding: 0 10px;
+    padding: 20px 10px;
     margin-bottom: 20px;
   }
 
@@ -146,13 +152,11 @@
   .calendar__days-date-item {
     width: 77px;
     height: 70px;
-
-    &:hover {
-      border: solid 4px @orange-red;
-    }
   }
 
   .calendar__days-label {
+    width: 77px;
+    height: 70px;
     font-size: 20px;
     font-weight: 500;
     line-height: 0.9;
@@ -162,5 +166,53 @@
 
   .calendar__days-input:checked + .calendar__days-label {
     padding-top: 26px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .calendar {
+    width: 999px;
+    padding: 20px 0;
+    margin-bottom: 60px;
+  }
+
+  .calendar__icon {
+    width: 18px;
+    height: 34px;
+  }
+
+  .calendar__days-name-item {
+    width: 142.7px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 1.8px;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+
+  .calendar__days-date-list {
+    width: 1000px;
+  }
+
+  .calendar__days-date-item {
+    width: 143px;
+    height: 72px;
+    text-align: left;
+
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+
+  .calendar__days-label {
+    display: inline-block;
+    font-weight: 300;
+
+    padding: 0;
+  }
+
+  .calendar__days-input:checked + .calendar__days-label {
+    padding: 0;
   }
 }

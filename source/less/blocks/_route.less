@@ -5,6 +5,10 @@
   background-color: @white;
   border: none;
   padding: 25px;
+
+  .user-creation-plans__step-marker-list {
+    display: none;
+  }
 }
 
 .route__list {
@@ -324,5 +328,89 @@ select {
     line-height: 3.3;
     letter-spacing: 2px;
     padding-left: 26px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .route {
+    width: 1320px;
+    border-radius: 60px;
+    padding: 100px 160px;
+    position: relative;
+
+    .user-creation-plans__step-marker-list {
+      display: block;
+      top: 135px;
+      right: 290px;
+    }
+  }
+
+  .route__country-select {
+    width: 730px;
+  }
+
+  .route__country {
+    &::after {
+      right: 55px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .route__list {
+    &::after {
+      right: 230px;
+      width: 1px;
+      height: 420px;
+    }
+  }
+
+  .route__item {
+    &::before {
+      right: 222px;
+    }
+  }
+
+  .route__country-add {
+    width: 730px;
+
+    &::before {
+      right: -47px;
+    }
+  }
+
+  .route__add-btn {
+    width: 730px;
+  }
+
+  .route__add-btn-icon {
+    right: 22px;
+    top: 25px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .route__country-icon {
+    left: 690px;
+  }
+
+  .route__country-empty {
+    .route__country-icon {
+      left: 690px;
+    }
+  }
+
+
+  .route__big-select {
+    &::after {
+      top: 12px;
+      right: 110px;
+    }
+  }
+
+  .route__cz-select {
+    &::after {
+      right: 110px;
+    }
   }
 }

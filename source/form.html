@@ -166,7 +166,7 @@
           <fieldset class="user-creation-plans__fieldset dates-of-stay">
             <div class="dates-of-stay__wrapper">
               <div class="user-creation-plans__fieldset-header">
-                <legend class="user-creation-plans__legend">Шаг 1.<br>Даты пребывания</legend>
+                <h3 class="user-creation-plans__fieldset-title">Шаг 1. <br>Даты пребывания</h3>
                 <p class="user-creation-plans__fieldset-description">
                   Укажите предпочтительное количество попутчиков, которых
                   вы хотели бы позвать в поездку и ее предполагаемую длительность.
@@ -177,34 +177,38 @@
                   <span class="dates-of-stay__traveler-title">Ищу попутчиков:</span>
                   <span class="dates-of-stay__traveler-sum">Чел.</span>
                 </div>
-                <button class="btn dates-of-stay__traveler-del" type="button" aria-label="Убавить">
-                  <svg class="dates-of-stay__icon" width="14" height="14">
-                    <use xlink:href="img/sprite.svg#qty-minus-mobile"></use>
-                  </svg>
-                </button>
-                <input type="text" class="dates-of-stay__traveler-num" value="2">
-                <button class="btn dates-of-stay__traveler-add" type="button" aria-label="Прибавить">
-                  <svg class="dates-of-stay__icon" width="14" height="14">
-                    <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
-                  </svg>
-                </button>
+                <div class="dates-of-stay__traveler-input">
+                  <button class="btn dates-of-stay__traveler-del" type="button" aria-label="Убавить">
+                    <svg class="dates-of-stay__icon" width="14" height="14">
+                      <use xlink:href="img/sprite.svg#qty-minus-mobile"></use>
+                    </svg>
+                  </button>
+                  <input type="text" class="dates-of-stay__traveler-num" value="2">
+                  <button class="btn dates-of-stay__traveler-add" type="button" aria-label="Прибавить">
+                    <svg class="dates-of-stay__icon" width="14" height="14">
+                      <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
               <div class="dates-of-stay__duration">
                 <div class="dates-of-stay__traveler-head">
                   <span class="dates-of-stay__traveler-title">Длительность:</span>
                   <span class="dates-of-stay__traveler-sum">Дн.</span>
                 </div>
-                <button class="btn dates-of-stay__duration-del" type="button" aria-label="Убавить">
-                  <svg class="dates-of-stay__icon" width="14" height="14">
-                    <use xlink:href="img/sprite.svg#qty-minus-mobile"></use>
-                  </svg>
-                </button>
-                <input type="text" class="dates-of-stay__duration-num"  value="2">
-                <button class="btn dates-of-stay__duration-add" type="button" aria-label="Прибавить">
-                  <svg class="dates-of-stay__icon" width="14" height="14">
-                    <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
-                  </svg>
-                </button>
+                <div class="dates-of-stay__duration-input">
+                  <button class="btn dates-of-stay__duration-del" type="button" aria-label="Убавить">
+                    <svg class="dates-of-stay__icon" width="14" height="14">
+                      <use xlink:href="img/sprite.svg#qty-minus-mobile"></use>
+                    </svg>
+                  </button>
+                  <input type="text" class="dates-of-stay__duration-num"  value="2">
+                  <button class="btn dates-of-stay__duration-add" type="button" aria-label="Прибавить">
+                    <svg class="dates-of-stay__icon" width="14" height="14">
+                      <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
               <div class="dates-of-stay__checkbox">
                 <input class="dates-of-stay__input visually-hidden" type="checkbox" id="kids" checked>
@@ -411,10 +415,15 @@
           </fieldset>
           <fieldset class="user-creation-plans__fieldset route">
             <div class="user-creation-plans__fieldset-header">
-              <legend class="user-creation-plans__legend">Шаг 2.<br>Маршрут</legend>
+              <h3 class="user-creation-plans__fieldset-title">Шаг 2. <br>Маршрут</h3>
               <p class="user-creation-plans__fieldset-description">
                 Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
               </p>
+              <ul class="user-creation-plans__step-marker-list">
+                <li class="user-creation-plans__step-marker-item"><span>Даты</span></li>
+                <li class="user-creation-plans__step-marker-item user-creation-plans__step-marker-item--active"><span>Маршрут</span></li>
+                <li class="user-creation-plans__step-marker-item"><span>Развлечения</span></li>
+              </ul>
             </div>
             <div class="route__wrapper">
               <ul class="route__list">
@@ -469,11 +478,16 @@
           </fieldset>
           <fieldset class="user-creation-plans__fieldset entertainment">
             <div class="user-creation-plans__fieldset-header">
-              <legend class="user-creation-plans__legend">Шаг 3.<br> Развлечения</legend>
+              <h3 class="user-creation-plans__fieldset-title">Шаг 3.<br> Развлечения</h3>
               <p class="user-creation-plans__fieldset-description">
                 Наконец, расскажите о своих планах времяпровождения.
                 Можно писать в свободной форме и ставить тэги.
               </p>
+              <ul class="user-creation-plans__step-marker-list">
+                <li class="user-creation-plans__step-marker-item"><span>Даты</span></li>
+                <li class="user-creation-plans__step-marker-item user-creation-plans__step-marker-item--active"><span>Маршрут</span></li>
+                <li class="user-creation-plans__step-marker-item"><span>Развлечения</span></li>
+              </ul>
             </div>
             <div class="entertainment__wrapper">
               <div class="entertainment__first-country">
