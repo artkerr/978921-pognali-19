@@ -8,16 +8,12 @@
 }
 
 .main-nav__toggle {
-  display: block;
-  background: transparent;
-  border: none;
-  width: 24px;
-  height: 3px;
-  border-radius: 1.5px;
-  background-color: @white;
-  box-shadow: 0 7px 0 @white;
   padding: 0;
-  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.main-nav__toggle-icon {
+  fill: @white;
 }
 
 .main-nav__toggle-image {
@@ -27,11 +23,12 @@
 @media (min-width: @tablet-width) {
   .main-nav {
     min-width: 52%;
+    margin-top: 4px;
   }
 
   .main-nav__toggle {
     margin-right: auto;
-    margin-top: 50px;
+
   }
 }
 

@@ -44,8 +44,6 @@ gulp.task("images", function() {
         plugins: [
           {removeViewBox: true},
           {cleanupIDs: true},
-          {removeUselessStrokeAndFill: true},
-          {removeStyleElement: true}
       ]
       })
     ]))
@@ -111,5 +109,5 @@ gulp.task("server", function () {
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-// gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
 gulp.task("start", gulp.series("css", "server"));

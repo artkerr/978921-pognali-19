@@ -21,7 +21,11 @@
       </picture>
     </a>
     <nav class="page-header__nav main-nav">
-      <button class="main-nav__toggle" aria-label="Кнопка меню"></button>
+      <button class="btn main-nav__toggle" aria-label="Кнопка меню">
+        <svg class="main-nav__toggle-icon" width="25" height="11">
+          <use xlink:href="img/sprite.svg#menu"></use>
+        </svg>
+      </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__site-list site-list">
           <li class="site-list__item">
@@ -381,5 +385,27 @@
       </div>
     </div>
   </footer>
+  <section class="modal business-rate">
+    <h2 class="modal__title">Бизнес-тарифы</h2>
+    <ul class="business-rate__list">
+      <li class="business-rate__item">
+        <p class="business-rate__text">Реклама у блоггера</p>
+        <p class="business-rate__text">300 000 руб./пост</p>
+      </li>
+      <li class="business-rate__item">
+        <p class="business-rate__text">Накрутка подписчиков</p>
+        <p class="business-rate__text">от 1 руб./шт.</p>
+      </li>
+      <li class="business-rate__item">
+        <p class="business-rate__text">Лайки от ботов</p>
+        <p class="business-rate__text">от 20 коп./лайк</p>
+      </li>
+      <li class="business-rate__item">
+        <p class="business-rate__text">Ваш продакт-плейсмент</p>
+        <p class="business-rate__text">Индивидуально</p>
+      </li>
+    </ul>
+    <button class="btn modal__btn" type="button">Закрыть окно</button>
+  </section>
 </body>
 </html>

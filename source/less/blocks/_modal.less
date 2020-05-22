@@ -1,0 +1,35 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__show {
+  display: block;
+  animation: bounce .6s;
+  z-index: 20;
+}
+
+.modal__title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  color: @mango;
+  margin-bottom: 30px;
+}
+
+.modal__btn {
+  width: 270px;
+  height: 59px;
+  background-color: @pale-grey-five;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 52px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: @dark-slate-blue;
+  text-transform: uppercase;
+}
