@@ -15,7 +15,7 @@
 
   &::after {
     position: absolute;
-    top: 5px;
+    top: -15px;
     right: 25px;
     content: "";
     width: 99px;
@@ -37,22 +37,24 @@
 
 .rate__title {
   .title ();
-  max-width: 45%;
-  padding-top: 20px;
-  margin-left: 15%;
-  margin-bottom: 45px;
+  max-width: 101px;
+  margin-top: 40px;
+  margin-left: 50px;
+  margin-bottom: 42px;
+  line-height: 1;
 }
 
 .rate__list {
   list-style: none;
   padding: 0;
   margin-bottom: 30px;
+
 }
 
 .rate__item {
-  max-width: 70%;
+  max-width: 200px;
   border-top: 1px solid @table-line;
-  padding: 10px 0;
+  padding: 10px 2px;
   position: relative;
 
   &:nth-child(3) {
@@ -62,8 +64,8 @@
   &::before {
     content: "1";
     position: absolute;
-    top: 0;
-    right: -56px;
+    top: 2px;
+    right: -48px;
     text-align: center;
     padding-top: 12px;
     font-size: 16px;
@@ -94,7 +96,7 @@
 .rate__link {
   font-weight: bold;
   color: @dark-blue;
-  padding: 10px 0;
+  padding: 10px 2px;
 
   &:hover {
     color: @dark-slate-blue-70;
