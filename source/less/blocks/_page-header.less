@@ -1,15 +1,19 @@
 .page-header {
+  z-index: 9;
+  background-color: @dark-two;
+  padding: 0;
+}
+
+.page-header__wrapper {
   max-width: @mobile-width;
+  background-color: @dark-two;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background-color: @dark-two;
+  margin: 0 auto;
   padding: 0 25px;
   padding-top: 25px;
-  box-sizing: border-box;
-  margin: 0 auto;
-  z-index: 9;
 }
 
 .page-header__logo-image {
@@ -33,11 +37,12 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    max-width: @tablet-width;
-    padding: 11px 40px;
+    background-color: @dark-blue-grey;
   }
 
-  .page-header__index {
+  .page-header__wrapper {
+    max-width: @tablet-width;
+    padding: 11px 40px;
     background-color: @dark-blue-grey;
   }
 
@@ -52,10 +57,13 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
+    background-color: @dark-two;
+  }
+
+  .page-header__wrapper {
     max-width: @desktop-width;
+    background-color: @dark-two;
     padding: 0 60px;
     padding-top: 20px;
-    padding-bottom: 80px;
-    background-color: @dark-two;
   }
 }

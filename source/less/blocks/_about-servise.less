@@ -150,17 +150,21 @@
 }
 
 @media (min-width: @desktop-width) {
+  .about-servise {
+    margin-top: -55px;
+  }
+
   .about-servise__wrapper {
     max-width: @desktop-width;
     padding-left: 133px;
-    margin-top: -55px;
-    background: @dark-blue url("../img/about-desktop@1x.png") no-repeat 92.5% 85px;
+    padding-top: 130px;
+    background: @dark-blue url("../img/about-desktop@1x.png") no-repeat 750px 140px;
     padding-bottom: 115px;
     position: relative;
     z-index: 10;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background: @dark-blue url("../img/about-desktop@2x.png") no-repeat 92.5% 91px;
+      background: @dark-blue url("../img/about-desktop@2x.png") no-repeat  750px 140px;
       background-size: 630px 655px;
     }
   }
@@ -172,19 +176,24 @@
     &::after {
       width: 213px;
       height: 213px;
-      left: 200px;
-      top: 100px;
+      left: 165px;
+      top: 125px;
     }
   }
 
   .about-servise__text {
-    max-width: 611px;
+    max-width: 615px;
     margin-bottom: 40px;
   }
 
+  .about-servise__text-br2 {
+    display: none;
+  }
+
   .about-servise__text-bold {
-    max-width: 410px;
+    max-width: 450px;
     margin-bottom: 68px;
+    font-size: 16px;
   }
 
   .about-servise__btn {
