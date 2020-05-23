@@ -8,15 +8,16 @@ link.addEventListener("click", function (evt) {
   popup.classList.add("modal__show");
 });
 
-
-
+close.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.remove("modal__show");
+});
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (popup.classList.contains("modal-show")) {
-      popup.classList.remove("modal-show");
-      popup.classList.remove("modal-error");
+    if (popup.classList.contains("modal__show")) {
+      popup.classList.remove("modal__show");
     }
   }
 });
