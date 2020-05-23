@@ -1,6 +1,5 @@
 .traveler-filter {
   width: 272px;
-  min-height: 800px;
   border-radius: 20px;
   background-color: @light-gold;
   margin: 0 auto;
@@ -16,7 +15,7 @@
   line-height: 1;
   font-size: 22.5px;
   font-weight: bold;
-  margin-bottom: 35px;
+  margin-bottom: 21px;
 }
 
 .traveler-filter__fieldset {
@@ -24,12 +23,28 @@
   border: none;
   border-top: 1px solid  @macaroni-and-cheese;
   margin: 0;
-  padding: 10px 0;
+  padding: 12px 0;
+  position: relative;
+}
+
+.traveler-filter__fieldset-open {
+  position: absolute;
+  right: -6px;
+  top: 10px;
+}
+
+.traveler-filter__fieldset-open-btn {
+  fill: @dark-blue-grey;
 }
 
 .traveler-filter__list {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.traveler-filter__item {
+  padding: 7px 0;
 }
 
 .traveler-filter__legend {
@@ -38,7 +53,7 @@
   line-height: 1.13;
   text-transform: uppercase;
   color: @dark-slate-blue;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 
   span {
     display: none;
@@ -47,20 +62,19 @@
 
 .traveler-filter__checkbox-label {
   display: flex;
-  align-items: center;
   color: @greyish;
   font-size: 15px;
   line-height: 1;
-  margin-bottom: 5px;
   cursor: pointer;
 
   &::before {
     content: "";
+    margin-top: -4px;
     width: 18px;
     height: 18px;
     border-radius: 4px;
     background-color: @white;
-    margin-right: 5px;
+    margin-right: 9px;
   }
 }
 
@@ -69,7 +83,7 @@
   width: 18px;
   height: 18px;
   border-radius: 4px;
-  margin-right: 5px;
+  margin-right: 9px;
   background-color: @white;
   background-image: url("../img/tick.svg");
   background-size: 9px 9px;
@@ -80,6 +94,10 @@
 .traveler-filter__transport-wrapper {
   .traveler-filter__list {
     display: flex;
+  }
+
+  .traveler-filter__legend {
+    margin-bottom: 9px;
   }
 }
 
@@ -142,7 +160,7 @@
 }
 
 .traveler-filter__level-toggle-min {
-  left: 0;
+  left: -8px;
 }
 
 .traveler-filter__level-value {
@@ -208,8 +226,9 @@
   font-weight: bold;
   line-height: 2;
   color: @dark-two;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 @media (min-width: @tablet-width) {
