@@ -86,31 +86,30 @@
       background-image: url("../img/globe-back-desktop@2x.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-  }
+    }
 
-  .introduction__wrapper {
-    max-width: @desktop-width;
-    position: relative;
-    background: url("../img/traveller-illustration-desktop@1x.png") no-repeat;
-    background-size: 430px;
-    background-position: 60% -16px;
-    padding-bottom: 60px;
-
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background:
-        url("../img/traveller-illustration-desktop@2x.png") no-repeat;
+    .introduction__wrapper {
+      max-width: @desktop-width;
+      position: relative;
+      background: url("../img/traveller-illustration-desktop@1x.png") no-repeat;
       background-size: 430px;
       background-position: 60% -16px;
+      padding-bottom: 60px;
+
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background: url("../img/traveller-illustration-desktop@2x.png") no-repeat;
+        background-size: 430px;
+        background-position: 60% -16px;
+      }
+    }
+
+    .introduction__title {
+      font-size: 60px;
+      max-width: 28%;
+      text-align: left;
+      margin-left: 129px;
+      padding-top: 85px;
     }
   }
-
-  .introduction__title {
-    font-size: 60px;
-    max-width: 28%;
-    text-align: left;
-    margin-left: 129px;
-    padding-top: 85px;
-  }
-}
 }
