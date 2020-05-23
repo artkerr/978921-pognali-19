@@ -48,17 +48,16 @@
   list-style: none;
   padding: 0;
   margin-bottom: 30px;
-
 }
 
 .rate__item {
   max-width: 200px;
-  border-top: 1px solid @table-line;
+  border-top: 1px solid @black-050;
   padding: 10px 2px;
   position: relative;
 
   &:nth-child(3) {
-    border-bottom: 1px solid @table-line;
+    border-bottom: 1px solid @black-050;
   }
 
   &::before {
@@ -119,7 +118,7 @@
     max-width: @tablet-width;
 
     &::after {
-      top: 355px;
+      top: 335px;
       right: 85px;
     }
   }
@@ -134,16 +133,17 @@
     min-width: 600px;
     text-align: center;
     margin: 0 auto;
-    margin-top: 70px;
-    margin-bottom: 75px;
+    margin-top: 92px;
+    margin-bottom: 73px;
   }
 
   .rate__list {
-    margin-bottom: 35px;
+    margin-bottom: 50px;
   }
 
   .rate__item {
-    padding: 20px 0;
+    padding: 0;
+    padding-top: 16px;
     max-width: 562px;
     height: 67px;
     display: flex;
@@ -179,19 +179,20 @@
 
   .rate__link {
     font-size: 20px;
-    margin-left: 13px;
+    padding: 10px 0;
+    margin-left: -2px;
     position: relative;
     color: @light-navy;
 
     &::before {
       position: absolute;
       top: -15px;
-      left: -87px;
+      left: -88px;
       content: "";
       width: 67px;
       height: 67px;
       border-radius: 50%;
-      background: @pale-grey-four url("../img/business.svg") no-repeat center center / 17px 21px;
+      background: @pale-grey-four url("../img/business.svg") no-repeat center / 17px 21px;
     }
   }
 }

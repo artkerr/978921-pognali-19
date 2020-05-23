@@ -43,6 +43,10 @@
   margin-top: 20px;
 }
 
+.fellow-traveler__text-br1 {
+  display: none;
+}
+
 .fellow-traveler__text-bold {
   font-weight: bold;
   line-height: 1.38;
@@ -64,7 +68,7 @@
   margin-bottom: 10px;
 }
 
-.fellow-traveler-btn {
+.fellow-traveler__btn {
   display: block;
   position: relative;
   width: 270px;
@@ -110,12 +114,13 @@
     background-color: @dark-blue;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    padding-bottom: 60px;
-    margin-top: -50px;
+    padding-bottom: 56px;
+    margin-top: -55px;
   }
 
   .fellow-traveler__wrapper {
     max-width: @tablet-width;
+    margin-top: 5px;
     background:
       url("../img/rogovaya-back-desktop@1x.png") no-repeat 84% 130px,
       url("../img/smolov-back-desktop@1x.png") no-repeat 6% 475px;
@@ -130,24 +135,36 @@
   }
 
   .fellow-traveler__text-wrapper {
-    max-width: 530px;
-    padding-left: 76px;
+    max-width: 430px;
     margin-top: 110px;
-    margin-left: -5px;
+    margin-left: 72px;
+    margin-bottom: 58px;
   }
 
   .fellow-traveler__text {
+    max-width: 430px;
     font-size: 28px;
     line-height: 1.18;
     margin-left: 3px;
-    margin-top: 37px;
+    margin-top: 35px;
     margin-bottom: 38px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .fellow-traveler__text-br {
+    display: none;
+  }
+
+  .fellow-traveler__text-br1 {
+    display: block;
   }
 
   .fellow-traveler__title {
     font-size: 45px;
     padding: 20px 0;
     position: relative;
+    z-index: 1;
 
     &::before {
       content: "";
@@ -164,25 +181,25 @@
 
   .fellow-traveler__text-bold {
     font-size: 21px;
-    max-width: 252px;
-    margin-left: 3px;
+    max-width: 260px;
+    line-height: 1.2;
   }
 
   .fellow-traveler__list {
-    width: 85%;
+    width: 618px;
     flex-direction: row;
     flex-grow: 1;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 6px;
+    justify-content: space-between;
+    margin-bottom: 80px;
   }
 
   .fellow-traveler__item {
     margin: 0;
-    flex-basis: 46%;
+    flex-basis: 285px;
   }
 
-  .fellow-traveler-btn {
+  .fellow-traveler__btn {
     width: 618px;
     line-height: 3.45;
     font-size: 24px;
@@ -225,7 +242,7 @@
     flex: initial;
   }
 
-  .fellow-traveler-btn {
+  .fellow-traveler__btn {
     position: absolute;
     left: 130px;
     bottom: 134px;

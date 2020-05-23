@@ -155,23 +155,21 @@
   padding-bottom: 17px;
 }
 
-
-.traveler-overview__transport-item-active {
-  fill: @dark-blue;
-}
-
 .traveler-overview__icon {
   fill: @point-text;
+}
+
+
+.traveler-overview__transport-item-active {
+  .traveler-overview__icon {
+    fill: @dark-blue;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .traveler-overview {
     max-width: 285px;
     margin: 0;
-
-    &:first-child {
-      margin-right: 8px;
-    }
   }
 
   .traveler-overview__photo {
@@ -185,7 +183,7 @@
   }
 
   .traveler-overview__flag-item {
-    margin-top: -15px;
+    margin-top: -12px;
   }
 
   .traveler-overview__title {
@@ -197,7 +195,7 @@
 
   .traveler-overview__offline {
     &::before {
-      top: 20px;
+      top: 18px;
       left: 47px;
       width: 7px;
       height: 7px;
@@ -206,7 +204,7 @@
 
   .traveler-overview__online {
     &::before {
-      top: 20px;
+      top: 18px;
       left: 57px;
       width: 7px;
       height: 7px;
@@ -224,7 +222,9 @@
   }
 
   .traveler-overview__transport-list {
+    max-width: 140px;
     padding-bottom: 20px;
+    justify-content: flex-start;
   }
 
   .traveler-overview__transport_item {

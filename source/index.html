@@ -9,7 +9,7 @@
   <link rel="preload" href="fonts/bloggersans.woff2" as="font">
 </head>
 <body>
-  <header class="page-header sticky">
+  <header class="page-header page-header__index sticky">
     <a class="page-header__logo">
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp, img/logo-desktop-white@2x.webp 2x" type="image/webp">
@@ -85,7 +85,7 @@
       <div class="about-servise__wrapper">
         <h2 class="about-servise__title">О сервисе</h2>
           <p class="about-servise__text">
-            Любое путешествие веселее<br> с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и
+            Любое путешествие веселее<br class="about-servise__text-br1"> с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий<br class="about-servise__text-br2"> и
             черпайте вдохновение в чужих.
           </p>
           <p class="about-servise__text-bold">
@@ -148,9 +148,9 @@
         <div class="fellow-traveler__text-wrapper">
           <h2 class="fellow-traveler__title">Попутчики</h2>
           <p class="fellow-traveler__text">
-            Все мы индивидуальны и у<br> каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут
+            Все мы индивидуальны и у<br class="fellow-traveler__text-br"> каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,<br class="fellow-traveler__text-br1"> а другому маршрут
             для хайкинга.
-            <p class="fellow-traveler__text-bold">Теперь можно легко найти единомышленников!</p>
+            <p class="fellow-traveler__text-bold">Теперь можно легко <br class="fellow-traveler__text-br1">найти единомышленников!</p>
         </div>
         <div class="fellow-traveler__traveler-wrapper">
           <ul class="fellow-traveler__list">
@@ -195,7 +195,7 @@
                   </ul>
                   <ul class="traveler-overview__transport-list">
                     <li class="traveler-overview__transport_item traveler-overview__transport-item-active tooltip tooltip__text" data-label="Авиаперелет" aria-label="Авиаперелет">
-                      <svg width="19" height="21">
+                      <svg width="19" height="21" class="traveler-overview__icon">
                         <use xlink:href="img/sprite.svg#plane"></use>
                       </svg>
                     </li>
@@ -255,7 +255,7 @@
                   </ul>
                   <ul class="traveler-overview__transport-list">
                     <li class="traveler-overview__transport_item traveler-overview__transport-item-active tooltip tooltip__text" data-label="Авиаперелет" aria-label="Авиаперелет">
-                      <svg width="19" height="21">
+                      <svg width="19" height="21" class="traveler-overview__icon">
                         <use xlink:href="img/sprite.svg#plane"></use>
                       </svg>
                     </li>
@@ -279,7 +279,7 @@
               </div>
             </li>
           </ul>
-          <a class="fellow-traveler-btn" href="catalog.html">Показать всеx</a>
+          <a class="fellow-traveler__btn" href="catalog.html">Показать всеx</a>
         </div>
       </div>
     </section>
