@@ -35,10 +35,9 @@
   font-weight: bold;
   color: @dark-slate-blue;
   padding-left: 30px;
-  margin-bottom: 30px;
-  margin-top: 30px;
   position: relative;
   cursor: pointer;
+  margin-bottom: 23px;
 
   &::before {
     content: "";
@@ -69,12 +68,38 @@
     background-color: @pale-gray;
     position: absolute;
     left: 50%;
-    bottom: -8px;
+    bottom: -13px;
   }
 }
 
 .load-profile__next-page {
   margin-right: 130px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 11px 10px;
+    border-style: solid;
+    border-color: transparent @dark-blue-grey transparent transparent;
+  }
+}
+.load-profile__preveus-page {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 11px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent @dark-blue-grey ;
+  }
 }
 
 .load-profile__icon {
