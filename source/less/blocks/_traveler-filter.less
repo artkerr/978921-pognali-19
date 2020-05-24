@@ -235,7 +235,7 @@
   .traveler-filter {
     background-color: @light-gold;
     width: 688px;
-    padding-left: 30px;
+    padding-left: 35px;
     border-radius: 20px;
     margin-bottom: 115px;
   }
@@ -245,11 +245,19 @@
     font-size: 30px;
     padding: 30px 0;
     border-bottom: 1px solid @macaroni-and-cheese;
+    padding-top: 0;
+    margin-top: 27px;
+    padding-bottom: 36px;
   }
 
   .traveler-filter__fieldset {
     border: none;
     width: 100%;
+    padding: 0;
+  }
+
+  .traveler-filter__fieldset-open {
+    display: none;
   }
 
   .traveler-filter__legend {
@@ -258,18 +266,35 @@
     line-height: 1.5;
     margin-right: 40px;
     margin-top: 10px;
-    padding-top: 12px;
 
     span {
       display: inline;
     }
   }
 
+  .traveler-filter__list {
+    padding-top: 10px;
+  }
+
+  .traveler-filter__item {
+    margin-right: 20px;
+  }
+
   .traveler-filter__hobby-wrapper {
     display: flex;
 
     .traveler-filter__legend {
-      margin-right: 60px;
+      margin-right: 65px;
+    }
+    .traveler-filter__item {
+      &:nth-child(1) {
+        margin-right: 40px;
+      }
+
+      &:nth-child(2) {
+        margin-right: 60px;
+      }
+
     }
   }
 
@@ -279,6 +304,16 @@
     .traveler-filter__legend {
       margin-right: 46px;
     }
+
+    .traveler-filter__item {
+      &:nth-child(1) {
+        margin-right: 15px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 
   .traveler-filter__food-wrapper {
@@ -286,6 +321,22 @@
 
     .traveler-filter__legend {
       margin-right: 86px;
+    }
+
+    .traveler-filter__item {
+      margin-right: 0;
+
+      &:nth-child(1) {
+        margin-right: 56px;
+      }
+
+      &:nth-child(2) {
+        margin-right: 15px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 

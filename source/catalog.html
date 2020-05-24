@@ -9,7 +9,7 @@
   <link rel="preload" href="fonts/bloggersans.woff2" as="font">
 </head>
 <body>
-  <header class="page-header sticky">
+  <header class="page-header page-header__catalog sticky">
     <div class="page-header__wrapper">
       <a class="page-header__logo">
         <picture>
@@ -417,8 +417,9 @@
         <h2 class="traveler-filter__title">Подберите идеального попутчика</h2>
         <form class="traveler-filter__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="traveler-filter__fieldset">
+            <legend class="visually-hidden">Выбор попутчика по хобби</legend>
             <div class="traveler-filter__hobby-wrapper">
-              <legend class="traveler-filter__legend">Хобби<span>:</span></legend>
+              <h3 class="traveler-filter__legend">Хобби<span>:</span></h3>
               <button type="button" class="btn traveler-filter__fieldset-open">
                 <svg class="traveler-filter__fieldset-open-btn" width="8" height="4">
                   <use xlink:href="img/sprite.svg#dropdown"></use>
@@ -441,8 +442,9 @@
             </div>
           </fieldset>
           <fieldset class="traveler-filter__fieldset">
+            <legend class="visually-hidden">Выбор попутчика по музыке</legend>
             <div class="traveler-filter__music-wrapper">
-              <legend class="traveler-filter__legend">Музыка<span>:</span></legend>
+              <h3 class="traveler-filter__legend">Музыка<span>:</span></h3>
               <button type="button" class="btn traveler-filter__fieldset-open">
                 <svg class="traveler-filter__fieldset-open-btn" width="8" height="4">
                   <use xlink:href="img/sprite.svg#dropdown"></use>
@@ -465,8 +467,9 @@
             </div>
           </fieldset>
           <fieldset class="traveler-filter__fieldset">
+            <legend class="visually-hidden">Выбор попутчика по еде</legend>
             <div class="traveler-filter__food-wrapper">
-            <legend class="traveler-filter__legend">Еда<span>:</span></legend>
+            <h3 class="traveler-filter__legend">Еда<span>:</span></h3>
             <button type="button" class="btn traveler-filter__fieldset-open">
               <svg class="traveler-filter__fieldset-open-btn" width="8" height="4">
                 <use xlink:href="img/sprite.svg#dropdown"></use>
@@ -489,8 +492,9 @@
             </div>
           </fieldset>
           <fieldset class="traveler-filter__fieldset">
+            <legend class="visually-hidden">Выбор попутчика по транспорту</legend>
             <div class="traveler-filter__transport-wrapper">
-              <legend class="traveler-filter__legend">Транспорт<span>:</span></legend>
+              <h3 class="traveler-filter__legend">Транспорт<span>:</span></h3>
               <button type="button" class="btn traveler-filter__fieldset-open">
                 <svg class="traveler-filter__fieldset-open-btn" width="8" height="4">
                   <use xlink:href="img/sprite.svg#dropdown"></use>
@@ -533,8 +537,9 @@
             </div>
           </fieldset>
           <fieldset class="traveler-filter__fieldset traveler-filter__level">
+            <legend class="visually-hidden">Выбор попутчика по уровню</legend>
             <div class="traveler-filter__level-wrapper">
-              <legend class="traveler-filter__legend">Левел:</legend>
+              <h3 class="traveler-filter__legend">Левел:</h3>
               <div class="traveler-filter__scale-wrapper">
                 <div class="traveler-filter__level-value">
                   <input class="traveler-filter__level-value-min" type="text" value="30">
@@ -562,7 +567,7 @@
                 <source media="(min-width: 320px)" srcset="img/firsova-mobile@1x.webp, img/firsova-mobile@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg, img/firsova-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg, img/firsova-tablet@2x.jpg 2x">
-                <img class="traveler__photo" src="img/firsova-mobile@1x.jpg", srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова" width="70" height="70">
+                <img class="traveler__photo" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова" width="70" height="70">
               </picture>
               <div class="traveler__user-info">
                 <h3 class="traveler__name traveler__offline">Таня Фирсова</h3>
@@ -949,7 +954,7 @@
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
-          <img src="img/htmlacademy.svg" alt="Htmlacademy" width=" 27" height="34">
+          <img src="img/htmlacademy.svg" alt="Htmlacademy" width="27" height="34">
         </a>
       </div>
     </div>
