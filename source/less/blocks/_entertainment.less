@@ -4,8 +4,8 @@
   background-color: @white;
   border: none;
   padding: 25px;
-  padding-bottom: 50px;
-
+  margin-top: 10px;
+  padding-bottom: 5px;
   .user-creation-plans__step-marker-list {
     display: none;
   }
@@ -26,6 +26,7 @@
 }
 
 .entertainment__first-country {
+  margin-bottom: 5px;
   &::before {
     position: absolute;
     top: 8px;
@@ -40,7 +41,7 @@
   &::after {
     position: absolute;
     top: 6px;
-    left: 0;
+    left: -2px;
     content: "";
     width: 6px;
     height: 6px;
@@ -51,6 +52,8 @@
 
 
 .entertainment__second-country {
+  margin-bottom: 50px;
+
   &::before {
     position: absolute;
     top: 290px;
@@ -65,7 +68,7 @@
   &::after {
     position: absolute;
     top: 288px;
-    left: 0;
+    left: -2px;
     content: "";
     width: 6px;
     height: 6px;
@@ -82,12 +85,13 @@
   position: relative;
   margin-left: 10px;
   margin-top: 22px;
+  margin-bottom: 16px;
 
   &::before {
     content: "";
     position: absolute;
     right: 20px;
-    top: 1px;
+    top: -1px;
     width: 49px;
     height: 34px;
     background-color: @white;
@@ -109,6 +113,12 @@
 }
 
 .entertainment__czech {
+  margin-bottom: 15px;
+
+  &::before {
+    content: none;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -128,12 +138,13 @@
   border: solid 1px @cloudy-blue;
   background-color: @white;
   color: @greyish;
+  font-size: 16px;
   padding: 13px 30px 15px 15px;
-}
 
-.entertainment__textarea::placeholder {
-  color: @greyish;
-  opacity: 0.3;
+  &::placeholder {
+    color: @greyish;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {

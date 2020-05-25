@@ -12,6 +12,7 @@
   border-top: 1px solid @cloudy-blue;
   border-bottom: 1px solid @cloudy-blue;
   padding: 10px 0;
+  padding-bottom: 5px;
 }
 
 .calendar__month-value {
@@ -19,6 +20,13 @@
   font-weight: bold;
   color: @dark-slate-blue;
   margin: auto;
+}
+
+.calendar__next-btn {
+  padding-right: 0;
+}
+.calendar__prev-btn {
+  padding-left: 0;
 }
 
 .calendar__icon {
@@ -31,8 +39,8 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 10px;
-  margin-bottom: 10px;
+  padding-top: 5px;
+  margin-bottom: 0;
 }
 
 .calendar__days-name-item {
@@ -59,6 +67,8 @@
   width: 221px;
   display: flex;
   flex-wrap: wrap;
+  margin-top: -3px;
+  margin-bottom: 30px;
 }
 
 .calendar__days-date-item {

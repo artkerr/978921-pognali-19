@@ -30,7 +30,7 @@
   .mainland-list__item {
     padding: 0;
     margin-right: 25px;
-    
+
     &:last-child {
       margin-right: 0;
     }
@@ -43,6 +43,16 @@
 
 @media (min-width: @desktop-width) {
   .mainland-list {
-    margin-left: 330px;
+    margin-left: 390px;
+  }
+
+  .mainland-list__item {
+    &:nth-child(2) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 30px;
+    }
   }
 }
