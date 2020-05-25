@@ -79,6 +79,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .user-plans {
+    padding-bottom: 75px;
+  }
+
   .user-plans__wrapper {
     max-width: 618px;
   }
@@ -86,11 +90,14 @@
   .user-plans__title {
     font-size: 36px;
     line-height: 1.4;
+    margin-top: 25px;
+    margin-bottom: 40px;
   }
 
   .user-plans__direction-item {
     width: 618px;
     border-radius: 10px;
+
   }
 
   .user-plans__direction-title {
@@ -101,7 +108,9 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
+    margin-left: 12px;
+    margin-top: 8px;
 
     span {
       font-size: 20px;
@@ -117,16 +126,16 @@
       height: 1px;
       background-color: @dark-slate-blue;
       opacity: 0.1;
-      bottom: -25px;
-      left: -24px;
+      bottom: -20px;
+      left: -36px;
     }
   }
 
   .user-plans__direction-value {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    margin-left: 10px;
   }
 
   .user-plans__direction-country {
@@ -135,6 +144,7 @@
     font-weight: 500;
     line-height: 0.9;
     letter-spacing: 2px;
+    width: 185px
   }
 
   .user-plans__direction-date {
@@ -143,6 +153,7 @@
     font-weight: 500;
     line-height: 0.9;
     letter-spacing: 2px;
+    width: 185px;
   }
 
   .user-plans__direction-btn {
@@ -150,6 +161,8 @@
     font-weight: 500;
     line-height: 0.9;
     letter-spacing: 2px;
+    margin-left: 75px;
+
   }
 }
 

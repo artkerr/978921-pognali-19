@@ -139,6 +139,7 @@
   background-color: @white;
   color: @greyish;
   font-size: 16px;
+  font-family: "BloggerSans", "Open Sans", sans-serif;
   padding: 13px 30px 15px 15px;
 
   &::placeholder {
@@ -152,16 +153,27 @@
     width: 618px;
     border-radius: 30px;
     padding: 43px;
-    padding-bottom: 80px;
+    padding-top: 47px;
+    padding-bottom: 65px;
+    margin-bottom: 60px;
 
     .user-creation-plans__btn--back {
-      margin-left: 300px;
+      margin-left: 359px;
+      margin-top: 10px;
+      padding-left: 26px;
+    }
+
+    .user-creation-plans__fieldset-title {
+      margin-bottom: 35px;
     }
   }
 
   .entertainment__wrapper {
+    margin-top: 80px;
+    margin-bottom: 45px;
+
     &::before {
-      top: 10px;
+      top: 13px;
       left: 526px;
       content: "";
       width: 3px;
@@ -173,12 +185,15 @@
     font-size: 30px;
     font-weight: bold;
     line-height: 0.6;
+    margin-left: 0;
+    margin-top: 24px;
+    margin-bottom: 40px;
   }
 
   .entertainment__bosnia {
     &::after {
-      top: -15px;
-      right: 35px;
+      top: -17px;
+      right: 33px;
       width: 70px;
       height: 47px;
       background-image: url("../img/flag-bosnia.svg");
@@ -188,8 +203,8 @@
 
   .entertainment__czech {
     &::after {
-      top: -15px;
-      right: 35px;
+      top: -17px;
+      right: 33px;
       width: 70px;
       height: 47px;
       background-image: url("../img/flag-czech.svg");
@@ -198,11 +213,12 @@
   }
 
   .entertainment__textarea {
-    width: 499px;
+    width: 505px;
     height: 142px;
     font-size: 20px;
     line-height: 1.2;
-    padding: 21px 19px;
+    padding: 17px 19px;
+    padding-right: 40px;
   }
 
 
@@ -223,14 +239,14 @@
 
 
   .entertainment__second-country {
-    margin-bottom: 50px;
+    margin-bottom: 0;
 
     &::before {
       content: none;
     }
 
     &::after {
-      top: 254px;
+      top: 259px;
       left: 520px;
       width: 15px;
       height: 15px;

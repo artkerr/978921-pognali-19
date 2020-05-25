@@ -9,7 +9,7 @@
   <link rel="preload" href="fonts/bloggersans.woff2" as="font">
 </head>
 <body>
-  <header class="page-header sticky">
+  <header class="page-header page-header__catalog sticky">
     <div class="page-header__wrapper">
       <a class="page-header__logo">
         <picture>
@@ -93,7 +93,7 @@
         <button type="button" class="btn user-info__btn"><span>Сменить</span> фото</button>
         <div class="user-info__tags">
           <h3 class="user-info__sub-title"><span>Тэги</span></h3>
-          <textarea class="user-info__tags-area" placeholder="#бургер #бар #футбол #концерт #крафт">#бургер #бар #футбол #концерт #крафт
+          <textarea class="user-info__tags-area" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт
           </textarea>
         </div>
         <div class="user-info__transport">
@@ -137,7 +137,7 @@
     </section>
     <section class="user-plans">
       <div class="user-plans__wrapper">
-        <h2 class="user-plans__title"> Мои планы</h2>
+        <h2 class="user-plans__title">Мои планы</h2>
         <ul class="user-plans__direction-list">
           <li class="user-plans__direction-item">
             <h3 class="user-plans__direction-title"><span>1.</span>Франция, Италия</h3>
@@ -170,6 +170,7 @@
             </ul>
           </div>
           <fieldset class="user-creation-plans__fieldset dates-of-stay">
+            <legend class="visually-hidden"></legend>
             <div class="dates-of-stay__wrapper">
               <div class="user-creation-plans__fieldset-header">
                 <h3 class="user-creation-plans__fieldset-title">Шаг 1. <br>Даты пребывания</h3>
@@ -436,7 +437,7 @@
                 <li class="route__item route__big-select">
                   <div class="route__country">
                     <select class="route__country-select" name="" id="">
-                      <option value="">Выберете страну</option>
+                      <option value="">Выберите страну</option>
                       <option value="big" selected>Босния и Герцеговина</option>
                       <option value="cz">Чехия</option>
                     </select>
@@ -448,7 +449,7 @@
                 <li class="route__item route__cz-select">
                   <div class="route__country">
                     <select class="route__country-select" name="" id="">
-                      <option value="">Выберете страну</option>
+                      <option value="">Выберите страну</option>
                       <option value="big">Босния и Герцеговина</option>
                       <option value="cz" selected>Чехия</option>
                     </select>
@@ -460,7 +461,7 @@
                 <li class="route__item route__country-empty">
                   <div class="route__country">
                     <select class="route__country-select route__country-empty-select" name="" id="">
-                      <option value="">Выберете страну</option>
+                      <option value="">Выберите страну</option>
                       <option value="">Босния и Герцеговина</option>
                       <option value="">Чехия</option>
                     </select>

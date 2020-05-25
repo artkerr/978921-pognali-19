@@ -123,16 +123,19 @@
 
   .user-creation-plans__fieldset-header {
     order: 1;
+    width: 505px;
   }
 
   .user-creation-plans__title {
     font-size: 36px;
-    margin-right: 280px;
+    margin-right: 300px;
+    margin-top: 30px;
+    margin-bottom: 55px;
   }
 
   .user-creation-plans__step-marker-list {
     width: 65px;
-    margin-top: 15px;
+    margin-top: 40px;
   }
 
   .user-creation-plans__step-marker-item {
@@ -142,6 +145,7 @@
   .user-creation-plans__fieldset-title {
     font-size: 36px;
     line-height: 1;
+    margin-bottom: 31px;
   }
 
   .user-creation-plans__fieldset-description {
@@ -150,19 +154,18 @@
   }
 
   .user-creation-plans__btn {
-    padding: 30px;
-    padding-right: 70px;
+    padding: 31px 77px 25px 35px;
     text-align: left;
     font-size: 24px;
     text-transform: none;
     position: relative;
     color: @dark-slate-blue;
-    margin-right: 15px;
+    margin-right: 45px;
 
     &::after {
       content: "";
       position: absolute;
-      right: 15px;
+      right: 25px;
       top: 50%;
       transform: translateY(-50%);
       border-width: 7px 10px;
@@ -173,11 +176,14 @@
 
   .user-creation-plans__btn--back {
     text-align: right;
-    padding-right: 0;
-    padding-left: 70px;
+    padding: 0;
+    padding-left: 25px;
+    margin-left: 20px;
+    margin-right: 0;
 
     &::after {
       top: 50%;
+      right: 15px;
       transform: translate(-150px, -50%) rotate(180deg);
       border-width: 7px 10px;
       border-style: solid;
@@ -186,7 +192,7 @@
   }
 
   .user-creation-plans__submit-btn {
-    bottom: 64px;
+    bottom: 54px;
     left: 45px;
     width: 285px;
     height: 81px;
@@ -195,13 +201,14 @@
     line-height: 1;
     text-transform: none;
     text-align: left;
-    padding-left: 34px;
+    padding-left: 33px;
+    padding-top: 10px;
     color: @dark-slate-blue;
 
     &::after {
       content: "";
       position: absolute;
-      right: 15px;
+      right: 27px;
       top: 50%;
       transform: translateY(-50%);
       border-width: 7px 10px;

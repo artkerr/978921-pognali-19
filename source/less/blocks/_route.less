@@ -212,21 +212,31 @@ select {
     height: auto;
     border-radius: 30px;
     padding: 43px;
+    padding-top: 46px;
+    padding-bottom: 65px;
+    margin-bottom: 50px;
 
     .user-creation-plans__fieldset-description {
       width: 406px;
+      margin-top: 35px;
     }
+  }
+
+  .route__wrapper {
+    margin-bottom: 12px;
   }
 
   .route__list {
     border-top: 1px solid  @light-blue-grey-two;
     padding: 40px 0;
     position: relative;
+    margin-top: 34px;
+    margin-bottom: 10px;
 
     &::after {
       position: absolute;
       top: 0;
-      right: 142px;
+      right: 136px;
       content: "";
       width: 1px;
       height: 400px;
@@ -240,11 +250,13 @@ select {
     font-size: 20px;
     line-height: 0.9;
     letter-spacing: 2px;
-    padding-left: 27px;
+    padding-top: 5px;
+    padding-left: 25px;
+    margin-bottom: 15px;
   }
 
   .route__country-icon {
-    left: 330px;
+    left: 325px;
     top: 32px;
     width: 17px;
     height: 9px;
@@ -252,15 +264,16 @@ select {
   }
 
   .route__country-empty-select + .route__country-icon {
-    left: 330px;
+    left: 325px;
   }
 
   .route__item {
+
     &::before {
       content: "";
       position: absolute;
       top: 28px;
-      right: 135px;
+      right: 130px;
       width: 15px;
       height: 15px;
       border-radius: 50%;
@@ -281,8 +294,8 @@ select {
 
   .route__big-select {
     &::after {
-      top: 12px;
-      right: 50px;
+      top: 13px;
+      right: 41px;
       width: 70px;
       height: 47px;
       border: none;
@@ -293,8 +306,8 @@ select {
 
   .route__cz-select {
     &::after {
-      top: 12px;
-      right: 50px;
+      top: 13px;
+      right: 41px;
       width: 70px;
       height: 47px;
       border: none;
@@ -309,12 +322,12 @@ select {
     &::after {
       content: "";
       top: 24px;
-      right: 0;
-      width: 21px;
-      height: 21px;
+      right: -5px;
+      width: 23px;
+      height: 23px;
       background-image: url("../img/filter-close.svg");
       background-color: transparent;
-      background-size: 17px 17px;
+      background-size: 23px 23px;
       opacity: 0.1;
       z-index: 10;
     }
@@ -326,7 +339,7 @@ select {
 
     &::before {
       content: "";
-      right: -28px;
+      right: -34px;
       background-color: @pale-grey;
     }
   }
@@ -337,6 +350,13 @@ select {
     line-height: 3.3;
     letter-spacing: 2px;
     padding-left: 26px;
+  }
+
+  .route__add-btn-icon {
+    width: 20px;
+    height: 20px;
+    top: 25px;
+    right: 25px;
   }
 }
 
