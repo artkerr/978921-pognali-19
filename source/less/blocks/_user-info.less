@@ -6,19 +6,19 @@
   margin-bottom: 9px;
 }
 
+.user-info__common-wrapper {
+  width: 270px;
+  margin: 0 auto;
+}
+
 .user-info__wrapper {
   display: flex;
-  max-width: 270px;
-  margin: 0 auto;
+
   padding: 0 18px;
   margin-top: -3px;
   margin-bottom: 15px;
 }
 
-.user-info__data-wrapper {
-  max-width: 270px;
-  margin: 0 auto;
-}
 
 .user-info__level {
   height: 100px;
@@ -200,6 +200,10 @@
     padding-bottom: 20px;
   }
 
+  .user-info__common-wrapper {
+    width: 618px;
+  }
+
   .user-info__level {
     width: 94px;
     height: 94px;
@@ -317,14 +321,20 @@
     position: relative;
     max-width: @desktop-width;
     margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .user-info__common-wrapper {
+    width: 1256px;
   }
 
   .user-info__wrapper {
-    max-width: 350px;
+    width: 350px;
     position: absolute;
     top: -190px;
-    right: 160px;
+    right: 158px;
     padding: 0;
+    margin-top: 0;
   }
 
   .user-info__data-wrapper {
@@ -333,8 +343,8 @@
   }
 
   .user-info__level {
-    margin-right: auto;
-    margin-top: 40px;
+    margin-top: 45px;
+    margin-left: 22px;
   }
 
   .user-info__score {
@@ -361,7 +371,8 @@
     border-bottom-right-radius: 10px;
     position: absolute;
     top: 0;
-    right: 160px;
+    right: 158px;
+    padding-top: 6px;
 
     span {
       display: none;
@@ -369,11 +380,12 @@
   }
 
   .user-info__tags {
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-left: 30px;
 
     .user-info__sub-title {
       top: 66px;
-      left: 55px;
+      left: 62px;
     }
   }
 
@@ -387,7 +399,7 @@
   .user-info__transport {
     width: 384px;
     height: 94px;
-    transform: translate(270px, 25px);
+    transform: translate(275px, 10px);
   }
 
   .user-info__transport-list {

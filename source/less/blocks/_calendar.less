@@ -96,6 +96,12 @@
   }
 }
 
+.calendar__days-date-item--disabled > .calendar__days-label {
+  &:hover {
+    border: none;
+  }
+}
+
 .calendar__days-date-item:disabled {
   color: @greyish-brown-30;
 }
@@ -192,8 +198,13 @@
 @media (min-width: @desktop-width) {
   .calendar {
     width: 999px;
-    padding: 20px 0;
-    margin-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: 75px;
+  }
+
+  .calendar__month {
+    margin-bottom: 0;
   }
 
   .calendar__icon {
@@ -201,35 +212,48 @@
     height: 34px;
   }
 
+  .calendar__prev-btn {
+    margin-left: -10px;
+  }
+
+  .calendar__next-btn {
+    margin-right: -10px;
+  }
+
+  .calendar__days-name-list {
+    margin-top: -7px;
+    margin-bottom: 18px;
+  }
+
   .calendar__days-name-item {
     width: 142.7px;
-    height: 50px;
+    height: 40px;
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 1.8px;
     text-align: left;
-    padding-left: 15px;
-    padding-top: 15px;
   }
 
   .calendar__days-date-list {
     width: 1000px;
+    margin-bottom: 0;
   }
 
   .calendar__days-date-item {
     width: 143px;
     height: 72px;
     text-align: left;
-
-    padding-left: 15px;
-    padding-top: 10px;
+    padding-left: 0px;
   }
 
   .calendar__days-label {
+    width: 143px;
+    height: 72px;
     display: inline-block;
     font-weight: 300;
-
     padding: 0;
+    text-align: left;
+    padding-left: 10px;
   }
 
   .calendar__days-input:checked + .calendar__days-label {

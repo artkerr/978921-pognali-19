@@ -4,6 +4,7 @@
   border-top-left-radius: 30px;
   padding: 25px;
   margin-top: -30px;
+  margin-bottom: 75px;
   padding-bottom: 55px;
 }
 
@@ -16,6 +17,7 @@
 .user-creation-plans__fieldset {
   margin-bottom: 6px;
   margin-left: 0;
+  margin-right: 0;
 }
 
 .user-creation-plans__title-wrapper {
@@ -80,6 +82,10 @@
   color: @greyish;
   font-size: 16px;
   margin-bottom: 18px;
+
+  br {
+    display: none;
+  }
 }
 
 .user-creation-plans__btn {
@@ -223,17 +229,26 @@
     border-top-right-radius: 60px;
     border-top-left-radius: 60px;
     padding: 60px;
+    padding-top: 25px;
   }
 
   .user-creation-plans__wrapper {
     max-width: 1320px;
   }
 
+  .user-creation-plans__fieldset-title {
+    margin-bottom: 35px;
+
+    span {
+      margin-right: -3px;
+    }
+  }
+
   .user-creation-plans__step-marker-list {
     flex-direction: column;
     position: absolute;
-    right: 300px;
-    top: 208px;
+    right: 285px;
+    top: 195px;
 
     span {
       display: block;
@@ -245,7 +260,8 @@
     line-height: 0.69;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 26px;
+    margin-bottom: 31px;
+    margin-left: 2px;
     color: @black-60;
 
     &::before {
@@ -269,7 +285,11 @@
   }
 
   .user-creation-plans__fieldset-description {
-    width: 576px;
+    width: 580px;
+
+    br {
+      display: block;
+    }
   }
 
   .user-creation-plans__btn--back {

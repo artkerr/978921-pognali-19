@@ -259,33 +259,58 @@
     width: 1320px;
     border-radius: 60px;
     padding: 100px 160px;
+    padding-bottom: 0;
+  }
+
+  .dates-of-stay__wrapper {
+    margin-bottom: 0;
   }
 
   .dates-of-stay__checkbox {
     position: absolute;
-    right: 200px;
-    top: 415px;
+    right: 160px;
+    top: 443px;
   }
 
   .dates-of-stay__traveler {
     margin-top: 50px;
     width: 550px;
     height: 100px;
-    padding-top: 35px;
+    padding-top: 25px;
     padding-bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 9px;
+    border: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      width: 1000px;
+      height: 1px;
+      background-color: @light-blue-grey-two;
+    }
   }
 
   .dates-of-stay__duration {
     width: 550px;
-    height: 100px;
-    border-top: none;
-    border-bottom: 1px solid @light-blue-grey-two;
+    height: 75px;
+    margin: 0;
+    border: none;
     padding: 0;
+
+    .dates-of-stay__traveler-title {
+      margin-right: 273px;
+      color: @dark-slate-blue;
+    }
   }
 
   .dates-of-stay__traveler-head {
     margin-top: 20px;
+  }
+
+  .dates-of-stay__traveler-title {
+    margin-right: 246px;
+    color: @dark-slate-blue;
   }
 
   .dates-of-stay__traveler-num {
@@ -296,7 +321,7 @@
   .dates-of-stay__traveler-input {
     position: relative;
     top: -70px;
-    left: 250px;
+    left: 218px;
     max-width: 181px;
   }
 
@@ -318,7 +343,7 @@
   .dates-of-stay__duration-input {
     position: relative;
     top: -70px;
-    left: 250px;
+    left: 218px;
     max-width: 181px;
   }
 
@@ -331,4 +356,6 @@
     left: 10px;
     top: 25px;
   }
+
+
 }

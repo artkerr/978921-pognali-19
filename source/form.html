@@ -69,69 +69,71 @@
       </div>
     </header>
     <section class="user-info">
-      <div class="user-info__wrapper">
-        <div class="user-info__level user-info__progress-80">
-          <span class="user-info__score">80</span>
-          <p class="user-info__score-text">level</p>
-          <div class="user-info__progress-circle">
-            <div class="user-info__progress-left-side user-info__progress-half-circle"></div>
-            <div class="user-info__progress-right-side user-info__progress-half-circle"></div>
+      <div class="user-info__common-wrapper">
+        <div class="user-info__wrapper">
+          <div class="user-info__level user-info__progress-80">
+            <span class="user-info__score">80</span>
+            <p class="user-info__score-text">level</p>
+            <div class="user-info__progress-circle">
+              <div class="user-info__progress-left-side user-info__progress-half-circle"></div>
+              <div class="user-info__progress-right-side user-info__progress-half-circle"></div>
+            </div>
+          </div>
+          <div class="user-info__photo-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp, img/demin-desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp, img/demin-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 320px)" srcset="img/demin-mobile@1x.webp, img/demin-mobile@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
+              <img class="user-info__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Димин" width="70" height="70">
+            </picture>
           </div>
         </div>
-        <div class="user-info__photo-wrapper">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp, img/demin-desktop@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp, img/demin-tablet@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 320px)" srcset="img/demin-mobile@1x.webp, img/demin-mobile@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
-            <img class="user-info__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Димин" width="70" height="70">
-          </picture>
-        </div>
-      </div>
-      <div class="user-info__data-wrapper">
-        <button type="button" class="btn user-info__btn"><span>Сменить</span> фото</button>
-        <div class="user-info__tags">
-          <h3 class="user-info__sub-title"><span>Тэги</span></h3>
-          <textarea class="user-info__tags-area" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт
-          </textarea>
-        </div>
-        <div class="user-info__transport">
-          <h3 class="user-info__sub-title"><span>Транспорт</span></h3>
-          <ul class="user-info__transport-list">
-            <li class="user-info__item">
-              <label class="user-info__checkbox-transport" for="plane">
-                <input class="user-info__checkbox visually-hidden" type="checkbox" id="plane" checked>
-                <svg width="14" height="16" class="user-info__icon">
-                  <use xlink:href="img/sprite.svg#plane"></use>
+        <div class="user-info__data-wrapper">
+          <button type="button" class="btn user-info__btn"><span>Сменить</span> фото</button>
+          <div class="user-info__tags">
+            <h3 class="user-info__sub-title"><span>Тэги</span></h3>
+            <textarea class="user-info__tags-area" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт
+            </textarea>
+          </div>
+          <div class="user-info__transport">
+            <h3 class="user-info__sub-title"><span>Транспорт</span></h3>
+            <ul class="user-info__transport-list">
+              <li class="user-info__item">
+                <label class="user-info__checkbox-transport" for="plane">
+                  <input class="user-info__checkbox visually-hidden" type="checkbox" id="plane" checked>
+                  <svg width="14" height="16" class="user-info__icon">
+                    <use xlink:href="img/sprite.svg#plane"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="user-info__item">
+                <label class="user-info__checkbox-transport"  for="bus">
+                  <input class="user-info__checkbox visually-hidden" type="checkbox" id="bus" checked>
+                  <svg width="13" height="16" class="user-info__icon">
+                    <use xlink:href="img/sprite.svg#bus"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="user-info__item">
+                <label class="user-info__checkbox-transport" for="bike">
+                  <input class="user-info__checkbox  visually-hidden" type="checkbox" id="bike">
+                  <svg width="19" height="17" class="user-info__icon user-info__icon-bike">
+                    <use xlink:href="img/sprite.svg#bike"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="user-info__item">
+                <label class="user-info__checkbox-transport"  for="run">
+                <input class="user-info__checkbox visually-hidden" type="checkbox" id="run" checked>
+                <svg width="15" height="17" class="user-info__icon">
+                  <use xlink:href="img/sprite.svg#run"></use>
                 </svg>
               </label>
             </li>
-            <li class="user-info__item">
-              <label class="user-info__checkbox-transport"  for="bus">
-                <input class="user-info__checkbox visually-hidden" type="checkbox" id="bus" checked>
-                <svg width="13" height="16" class="user-info__icon">
-                  <use xlink:href="img/sprite.svg#bus"></use>
-                </svg>
-              </label>
-            </li>
-            <li class="user-info__item">
-              <label class="user-info__checkbox-transport" for="bike">
-                <input class="user-info__checkbox  visually-hidden" type="checkbox" id="bike">
-                <svg width="19" height="17" class="user-info__icon user-info__icon-bike">
-                  <use xlink:href="img/sprite.svg#bike"></use>
-                </svg>
-              </label>
-            </li>
-            <li class="user-info__item">
-              <label class="user-info__checkbox-transport"  for="run">
-              <input class="user-info__checkbox visually-hidden" type="checkbox" id="run" checked>
-              <svg width="15" height="17" class="user-info__icon">
-                <use xlink:href="img/sprite.svg#run"></use>
-              </svg>
-            </label>
-          </li>
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -173,10 +175,10 @@
             <legend class="visually-hidden"></legend>
             <div class="dates-of-stay__wrapper">
               <div class="user-creation-plans__fieldset-header">
-                <h3 class="user-creation-plans__fieldset-title">Шаг 1. <br>Даты пребывания</h3>
+                <h3 class="user-creation-plans__fieldset-title"><span>Шаг 1.</span> <br>Даты пребывания</h3>
                 <p class="user-creation-plans__fieldset-description">
-                  Укажите предпочтительное количество попутчиков, которых
-                  вы хотели бы позвать в поездку и ее предполагаемую длительность.
+                  Укажите предпочтительное количество попутчиков, которых<br> вы
+                   хотели бы позвать в поездку и ее предполагаемую длительность.
                 </p>
               </div>
               <div class="dates-of-stay__traveler">
@@ -422,7 +424,7 @@
           </fieldset>
           <fieldset class="user-creation-plans__fieldset route">
             <div class="user-creation-plans__fieldset-header">
-              <h3 class="user-creation-plans__fieldset-title">Шаг 2. <br>Маршрут</h3>
+              <h3 class="user-creation-plans__fieldset-title"><span>Шаг 2. </span><br>Маршрут</h3>
               <p class="user-creation-plans__fieldset-description">
                 Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
               </p>
@@ -485,7 +487,7 @@
           </fieldset>
           <fieldset class="user-creation-plans__fieldset entertainment">
             <div class="user-creation-plans__fieldset-header">
-              <h3 class="user-creation-plans__fieldset-title">Шаг 3.<br> Развлечения</h3>
+              <h3 class="user-creation-plans__fieldset-title"><span>Шаг 3.</span><br> Развлечения</h3>
               <p class="user-creation-plans__fieldset-description">
                 Наконец, расскажите о своих планах времяпровождения.
                 Можно писать в свободной форме и ставить тэги.

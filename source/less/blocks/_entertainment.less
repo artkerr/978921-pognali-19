@@ -6,6 +6,7 @@
   padding: 25px;
   margin-top: 10px;
   padding-bottom: 5px;
+
   .user-creation-plans__step-marker-list {
     display: none;
   }
@@ -154,8 +155,9 @@
     border-radius: 30px;
     padding: 43px;
     padding-top: 47px;
-    padding-bottom: 65px;
+    padding-bottom: 75px;
     margin-bottom: 60px;
+    margin-top: 0;
 
     .user-creation-plans__btn--back {
       margin-left: 359px;
@@ -166,6 +168,7 @@
     .user-creation-plans__fieldset-title {
       margin-bottom: 35px;
     }
+
   }
 
   .entertainment__wrapper {
@@ -260,6 +263,8 @@
     border-radius: 60px;
     padding: 100px 160px;
     position: relative;
+    padding-bottom: 155px;
+
 
     .user-creation-plans__btn--back {
       margin-left: 750px;
@@ -267,48 +272,57 @@
 
     .user-creation-plans__step-marker-list {
       display: block;
-      top: 135px;
-      right: 290px;
+      top: 74px;
+      right: 285px;
+    }
+
+    .user-creation-plans__fieldset-description {
+      width: 480px;
     }
   }
 
   .entertainment__wrapper {
     width: 997px;
     border-top: solid 1px @cloudy-blue;
+    margin-top: 50px;
+    margin-bottom: 19px;
 
     &::before {
-      top: 90px;
-      left: 806px;
+      height: 261px;
+      top: 100px;
+      left: 772px;
     }
   }
 
   .entertainment__first-country {
-    margin-top: 80px;
+    margin-top: 87px;
+
     position: relative;
 
     &::after {
       top: 0;
-      left: 800px;
+      left: 765px;
       width: 15px;
       height: 15px;
     }
   }
 
   .entertainment__title {
-    margin-bottom: 37px;
+    margin-bottom: 43px;
+    margin-left: -2px;
   }
 
   .entertainment__textarea {
     width: 730px;
     height: 142px;
+    padding: 25px 25px;
+    padding-right: 0;
   }
 
   .entertainment__second-country {
-    position: relative;
-
     &::after {
       top: 0;
-      left: 800px;
+      left: 765px;
       width: 15px;
       height: 15px;
     }
@@ -316,15 +330,17 @@
 
   .entertainment__bosnia {
     &::after {
-      top: -15px;
-      right: 65px;
+      top: -11px;
+      right: 114px;
     }
   }
 
   .entertainment__czech {
+    margin-bottom: 40px;
+
     &::after {
-      top: -15px;
-      right: 65px;
+      top: -12px;
+      right: 114px;
     }
   }
 }
