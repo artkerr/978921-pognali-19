@@ -4,7 +4,7 @@
   height: 520px;
   border: 1px solid @cloudy-blue;
   background-color: @white;
-  box-shadow: 0px 20px 50px 0 @dark-slate-blue-10;
+  box-shadow: 0 20px 50px 0 @dark-slate-blue-10;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 4px;
@@ -56,6 +56,7 @@
   padding: 0;
   margin-top: 260px;
   margin-left: -10px;
+  list-style: none;
 }
 
 .modal-calendar__letter-link {
@@ -63,6 +64,13 @@
   line-height: 1.38;
   color: @greyish;
 
+  &:hover {
+    color: @dark-slate-blue;
+  }
+
+  &:active {
+    color: @dark-slate-blue-30;
+  }
 }
 
 .modal-calendar__input {
@@ -92,16 +100,17 @@
   position: absolute;
   right: 8px;
   top: 15px;
+  cursor: pointer;
 }
 
 @media (min-width: @tablet-width) {
   .modal-calendar {
-   width: 369px;
-   height: 546px;
-   left: 184px;
-   top: 0;
-   border: none;
-   box-shadow: 0px 20px 50px 0 @dark-slate-blue-10;
+    width: 369px;
+    height: 546px;
+    left: 184px;
+    top: 0;
+    border: none;
+    box-shadow: 0 20px 50px 0 @dark-slate-blue-10;
   }
 
   .modal-calendar__input {
@@ -171,9 +180,13 @@
       height: 476px;
       background-color: @greyish-brown-30;
     }
+  }
 
-    .modal-calendar__letter-link {
-      font-size: 20px;
+  .modal-calendar__letter-link {
+    font-size: 20px;
+
+    &:hover {
+      color: @dark-slate-blue;
     }
   }
 }
@@ -193,11 +206,14 @@
   .modal-calendar__item {
     width: 60px;
     height: 70px;
-    border: none;
     border-radius: 4px;
     border: solid 1px @cloudy-blue;
     margin-right: 15px;
     margin-bottom: 15px;
+
+    &:hover {
+      border-color: @bluey-grey;
+    }
   }
 
   .modal-calendar__letter-list {
@@ -220,16 +236,32 @@
       background-color: @greyish-brown-30;
     }
   }
+
   .modal-calendar__letter-item {
     margin-bottom: 0;
     height: 30px;
+    border-color: @dark-slate-blue;
   }
 
+
+  .modal-calendar__link--selected {
+    margin-left: 22px;
+  }
 
   .modal-calendar__input {
     width: 730px;
     height: 70px;
   }
+
+  .modal-calendar__close-btn {
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
 }
-
-

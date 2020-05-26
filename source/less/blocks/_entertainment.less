@@ -28,6 +28,7 @@
 
 .entertainment__first-country {
   margin-bottom: 5px;
+
   &::before {
     position: absolute;
     top: 8px;
@@ -147,6 +148,22 @@
     color: @greyish;
     opacity: 0.3;
   }
+
+  &:hover {
+    border-color: @bluey-grey;
+  }
+
+  &:active {
+    border-color: @dark-two;
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  &:required {
+    border-color: @blush;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -168,7 +185,6 @@
     .user-creation-plans__fieldset-title {
       margin-bottom: 35px;
     }
-
   }
 
   .entertainment__wrapper {

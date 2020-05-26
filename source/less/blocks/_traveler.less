@@ -13,7 +13,7 @@
   z-index: 1;
 
   &:hover {
-    transform: scale(1.01);
+    transform: scale(1.005);
     box-shadow: 0 6px 21px 0 @black-08;
     transition: 300ms;
   }
@@ -31,10 +31,6 @@
 
 .traveler__name {
   max-width: 70px;
-  font-size: 20px;
-  font-weight: bold;
-  color: @dark-blue;
-  line-height: 1;
   align-items: flex-start;
   margin: 0;
   position: relative;
@@ -46,6 +42,13 @@
     background: @salmon;
     border-radius: 50%;
   }
+}
+
+.traveler__name-link {
+  font-size: 20px;
+  font-weight: bold;
+  color: @dark-blue;
+  line-height: 1;
 
   &:hover {
     color: @dark-slate-blue-70;
@@ -122,6 +125,14 @@
   background: @very-light-pink-two;
   fill: @tomato;
   justify-content: center;
+
+  &:hover {
+    background-color: @light-tan;
+  }
+
+  &:active {
+    fill: @tomato-30;
+  }
 }
 
 .traveler__like {
@@ -251,14 +262,12 @@
   margin-right: 16px;
 
   .traveler__sub-title {
+    margin-bottom: 0;
+
     &::before {
       content: none;
     }
   }
-}
-
-.traveler__level-wrapper .traveler__sub-title {
-  margin-bottom: 0;
 }
 
 .traveler__level {
@@ -390,14 +399,17 @@
   .traveler__name {
     min-width: 70px;
     max-width: 220px;
-    font-size: 30px;
     margin-bottom: 16px;
+  }
 
+  .traveler__name-link {
+    font-size: 30px;
   }
 
   .traveler__offline,
   .traveler__online {
     position: relative;
+
     &::before {
       right: 1px;
       top: 9px;
@@ -503,6 +515,10 @@
   .traveler__transport-icon {
     width: 20px;
     height: auto;
+  }
+
+  .traveler__transport-icon-bike {
+    width: 24px;
   }
 
   .traveler__transport-wrapper {

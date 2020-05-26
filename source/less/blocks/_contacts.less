@@ -52,14 +52,30 @@
   width: 270px;
   height: 62px;
   border-radius: 10px;
-  background: @white;
+  background-color: @white;
   border: none;
+  font-family: "BloggerSans", "Open Sans", sans-serif;
 
   &::placeholder {
     font-size: 18px;
     font-weight: bold;
     padding-left: 22px;
     color: @point-text;
+  }
+
+  &:hover {
+    &::placeholder {
+      color: @greyish-brown-50;
+    }
+  }
+
+  &:active {
+    background-color: @dark-blue-grey;
+    border: solid 4px @white;
+  }
+
+  &:required {
+    color: @red;
   }
 }
 
@@ -116,6 +132,7 @@
   height: 62px;
   border-radius: 10px;
   background-color: @light-gold;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -176,10 +193,16 @@
     width: 600px;
     height: 81px;
     border-radius: 20px;
+    font-size: 24px;
+    padding-left: 25px;
 
     &::placeholder {
       font-size: 24px;
       padding-left: 33px;
+    }
+
+    &:active {
+      color: @white;
     }
   }
 

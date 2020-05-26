@@ -98,6 +98,14 @@
   text-transform: uppercase;
   color: @dark-two;
   padding: 11px 41px;
+
+  &:hover {
+    background-color: @mango-two;
+  }
+
+  &:active {
+    color: @dark-slate-blue-30;
+  }
 }
 
 .user-creation-plans__btn--back {
@@ -106,6 +114,23 @@
   padding: 0;
   margin-left: 52px;
   margin-top: 14px;
+
+  &:hover {
+    background-color: transparent;
+    color: @dark-slate-blue-70;
+
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    color: @dark-slate-blue-30;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
 
 .user-creation-plans__submit-btn {
@@ -178,6 +203,10 @@
       border-style: solid;
       border-color: transparent transparent transparent @dark-slate-blue;
     }
+
+    &:active::after {
+      opacity: 0.3;
+    }
   }
 
   .user-creation-plans__btn--back {
@@ -210,6 +239,7 @@
     padding-left: 33px;
     padding-top: 10px;
     color: @dark-slate-blue;
+    cursor: pointer;
 
     &::after {
       content: "";
@@ -220,6 +250,18 @@
       border-width: 7px 10px;
       border-style: solid;
       border-color: transparent transparent transparent @dark-slate-blue;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
+
+    &:hover {
+      background-color: @mango-two;
+    }
+
+    &:active {
+      color: @dark-slate-blue-30;
     }
   }
 }
@@ -241,6 +283,10 @@
 
     span {
       margin-right: -3px;
+    }
+
+    br {
+      display: none;
     }
   }
 
@@ -276,12 +322,6 @@
 
   .user-creation-plans__title {
     margin-left: 70px;
-  }
-
-  .user-creation-plans__fieldset-title {
-    br {
-      display: none;
-    }
   }
 
   .user-creation-plans__fieldset-description {

@@ -51,6 +51,10 @@
   font-weight: 500;
   text-align: center;
   color: @dark-slate-blue;
+
+  &:hover {
+    border: solid 1px @bluey-grey;
+  }
 }
 
 .dates-of-stay__traveler-del {
@@ -82,6 +86,10 @@
   font-weight: 500;
   text-align: center;
   color: @dark-slate-blue;
+
+  &:hover {
+    border: solid 1px @bluey-grey;
+  }
 }
 
 .dates-of-stay__duration-del {
@@ -124,6 +132,14 @@
     border: solid 1px @cloudy-blue;
     background-color: @white;
   }
+
+  &:hover::before {
+    border-color: @bluey-grey;
+  }
+
+  &:active::before {
+    background-color: @pale-grey-three;
+  }
 }
 
 .dates-of-stay__input:checked + .dates-of-stay__label::before {
@@ -141,6 +157,16 @@
   background-position: center;
   background-size: 9px 9px;
 }
+
+.dates-of-stay__input:checked + .dates-of-stay__label:hover::before {
+  border-color: @bluey-grey;
+}
+
+.dates-of-stay__input:checked + .dates-of-stay__label:active::before {
+  background-color: @pale-grey-three;
+  opacity: 0.3;
+}
+
 
 @media (min-width: @tablet-width) {
   .dates-of-stay {
@@ -190,16 +216,37 @@
 
   .dates-of-stay__traveler-del {
     bottom: 44px;
+
+
+    &::before {
+      position: absolute;
+      top: -22px;
+      left: 20px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      opacity: 0.3;
+      background: url("../img/qty-minus.svg") no-repeat center / 20px 20px;
+    }
   }
 
   .dates-of-stay__traveler-add {
     bottom: 45px;
+
+    &::before {
+      position: absolute;
+      top: -22px;
+      right: 10px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      opacity: 0.3;
+      background: url("../img/qty-plus.svg") no-repeat center / 20px 20px;
+    }
   }
 
   .dates-of-stay__icon {
-    width: 20px;
-    height: 20px;
-    opacity: 0.2;
+    display: none;
   }
 
   .dates-of-stay__duration {
@@ -219,10 +266,32 @@
 
   .dates-of-stay__duration-del {
     bottom: 20px;
+
+    &::before {
+      position: absolute;
+      top: -46px;
+      left: 19px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      opacity: 0.3;
+      background: url("../img/qty-minus.svg") no-repeat center / 20px 20px;
+    }
   }
 
   .dates-of-stay__duration-add {
     bottom: 20px;
+
+    &::before {
+      position: absolute;
+      top: -46px;
+      right: 10px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      opacity: 0.3;
+      background: url("../img/qty-plus.svg") no-repeat center / 20px 20px;
+    }
   }
 
   .dates-of-stay__checkbox {
@@ -356,6 +425,4 @@
     left: 10px;
     top: 25px;
   }
-
-
 }
