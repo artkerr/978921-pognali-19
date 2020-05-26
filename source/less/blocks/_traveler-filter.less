@@ -58,6 +58,14 @@
   span {
     display: none;
   }
+
+  &:hover {
+    color: @dark-slate-blue-60;
+  }
+
+  &:active {
+      color: @dark-slate-blue-30;
+  }
 }
 
 .traveler-filter__checkbox-label {
@@ -107,6 +115,7 @@
   background-color: @white;
   border-radius: 50%;
   display: flex;
+  cursor: pointer;
 }
 
 .traveler-filter__checkbox:checked + .traveler-filter__icon {
@@ -496,5 +505,22 @@
 
   .traveler-filter__btn {
     width: 196px;
+  }
+
+  .traveler-filter__fieldset-open {
+    display: inline-block;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .traveler-filter__fieldset-open-btn {
+    width: 10px;
+    height: 5px;
   }
 }
