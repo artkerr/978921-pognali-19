@@ -401,6 +401,10 @@
     min-width: 70px;
     max-width: 220px;
     margin-bottom: 16px;
+
+    &::after {
+      content: none;
+    }
   }
 
   .traveler__name-link {
@@ -412,8 +416,8 @@
     position: relative;
 
     &::before {
-      right: 1px;
-      top: 9px;
+      right: -20px;
+      top: 10px;
       width: 7px;
       height: 7px;
     }
