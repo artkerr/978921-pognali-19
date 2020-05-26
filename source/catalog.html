@@ -419,12 +419,12 @@
           <fieldset class="traveler-filter__fieldset">
             <legend class="visually-hidden">Выбор попутчика по хобби</legend>
             <div class="traveler-filter__hobby-wrapper">
-              <h3 class="traveler-filter__legend">Хобби<span>:</span></h3>
-              <button type="button" class="btn traveler-filter__fieldset-open" aria-label="Открыть список">
-                <svg class="traveler-filter__fieldset-open-btn" width="8" height="4">
-                  <use xlink:href="img/sprite.svg#dropdown"></use>
-                </svg>
-              </button>
+              <h3 class="traveler-filter__legend">
+                <label class="traveler-filter__main-label" for="hobby">
+                  Хобби<span>:</span>
+                </label>
+              </h3>
+              <input class="visually-hidden traveler-filter__main-checkbox" type="checkbox" id="hobby">
               <ul class="traveler-filter__list">
                 <li class="traveler-filter__item">
                   <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="gym" checked>
@@ -444,12 +444,12 @@
           <fieldset class="traveler-filter__fieldset">
             <legend class="visually-hidden">Выбор попутчика по музыке</legend>
             <div class="traveler-filter__music-wrapper">
-              <h3 class="traveler-filter__legend">Музыка<span>:</span></h3>
-              <button type="button" class="btn traveler-filter__fieldset-open" aria-label="Открыть список">
-                <svg class="traveler-filter__fieldset-open-btn" width="8" height="4">
-                  <use xlink:href="img/sprite.svg#dropdown"></use>
-                </svg>
-              </button>
+              <h3 class="traveler-filter__legend">
+                <label class="traveler-filter__main-label" for="music">
+                  Музыка<span>:</span>
+                </label>
+              </h3>
+              <input class="visually-hidden traveler-filter__main-checkbox" type="checkbox" id="music" checked>
               <ul class="traveler-filter__list">
                 <li class="traveler-filter__item">
                   <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="hard-rock" checked>
@@ -469,12 +469,12 @@
           <fieldset class="traveler-filter__fieldset">
             <legend class="visually-hidden">Выбор попутчика по еде</legend>
             <div class="traveler-filter__food-wrapper">
-            <h3 class="traveler-filter__legend">Еда<span>:</span></h3>
-            <button type="button" class="btn traveler-filter__fieldset-open"aria-label="Открыть список">
-              <svg class="traveler-filter__fieldset-open-btn" width="8" height="4">
-                <use xlink:href="img/sprite.svg#dropdown"></use>
-              </svg>
-            </button>
+            <h3 class="traveler-filter__legend">
+              <label class="traveler-filter__main-label" for="food">
+                Еда<span>:</span>
+              </label>
+            </h3>
+            <input class="visually-hidden traveler-filter__main-checkbox" type="checkbox" id="food">
               <ul class="traveler-filter__list">
                 <li class="traveler-filter__item">
                   <input class="traveler-filter__checkbox visually-hidden" type="checkbox" id="meat" checked>
@@ -494,13 +494,12 @@
           <fieldset class="traveler-filter__fieldset">
             <legend class="visually-hidden">Выбор попутчика по транспорту</legend>
             <div class="traveler-filter__transport-wrapper">
-              <input checked type="checkbox" name="transport" id="transport" class="traveler-filter__fieldset-checkbox visually-hidden">
-              <label for="transport" class="traveler-filter__legend">Транспорт<span>:</span></label>
-              <button type="button" class="btn traveler-filter__fieldset-open" aria-label="Открыть список">
-                <svg class="traveler-filter__fieldset-open-btn" width="8" height="4">
-                  <use xlink:href="img/sprite.svg#dropdown"></use>
-                </svg>
-              </button>
+              <h3 class="traveler-filter__legend">
+                <label class="traveler-filter__main-label" for="transport">
+                  Транспорт<span>:</span>
+                </label>
+              </h3>
+              <input class="visually-hidden traveler-filter__main-checkbox" type="checkbox" id="transport" checked>
                 <ul class="traveler-filter__list">
                   <li class="traveler-filter__item">
                     <label class="traveler-filter__checkbox-transport" for="plane">
@@ -532,20 +531,20 @@
                     <svg width="15" height="17" class="traveler-filter__icon">
                       <use xlink:href="img/sprite.svg#run"></use>
                     </svg>
-                  </label>
-                </li>
-              </ul>
+                    </label>
+                  </li>
+               </ul>
             </div>
           </fieldset>
           <fieldset class="traveler-filter__fieldset traveler-filter__level">
             <legend class="visually-hidden">Выбор попутчика по уровню</legend>
             <div class="traveler-filter__level-wrapper">
-              <h3 class="traveler-filter__legend">Левел:</h3>
-              <button type="button" class="btn traveler-filter__fieldset-open" aria-label="Открыть список">
-                <svg class="traveler-filter__fieldset-open-btn" width="8" height="4">
-                  <use xlink:href="img/sprite.svg#dropdown"></use>
-                </svg>
-              </button>
+              <h3 class="traveler-filter__legend">
+                <label class="traveler-filter__main-label" for="level">
+                  Левел<span>:</span>
+                </label>
+              </h3>
+              <input class="visually-hidden traveler-filter__main-checkbox" type="checkbox" id="level" checked>
               <div class="traveler-filter__scale-wrapper">
                 <div class="traveler-filter__level-value">
                   <input class="traveler-filter__level-value-min" type="text" value="30">
@@ -913,7 +912,7 @@
             </ul>
             <div class="load-profile__switch-page">
               <a href="#" class="load-profile__next-page" aria-label="Следующая страница"></a>
-              <a href="#" class="load-profile__preveus-page"aria-label="Предидущая страница"> </a>
+              <a href="#" class="load-profile__preveus-page" aria-label="Предидущая страница"> </a>
             </div>
           </div>
         </div>
