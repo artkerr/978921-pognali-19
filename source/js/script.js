@@ -1,7 +1,6 @@
-var link = document.querySelector(".rate__link");
+var link = document.querySelector(".rate__link, .route__country-empty-select");
 var popup = document.querySelector(".modal");
-var close = popup.querySelector(".modal__close");
-
+var close = popup.querySelector(".modal__close, .modal-calendar__close-btn");
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault();

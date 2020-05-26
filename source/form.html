@@ -462,14 +462,119 @@
                 </li>
                 <li class="route__item route__country-empty">
                   <div class="route__country">
-                    <select class="route__country-select route__country-empty-select" name="" id="">
-                      <option value="">Выберите страну</option>
-                      <option value="">Босния и Герцеговина</option>
-                      <option value="">Чехия</option>
-                    </select>
+                    <button class="route__country-select route__country-empty-select" type="button">Выберите страну</button>
                     <svg width="12" height="7" class="route__country-icon">
                       <use xlink:href="img/sprite.svg#dropdown-form"></use>
                     </svg>
+                    <div class="modal modal-calendar">
+                      <input class="visually-hidden modal-calendar__checkbox" type="checkbox" id="calendar">
+                      <label for="calendar" class="modal-calendar__input">Выберите страну</label>
+                      <button type="button" class="btn modal-calendar__close-btn" aria-label="Закрыть окно">
+                        <svg width="12" height="7" class="modal-calendar__icon">
+                          <use xlink:href="img/sprite.svg#menu-close"></use>
+                        </svg>
+                      </button>
+                      <ul class="modal-calendar__list">
+                        <li class="modal-calendar__item modal-calendar__item--selected">
+                          <a href="#" class="modal-calendar__link modal-calendar__link--selected">А</a>
+                          <ul class="modal-calendar__letter-list">
+                            <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Австралия</a></li>
+                            <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Австрия</a></li>
+                            <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Афганистан</a></li>
+                            <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Албания</a></li>
+                            <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Алгерия</a></li>
+                            <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Андорра</a></li>
+                            <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Аргентина</a></li>
+                            <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Армения</a></li>
+                            <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Азербайджан</a></li>
+                          </ul>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Б</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">В</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Г</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Д</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Е</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Ж</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">З</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">И</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">К</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Л</a>
+                        </li>
+                        <li class="modal-calendar__item modal-calendar__empty-item">
+                          <a href="#" class="modal-calendar__link">Й</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">М</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Н</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">О</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">П</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Р</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">С</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Т</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">У</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Ф</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Х</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Ц</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Ч</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Ш</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Щ</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Э</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Ю</a>
+                        </li>
+                        <li class="modal-calendar__item">
+                          <a href="#" class="modal-calendar__link">Я</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </li>
                 <li class="route__item route__country-add">
@@ -563,5 +668,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
