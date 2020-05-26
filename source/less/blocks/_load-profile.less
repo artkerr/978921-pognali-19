@@ -26,6 +26,14 @@
   font-weight: bold;
   line-height: 1.5;
   margin-right: 40px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+
+  }
 }
 
 .load-profile__btn {
@@ -46,14 +54,14 @@
     position: absolute;
     left: 0;
     background: url("../img/show-more-plus.svg") no-repeat;
+  }
 
-    &:hover {
-      opacity: 0.6;
-    }
+  &:hover {
+    opacity: 0.6;
+  }
 
-    &:active {
-      opacity: 0.3;
-    }
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -86,6 +94,14 @@
     border-style: solid;
     border-color: transparent @dark-blue-grey transparent transparent;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .load-profile__preveus-page {
@@ -100,6 +116,14 @@
     border-width: 11px 10px;
     border-style: solid;
     border-color: transparent transparent transparent @dark-blue-grey;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -139,9 +163,13 @@
     align-items: center;
     width: 50px;
     height: 50px;
-    border-radius: 25px;
+    border-radius: 50%;
     background-color: @light-gold;
     cursor: auto;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   .load-profile__switch-page {
