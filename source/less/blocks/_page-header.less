@@ -14,6 +14,135 @@
   padding: 0 25px;
 }
 
+.page-header__social-list {
+  display: none;
+}
+
+.page-header__open {
+  height: 568px;
+  padding: 0 25px;
+  flex-direction: column;
+}
+
+.page-header__open > .page-header__logo {
+  margin-right: auto;
+}
+
+.page-header__open > .page-header__close-btn {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+.page-header__open .main-nav__toggle {
+  display: none;
+}
+
+.page-header__open .main-nav__wrapper {
+  display: block;
+}
+
+.page-header__open .site-list {
+  padding: 0;
+  margin-bottom: 58px;
+}
+
+.page-header__open .site-list__item {
+  text-align: center;
+}
+
+.page-header__open .site-list__link {
+  color: @dark-blue-grey;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.page-header__open .user-list {
+  display: flex;
+  margin-bottom: 240px;
+  flex-direction: column-reverse;
+}
+
+.page-header__open .user-list__item {
+  width: 270px;
+  display: block;
+
+  &:nth-child(1) {
+    background-color: transparent;
+    font-size: 16px;
+    order: 3;
+    position: relative;
+    margin-bottom: 10px;
+    display: block;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: @dark-blue-grey-two url("../img/contacts-phone.svg") no-repeat center / 18px;
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: transparent;
+    padding-left: 60px;
+    order: 2;
+    position: relative;
+    display: block;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: @dark-blue-grey-two url("../img/contacts-mail.svg") no-repeat center / 18px;
+    }
+  }
+
+  &:last-child {
+    width: 270px;
+    height: 50px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    order: 4;
+    padding-top: 10px;
+  }
+}
+
+
+.page-header__open .user-list__icon {
+  display: none;
+}
+
+.page-header__open .page-header__social-list {
+  display: flex;
+  list-style: 0;
+  padding: 0;
+  margin-top: -120px;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-header__open .page-header__social-item {
+  list-style: none;
+  margin-right: 25px;
+}
+
+
 .page-header__logo-image {
   max-width: 100%;
   height: auto;
@@ -42,9 +171,117 @@
   }
 }
 
+.page-header__open-btn {
+  display: none;
+}
+
+.page-header__close-btn {
+  width: 19px;
+  height: 19px;
+  fill: @pinkish-grey;
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
     background-color: @dark-blue-grey;
+  }
+
+  .page-header__open {
+    height: 910px;
+
+    .page-header__close-btn {
+      left: 50%;
+      top: 25px;
+    }
+
+    .page-header__close-btn-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    .main-nav {
+      flex-direction: column;
+    }
+
+    .site-list {
+      margin-left: -120px;
+    }
+
+    .site-list__item {
+      text-align: left;
+    }
+
+    .site-list__link {
+      text-align: left;
+      font-size: 60px;
+      font-weight: 500;
+    }
+
+    .user-list {
+      margin-bottom: 300px;
+      margin-left: -120px;
+    }
+
+    .user-list__item {
+      width: 350px;
+
+      &:nth-child(1) {
+        padding-left: 63px;
+        padding-top: 10px;
+        margin-bottom: 20px;
+
+        &::before {
+          width: 67px;
+          height: 67px;
+          background-size: 27px;
+        }
+      }
+
+      &:nth-child(2) {
+        padding-left: 160px;
+        padding-top: 10px;
+
+        &::before {
+          width: 67px;
+          height: 67px;
+          background-size: 27px;
+        }
+      }
+
+      &:nth-child(3) {
+        width: 189px;
+        font-size: 20px;
+        position: absolute;
+        top: -480px;
+        right: -180px;
+        padding-top: 12px;
+        padding-left: 10px;
+
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .user-list__link {
+      font-size: 28px;
+    }
+
+    .social__icon {
+      fill: @pinkish-grey;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .page-header__social-list {
+    position: absolute;
+    bottom: 50px;
+    left: 90px;
+
+    .social__icon-vk {
+      width: 31px;
+    }
   }
 
   .page-header__wrapper-nav {

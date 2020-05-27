@@ -10,7 +10,7 @@
 <body>
   <header class="page-header">
     <div class="page-header__wrapper page-header__wrapper-blue page-header__wrapper-sticky">
-      <div class="page-header__wrapper-nav">
+      <div class="page-header__wrapper-nav page-header__open">
         <a class="page-header__logo">
           <picture>
             <source class="js-logo-desktop-png" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp, img/logo-desktop-white@2x.webp 2x" type="image/webp">
@@ -21,7 +21,12 @@
             <img class="page-header__logo-image page-header__logo-image-js" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип Погнали">
           </picture>
         </a>
-        <nav class="page-header__nav main-nav main-nav--open">
+        <button type="button" class="btn page-header__close-btn" aria-label="Закрыть меню">
+          <svg class="page-header__close-btn-icon" width="19" height="19">
+            <use xlink:href="img/sprite.svg#menu-close"></use>
+          </svg>
+        </button>
+        <nav class="page-header__nav main-nav">
           <button class="btn main-nav__toggle" aria-label="Кнопка меню">
             <svg class="main-nav__toggle-icon" width="25" height="11">
               <use xlink:href="img/sprite.svg#menu"></use>
@@ -46,6 +51,7 @@
                 <svg class="user-list__icon" width="18" height="18">
                   <use xlink:href="img/sprite.svg#topmenu-phone"></use>
                 </svg>
+                <span>8 800 555-86-28</span>
               </a>
             </li>
             <li class="user-list__item">
@@ -53,10 +59,34 @@
                 <svg class="user-list__icon" width="18" height="14">
                   <use xlink:href="img/sprite.svg#topmenu-mail"></use>
                 </svg>
+                <span>mail@htmlacademy.ru</span>
               </a>
             </li>
             <li class="user-list__item">
               <a class="user-list__link" href="sign-in.html">Авторизация</a>
+            </li>
+          </ul>
+          <ul class="page-header__social-list">
+            <li class="page-header__social-item">
+              <a href="https://facebook.com" class="page-header__social-link" aria-label="facebook">
+                <svg width="11" height="21" class="social__icon social__icon-facebook">
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="page-header__social-item">
+              <a href="https://vk.com" class="page-header__social-link" aria-label="vk">
+                <svg width="23" height="12" class="social__icon social__icon-vk">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="page-header__social-item">
+              <a href="https://instagram.com" class="page-header__social-link" aria-label="instagram">
+                <svg width="18" height="18" class="social__icon social__icon-instagram">
+                  <use xlink:href="img/sprite.svg#instagram"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </nav>
@@ -82,6 +112,25 @@
             <li class="step-by-step__item"><a class="step-by-step__link" data-number="4" href="#">Путешествуйте вместе!</a></li>
           </ul>
         </div>
+        <ul class="introduction__user-list">
+          <li class="introduction__user-list-item">
+            <a class="introduction__user-list-link" href="tel:88005558628" aria-label="Наш телефон">
+              <svg class="introduction__user-list-icon" width="18" height="18">
+                <use xlink:href="img/sprite.svg#topmenu-phone"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="introduction__user-list-item">
+            <a class="introduction__user-list-link" href="mailto:mail@htmlacademy.ru"  aria-label="Наш email">
+              <svg class="introduction__user-list-icon" width="18" height="14">
+                <use xlink:href="img/sprite.svg#topmenu-mail"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="introduction__user-list-item">
+            <a class="introduction__user-list-link" href="sign-in.html">Авторизация</a>
+          </li>
+        </ul>
       </div>
     </header>
     <section class="about-servise">
