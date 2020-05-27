@@ -11,17 +11,21 @@
   align-items: center;
   position: relative;
   margin: 0 auto;
-  padding: 0 25px;
 }
 
 .page-header__social-list {
   display: none;
 }
 
+.page-header__nav {
+  width: 20px;
+}
+
 .page-header__open {
   height: 568px;
-  padding: 0 25px;
+  padding: 0 10px;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .page-header__open > .page-header__logo {
@@ -36,6 +40,10 @@
   width: 20px;
   height: 20px;
   padding: 0;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .page-header__open .main-nav__toggle {
@@ -49,10 +57,14 @@
 .page-header__open .site-list {
   padding: 0;
   margin-bottom: 58px;
+  width: 200px;
+  align-content: center;
+  margin-left: 30px;
 }
 
 .page-header__open .site-list__item {
   text-align: center;
+  list-style: none;
 }
 
 .page-header__open .site-list__link {
@@ -133,6 +145,7 @@
   list-style: 0;
   padding: 0;
   margin-top: -120px;
+  margin-left: 140px;
   justify-content: center;
   align-items: center;
 }
@@ -169,6 +182,13 @@
   .main-nav__toggle-icon {
     fill: @pinkish-grey;
   }
+
+  &-static {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
 }
 
 .page-header__open-btn {
@@ -179,6 +199,7 @@
   width: 19px;
   height: 19px;
   fill: @pinkish-grey;
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -188,6 +209,7 @@
 
   .page-header__open {
     height: 910px;
+
 
     .page-header__close-btn {
       left: 50%;
@@ -201,10 +223,12 @@
 
     .main-nav {
       flex-direction: column;
+     margin-left: 150px;
     }
 
     .site-list {
       margin-left: -120px;
+      width: 300px;
     }
 
     .site-list__item {
@@ -276,8 +300,8 @@
 
   .page-header__social-list {
     position: absolute;
-    bottom: 50px;
-    left: 90px;
+    bottom: 100px;
+    left: -80px;
 
     .social__icon-vk {
       width: 31px;
@@ -315,9 +339,14 @@
     background-color: @dark-two;
   }
 
+  .page-header__open {
+
+  }
+
   .page-header__wrapper-nav {
     max-width: @desktop-width;
     padding: 0 60px;
+
   }
 
   .page-header__wrapper-blue {

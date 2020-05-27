@@ -9,25 +9,25 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="page-header__wrapper page-header__wrapper-blue page-header__wrapper-sticky">
-      <div class="page-header__wrapper-nav page-header__open">
+    <div class="page-header__wrapper page-header__wrapper-blue page-header__wrapper-sticky page-header__wrapper-sticky-static js-header">
+      <div class="page-header__wrapper-nav page-header__open  js-h-navs">
         <a class="page-header__logo">
           <picture>
-            <source class="js-logo-desktop-png" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp, img/logo-desktop-white@2x.webp 2x" type="image/webp">
-            <source class="js-logo-tablet-webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp, img/logo-tablet-white@2x.webp 2x" type="image/webp">
-            <source class="js-logo-mobil-webp" media="(min-width: 320px)" srcset="img/logo-mobile-white@1x.webp, img/logo-mobile-white@2x.webp 2x" type="image/webp">
-            <source class="js-logo-desktop-png" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
-            <source class="js-logo-tablet-png" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
-            <img class="page-header__logo-image page-header__logo-image-js" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип Погнали">
+            <source class="js-logo-desktop-webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
+            <source class="js-logo-tablet-webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp, img/logo-tablet-blue@2x.webp 2x" type="image/webp">
+            <source class="js-logo-mobile-webp" media="(min-width: 320px)" srcset="img/logo-mobile-blue@1x.webp, img/logo-mobile-blue@2x.webp 2x" type="image/webp">
+            <source class="js-logo-desktop-png" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
+            <source class="js-logo-tablet-png" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
+            <img class="page-header__logo-image page-header__logo-image-js js-logo-main-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип Погнали">
           </picture>
         </a>
-        <button type="button" class="btn page-header__close-btn" aria-label="Закрыть меню">
+        <button type="button" class="btn page-header__close-btn page-header__close-btn--hidden js-clouse-header" aria-label="Закрыть меню">
           <svg class="page-header__close-btn-icon" width="19" height="19">
             <use xlink:href="img/sprite.svg#menu-close"></use>
           </svg>
         </button>
         <nav class="page-header__nav main-nav">
-          <button class="btn main-nav__toggle" aria-label="Кнопка меню">
+          <button class="btn main-nav__toggle js-show-h-menu" aria-label="Кнопка меню">
             <svg class="main-nav__toggle-icon" width="25" height="11">
               <use xlink:href="img/sprite.svg#menu"></use>
             </svg>
@@ -93,7 +93,7 @@
       </div>
     </div>
   </header>
-  <main class="page-main">
+  <main class="page-main page-main--no-padding js-page-main">
     <h1 class="visually-hidden">Сервис для поиска попутчиков для путешествий - Погнали</h1>
     <header class="introduction">
       <div class="introduction__wrapper">

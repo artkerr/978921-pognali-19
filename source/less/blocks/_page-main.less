@@ -1,7 +1,10 @@
 .page-main {
   margin-top: -2px;
   background-color: @pale-gray;
-  padding-top: 50px;
+
+  &--no-padding {
+    padding-top: 0;
+  }
 }
 
 .page-main__header {
@@ -51,7 +54,10 @@
   .page-main {
     margin: 0 auto;
     margin-top: -1px;
-    padding-top: 130px;
+
+    &--no-padding {
+      padding-top: 0;
+    }
   }
 
   .page-main__header {
@@ -119,6 +125,11 @@
 @media (min-width: @desktop-width) {
   .page-main {
     margin-top: -1px;
+    
+    &--no-padding {
+      padding-top: 0;
+    }
+
   }
 
   .page-main__header-wrapper {

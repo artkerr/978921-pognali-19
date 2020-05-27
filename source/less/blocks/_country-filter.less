@@ -18,6 +18,10 @@
   min-height: 730px;
   padding-top: 20px;
   margin-top: -20px;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .country-filter__country-wrapper {
@@ -30,6 +34,13 @@
   align-items: center;
   margin: 0 auto;
   max-width: 270px;
+}
+
+.country-filter__mainland-wrapper {
+
+  .country-filter__open-btn {
+    display: none;
+  }
 }
 
 .country-filter__list {
@@ -143,6 +154,14 @@
     padding: 0 60px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+  }
+
+  .country-filter__mainland-wrapper {
+    position: absolute;
+
+    .country-filter__open-btn {
+      display: block;
+    }
   }
 
   .country-filter__country-wrapper {
