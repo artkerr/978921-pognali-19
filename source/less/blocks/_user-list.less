@@ -1,12 +1,7 @@
 .user-list {
-  display: flex;
   list-style: none;
-  position: absolute;
-  top: 455px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: none;
   padding: 0;
-  z-index: 1;
 }
 
 .user-list__item {
@@ -73,7 +68,7 @@
 
 @media (min-width: @tablet-width) {
   .user-list {
-    position: static;
+    display: flex;
     transform: translate(1px, -2px);
   }
 
