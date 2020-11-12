@@ -1,0 +1,231 @@
+.user-plans {
+  background-color: @pale-grey-two;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  padding: 25px;
+  padding-bottom: 40px;
+}
+
+.user-plans__wrapper {
+  margin: 0 auto;
+  max-width: 270px;
+}
+
+.user-plans__direction-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-plans__title {
+  margin-top: 5px;
+  margin-bottom: 29px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  color: @dark-slate-blue;
+}
+
+.user-plans__direction-item {
+  width: 270px;
+  height: 154px;
+  border-radius: 10px;
+  background-color: @white;
+  padding: 24px;
+  margin-bottom: 10px;
+}
+
+.user-plans__direction-title {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  color: @dark-slate-blue;
+  margin-top: 0;
+
+  span {
+    font-weight: 500;
+    letter-spacing: 1.6px;
+  }
+}
+
+.user-plans__direction-country {
+  font-size: 14px;
+  font-weight: 500;
+  color: @dark-slate-blue;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.user-plans__direction-date {
+  font-size: 14px;
+  font-weight: 500;
+  color: @dark-slate-blue;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.user-plans__direction-btn {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+  color: @black;
+  opacity: 0.3;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .user-plans {
+    padding-bottom: 75px;
+  }
+
+  .user-plans__wrapper {
+    max-width: 618px;
+  }
+
+  .user-plans__title {
+    font-size: 36px;
+    line-height: 1.4;
+    margin-top: 25px;
+    margin-bottom: 40px;
+  }
+
+  .user-plans__direction-item {
+    width: 618px;
+    border-radius: 10px;
+  }
+
+  .user-plans__direction-title {
+    font-size: 24px;
+    line-height: 2.08;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+    margin-left: 12px;
+    margin-top: 8px;
+
+    span {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 619px;
+      height: 1px;
+      background-color: @dark-slate-blue;
+      opacity: 0.1;
+      bottom: -20px;
+      left: -36px;
+    }
+  }
+
+  .user-plans__direction-value {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  .user-plans__direction-country {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    width: 185px;
+  }
+
+  .user-plans__direction-date {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    width: 185px;
+  }
+
+  .user-plans__direction-btn {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    margin-left: 75px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-plans {
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+    padding-bottom: 65px;
+  }
+
+  .user-plans__wrapper {
+    max-width: 1256px;
+    padding: 0 30px;
+  }
+
+  .user-plans__title {
+    margin-left: 10px;
+  }
+
+  .user-plans__direction-item {
+    width: 1256px;
+    height: 97px;
+    display: flex;
+    align-items: center;
+    padding-left: 44px;
+    margin-bottom: 15px;
+  }
+
+  .user-plans__direction-title {
+    width: 670px;
+    margin: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    span {
+      margin-right: 35px;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .user-plans__direction-value {
+    width: 700px;
+  }
+
+  .user-plans__direction-country {
+    width: 175px;
+  }
+
+  .user-plans__direction-date {
+    width: 180px;
+    margin-right: 125px;
+  }
+
+  .user-plans__direction-btn {
+    margin: 0;
+  }
+}

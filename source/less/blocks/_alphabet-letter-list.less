@@ -1,0 +1,35 @@
+.alphabet-letter-list {
+  position: absolute;
+  bottom: -210px;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  display: none;
+}
+
+.alphabet-letter--selected {
+  display: block;
+}
+
+.alphabet-letter-list__link {
+  color: @greyish;
+  line-height: 1.38;
+}
+
+@media (min-width: @tablet-width) {
+  .alphabet-letter-list {
+    font-size: 20px;
+    top: 0;
+    left: 450px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .alphabet-letter-list {
+    display: block;
+    position: static;
+    margin-left: 82px;
+    margin-top: 35px;
+  }
+}

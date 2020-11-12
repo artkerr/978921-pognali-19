@@ -1,41 +1,156 @@
 .traveler {
+  max-width: 270px;
+  display: flex;
+  flex-direction: column;
   background-color: @white;
   border-radius: 20px;
-  max-width: 84%;
   margin: 0 auto;
+  padding-top: 15px;
   padding-left: 20px;
+  padding-bottom: 60px;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    transform: scale(1.005);
+    box-shadow: 0 6px 21px 0 @black-08;
+    transition: 300ms;
+  }
+}
+
+.traveler__header {
+  display: flex;
+}
+
+
+.traveler__user-info {
+  display: flex;
+  flex-direction: column;
 }
 
 .traveler__name {
+  max-width: 70px;
+  align-items: flex-start;
+  margin: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: @salmon;
+    border-radius: 50%;
+  }
+}
+
+.traveler__name-link {
   font-size: 20px;
   font-weight: bold;
   color: @dark-blue;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover {
+    color: @dark-slate-blue-70;
+  }
+
+  &:active {
+    color: @dark-slate-blue-30;
+  }
+}
+
+.traveler__online {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: -74px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: @green-apple;
+  }
+}
+
+.traveler__offline {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -74px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: @salmon;
+  }
 }
 
 .traveler__photo {
   border-radius: 50%;
+  margin-right: 15px;
+}
+
+.traveler__like-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: -38px;
 }
 
 .traveler__favorite {
-  background: @pale-gray;
+  display: flex;
   border-radius: 50%;
+  background-color: @pale-grey;
+  padding: 0;
   width: 31px;
   height: 31px;
   border: none;
-  fill: @greyish;
+  cursor: pointer;
+}
+
+.traveler__favorite-icon {
+  fill: @dark-blue-grey;
+  opacity: 0.3;
+  margin: auto;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.traveler__favorite--active {
+  background: @very-light-pink-two;
+  fill: @tomato;
+  justify-content: center;
+
+  &:hover {
+    background-color: @light-tan;
+  }
+
+  &:active {
+    fill: @tomato-30;
+  }
 }
 
 .traveler__like {
   font-size: 14px;
   font-weight: bold;
   color: @dark-two;
+  line-height: 2.2;
+  margin-left: 5px;
 }
 
 .traveler__tag-list {
-  max-width: 50%;
   display: flex;
   flex-wrap: wrap;
+  max-width: 180px;
+  order: 2;
   padding: 0;
+  margin: 14px 0 0 -80px;
 }
 
 .traveler__tag-item {
@@ -52,15 +167,42 @@
   text-align: center;
 }
 
-.traveler__text {
+.traveler__sub-title {
   font-size: 15px;
   color: @greyish;
   line-height: 1.2;
+  text-transform: lowercase;
+  position: relative;
+  font-weight: normal;
+  margin-top: 13px;
+  margin-bottom: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 8px;
+    z-index: -1;
+    width: 300px;
+    height: 1px;
+    background-color: #edeff6;
+  }
+}
+
+.traveler__sub-text {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  padding: 0 6px;
+  background-color: @white;
 }
 
 .traveler__flag-list {
   list-style: none;
   padding: 0;
+  margin-left: 5px;
+  margin-top: 15px;
+  margin-bottom: -1px;
 }
 
 .traveler__flag-item {
@@ -69,41 +211,159 @@
   color: @dark-slate-blue;
   text-transform: uppercase;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .traveler__country-name {
   margin: 0;
-  padding: 0;
-  margin-bottom: 5px;
-  margin-left: 10px;
+  line-height: 1.5;
+  margin-left: 15px;
 }
 
-.traveler__transport_list {
+.traveler__footer {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.traveler__transport-wrapper {
+  margin-right: auto;
+}
+
+.traveler__transport-list {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  margin-top: 12px;
+  margin-left: 5px;
 }
 
-.traveler__transport_item {
+.traveler__transport-item {
   display: flex;
   align-items: center;
   justify-content: center;
   background: @pale-gray;
   border-radius: 50%;
   width: 33px;
-  height: 32px;
+  height: 33px;
   border: none;
   fill: @point-text;
+  cursor: pointer;
 }
 
 .traveler__transport-active {
   fill: @dark-slate-blue;
 }
 
+.traveler__level-wrapper {
+  margin-right: 16px;
+
+  .traveler__sub-title {
+    margin-bottom: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.traveler__level {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 5px;
+}
+
+.traveler__score {
+  color: @dark-slate-blue;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+.traveler__score-text {
+  display: none;
+  margin: 0;
+  line-height: 1;
+
+  &::after {
+    content: "";
+    width: 31px;
+    height: 1px;
+    opacity: 0.3;
+    background-color: @point-text;
+    position: absolute;
+    top: 33px;
+    left: 14px;
+  }
+}
+
+.traveler__progress-circle {
+  height: 45px;
+  width: 45px;
+  clip: rect(auto, auto, auto, auto);
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.traveler__progress-half-circle {
+  width: 45px;
+  height: 45px;
+  border: 2px solid @mango;
+  border-radius: 50%;
+  clip: rect(0, 30px, 60px, 0);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.traveler__progress-99 .traveler__progress-left-side {
+  transform: rotate(-30deg);
+}
+
+.traveler__progress-99 .traveler__progress-right-side {
+  transform: rotate(-160deg);
+}
+
+.traveler__progress-80 .traveler__progress-left-side {
+  transform: rotate(200deg);
+}
+
+.traveler__progress-80 .traveler__progress-right-side {
+  transform: rotate(300deg);
+}
+
+.traveler__progress-25 .traveler__progress-right-side {
+  transform: rotate(45deg);
+  clip: rect(0, 35px, 12px, auto);
+}
+
+.traveler__progress-25 .traveler__progress-left-side {
+  display: none;
+}
+
+.traveler__progress-50 .traveler__progress-left-side {
+  display: none;
+}
+
+.traveler__progress-50 .traveler__progress-right-side {
+  transform: rotate(180deg);
+  clip: rect(0, 25px, 45px, auto);
+}
+
 .traveler__btn {
   width: 230px;
-  line-height: 3;
+  line-height: 2.2;
   border-radius: 20px;
   background-color: @light-gold;
   text-transform: uppercase;
@@ -111,20 +371,67 @@
   font-weight: bold;
   color: @dark-two;
   vertical-align: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+
+  &:hover {
+    background-color: @mango-two;
+  }
+
+  &:active {
+    background-color: @mango-two;
+    color: @dark-two-30;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .traveler {
-    max-width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 688px;
+    padding: 35px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
   }
 
   .traveler__name {
+    min-width: 70px;
+    max-width: 220px;
+    margin-bottom: 16px;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .traveler__name-link {
     font-size: 30px;
+  }
+
+  .traveler__offline,
+  .traveler__online {
+    position: relative;
+
+    &::before {
+      right: -20px;
+      top: 10px;
+      width: 7px;
+      height: 7px;
+    }
   }
 
   .traveler__photo {
     border-radius: 20px;
     min-width: 190px;
+    margin-right: 33px;
+  }
+
+  .traveler__like-wrapper {
+    margin: 0;
+    margin-left: 145px;
   }
 
   .traveler__favorite {
@@ -134,10 +441,21 @@
 
   .traveler__like {
     font-size: 20px;
+    line-height: 2.6;
+  }
+
+  .traveler__favorite-icon,
+  .traveler__favorite-icon--active {
+    width: 20px;
+    height: 17px;
   }
 
   .traveler__tag-list {
-    max-width: 30%;
+    max-width: 230px;
+    margin: 0;
+    order: 0;
+    margin-left: 3px;
+    margin-bottom: 45px;
   }
 
   .traveler__tag-link {
@@ -145,19 +463,33 @@
     line-height: 1.2;
   }
 
-  .traveler__text {
+  .traveler__sub-title {
     font-size: 15px;
+    margin-left: 42px;
+
+    &::before {
+      width: 700px;
+      margin-left: -50px;
+    }
+  }
+
+  .traveler__country-wrapper {
+    margin-right: auto;
+  }
+
+  .traveler__country-name {
+    margin-left: 8px;
   }
 
   .traveler__flag-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
   }
 
   .traveler__flag-item {
     font-size: 20px;
     font-weight: 500;
-    margin-right: 10px;
+    margin-right: 26px;
 
     img {
       width: 35px;
@@ -165,32 +497,204 @@
     }
   }
 
-  .traveler__transport_list {
+  .traveler__footer {
+    margin-top: -215px;
     flex-direction: column;
   }
 
-  .traveler__transport_item {
+  .traveler__score-text {
+    display: inline-block;
+    color: @point-text;
+    font-size: 14px;
+  }
+
+  .traveler__transport-list {
+    flex-direction: column;
+    margin-left: 14px;
+  }
+
+  .traveler__transport-item {
     background: transparent;
+  }
+
+  .traveler__transport-icon {
+    width: 20px;
+    height: auto;
+  }
+
+  .traveler__transport-icon-bike {
+    width: 24px;
+  }
+
+  .traveler__transport-wrapper {
+    margin: 0;
+
+    .traveler__sub-title {
+      display: none;
+    }
+  }
+
+  .traveler__level {
+    padding-left: 14px;
+    padding-top: 10px;
+  }
+
+  .traveler__level-wrapper .traveler__sub-title {
+    display: none;
+  }
+
+  .traveler__progress-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .traveler__progress-half-circle {
+    width: 60px;
+    height: 60px;
+    border: 3px solid @mango;
+  }
+
+  .traveler__progress-99 .traveler__progress-left-side {
+    transform: rotate(180deg);
+  }
+
+  .traveler__progress-99 .traveler__progress-right-side {
+    transform: rotate(350deg);
+  }
+
+  .traveler__progress-80 .traveler__progress-left-side {
+    transform: rotate(180deg);
+  }
+
+  .traveler__progress-80 .traveler__progress-right-side {
+    transform: rotate(300deg);
+  }
+
+  .traveler__progress-25 .traveler__progress-right-side {
+    transform: rotate(80deg);
+    clip: rect(0, 35px, 30px, auto);
+  }
+
+  .traveler__progress-25 .traveler__progress-left-side {
+    display: none;
+  }
+
+  .traveler__progress-50 .traveler__progress-left-side {
+    display: none;
+  }
+
+  .traveler__progress-50 .traveler__progress-right-side {
+    transform: rotate(180deg);
+    clip: rect(0, 30px, 60px, auto);
   }
 
   .traveler__btn {
     width: 148px;
+    border-radius: 25px;
     line-height: 2.5;
+    font-size: 20px;
+    position: static;
+    margin-left: -150px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .traveler {
-    min-width: 950px;
+    max-width: 950px;
+    max-height: 285px;
+    display: flex;
+    flex-direction: row;
     padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .traveler__header {
     margin: 0;
   }
 
+  .traveler__user-info {
+    margin-top: 48px;
+  }
+
+  .traveler__photo {
+    min-width: 285px;
+    border-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    margin: 0;
+    margin-right: 60px;
+  }
+
+  .traveler__name {
+    margin-bottom: 20px;
+  }
+
+  .traveler__offline,
+  .traveler__online {
+    &::before {
+      left: -18px;
+      top: 9px;
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+  .traveler__tag-list {
+    margin: 0;
+    margin-bottom: 48px;
+  }
+
+  .traveler__like-wrapper {
+    margin: 0;
+  }
+
+  .traveler__sub-title {
+    display: none;
+    margin: 0;
+  }
+
+  .traveler__country-wrapper {
+    margin-top: 48px;
+    margin-left: 100px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -50px;
+      width: 1px;
+      height: 187px;
+      background-color: @point-text;
+      background-image: linear-gradient(to bottom, white, black 25%, black 75%, white);
+      opacity: 0.1;
+    }
+  }
+
   .traveler__flag-list {
+    margin: 0;
     flex-direction: column;
   }
 
-  .traveler__transport_list {
+  .traveler__footer {
+    margin: 0;
     flex-direction: row;
+    margin-left: 670px;
+    margin-top: -100px;
+  }
+
+  .traveler__transport-list {
+    flex-direction: row;
+    margin-right: 40px;
+  }
+
+  .traveler__level {
+    margin: 0;
+  }
+
+  .traveler__btn {
+    width: 148px;
+    margin: 0;
   }
 }

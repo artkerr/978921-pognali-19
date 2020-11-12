@@ -1,17 +1,33 @@
 .directions {
-  max-width: 85%;
   background: @pale-gray;
-  padding: 15%;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: relative;
+  z-index: 6;
+  margin-top: -20px;
+  padding: 75px 0 30px 0;
+}
+
+.directions__wrapper {
+  max-width: @mobile-width;
+  margin: 0 auto;
+}
+
+.directions__text-wrapper {
+  max-width: 195px;
+  margin-left: 50px;
+  margin-bottom: 60px;
 }
 
 .directions__title {
   .title ();
+  margin-top: 17px;
+  margin-bottom: 15px;
 }
 
 .directions__text {
   color: @greyish;
+  line-height: 1.38;
 }
 
 .directions__point-list {
@@ -19,59 +35,172 @@
   padding: 0;
 }
 
+.directions__point-item {
+  &:nth-child(3) {
+    margin-bottom: 27px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      z-index: 1;
+      height: 81px;
+      width: 100%;
+      background-image: linear-gradient(to top, @pale-gray, transparent);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+}
+
 .directions__btn {
+  position: relative;
+  display: block;
   width: 270px;
   background-color: @light-gold;
   font-size: 18px;
   font-weight: bold;
-  line-height: 3;
+  line-height: 3.4;
   color: @dark-slate-blue;
   text-align: left;
   border-radius: 10px;
+  padding-left: 23px;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 7px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent @dark-slate-blue;
+  }
+
+  &:hover {
+    background-color: @mango-two;
+  }
+
+  &:active {
+    color: @dark-slate-blue-30;
+    background-color: @mango-two;
+  }
+
+  &:active::after {
+    border-color: transparent transparent transparent @dark-slate-blue-30;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .directions {
-    padding: 10%;
-    background: @pale-gray url("../img/flags-back@1x.png") no-repeat 80% 10%;
+    margin: 0;
+    background: @pale-gray url("../img/flags-back@1x.png") no-repeat 92% 125px;
+    background-size: 290px 575px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin-top: -45px;
+    padding-bottom: 80px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: @pale-gray url("../img/flags-back@2x.png") no-repeat 92% 125px;
+      background-size: 290px 575px;
+    }
+  }
+
+  .directions__wrapper {
+    max-width: @tablet-width;
+  }
+
+  .directions__text-wrapper {
+    margin-left: 73px;
+    max-width: 337px;
+    margin-bottom: 105px;
   }
 
   .directions__title {
     font-size: 45px;
+    margin-top: 42px;
   }
 
   .directions__text {
     font-size: 28px;
-    max-width: 55%;
-    padding: 40px 0;
+    width: 340px;
+    line-height: 1.18;
+    padding-top: 20px;
+    margin-top: 33px;
   }
 
   .directions__btn {
-    min-width: 618px;
+    width: 618px;
     font-size: 24px;
+    padding-left: 34px;
+    border-radius: 20px;
+    margin-top: 35px;
+    line-height: 3.4;
+
+    &::after {
+      right: 25px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .directions {
+    padding-bottom: 105px;
+    background-image: none;
+  }
+
+  .directions__wrapper {
+    max-width: @desktop-width;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
     position: relative;
+    background: @pale-gray url("../img/flags-back@1x.png") no-repeat 95% 130px;
+    background-size: 290px 575px;
+    margin: 0 auto;
+
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: @pale-gray url("../img/flags-back@2x.png") no-repeat 95% 130px;
+      background-size: 290px 575px;
+    }
   }
 
   .directions__text-wrapper {
-    padding-left: 160px;
+    margin-right: 240px;
+    margin-left: 170px;
+    margin-top: 95px;
+    max-width: 50%;
+  }
+
+  .directions__title {
+    margin-left: 3px;
+    margin-top: 40px;
   }
 
   .directions__text {
-    max-width: 336px;
+    max-width: 340px;
+    margin-top: 56px;
     padding: 0;
+  }
+
+  .directions__point {
+    margin-top: 105px;
   }
 
   .directions__btn {
     max-width: 274px;
     position: absolute;
-    right: 0;
+    right: 300px;
+    bottom: 30px;
+    padding-left: 30px;
+
+    &::after {
+      right: 29px;
+      transform: translateY(-60%);
+    }
   }
 }

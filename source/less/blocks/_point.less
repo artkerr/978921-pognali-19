@@ -1,6 +1,7 @@
 .point {
-  min-width: 85%;
-  margin-bottom: 20px;
+  max-width: 270px;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .point__image {
@@ -11,11 +12,12 @@
 }
 
 .point__content {
+  min-height: 90px;
   position: relative;
   background-color: @white;
   border-radius: 10px;
-  padding: 0 9%;
-  margin-top: -15px;
+  padding: 0 25px;
+  margin-top: -18px;
   z-index: 1;
 }
 
@@ -23,8 +25,8 @@
   width: 35px;
   height: 24px;
   position: absolute;
-  top: -10px;
-  left: 35px;
+  top: -12px;
+  left: 27px;
 }
 
 .point__title {
@@ -33,7 +35,7 @@
   color: @dark-two;
   line-height: 1;
   margin: 0;
-  padding-top: 20px;
+  padding-top: 25px;
 }
 
 .point__text {
@@ -41,7 +43,6 @@
   line-height: 1.88;
   color: @point-text;
   margin: 0;
-  padding-bottom: 10px;
 }
 
 .point__counter {
@@ -49,52 +50,129 @@
   font-weight: 500;
   line-height: 1.88;
   color: @point-text;
-  top: 0;
-  right: 20px;
+  padding-left: 15px;
+  margin: 0;
+  top: 24px;
+  right: 25px;
+
+
+  &::before {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    content: "";
+    width: 11px;
+    height: 11px;
+    background: url("../img/user.svg") no-repeat;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .point {
-    min-width: 85%;
+    position: relative;
+    max-width: 616px;
+    min-height: 140px;
     display: flex;
     flex-direction: row-reverse;
+    margin-bottom: 1px;
+
+    &:first-child::after {
+      content: "";
+      width: 141px;
+      height: 141px;
+      border-radius: 20px;
+      background-color: @pale-grey-four;
+      position: absolute;
+      top: -40px;
+      left: -39px;
+    }
   }
 
   .point__image {
-    min-width: 15%;
-    margin-left: -100px;
-    height: auto;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    max-height: 140px;
+    width: auto;
+    border-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 2;
   }
 
   .point__content {
+    max-height: 140px;
     flex-grow: 1;
     border-radius: 0;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    margin: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+    padding-left: 30px;
   }
 
   .point__title {
     font-size: 24px;
+    padding-top: 30px;
   }
 
   .point__text {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 500;
     padding: 0;
+    line-height: 0.88;
+    padding-top: 5px;
+    margin-left: -2px;
   }
 
   .point__counter {
     font-size: 20px;
-    position: static;
-    margin: 0;
+    position: relative;
+    padding-left: 27px;
+    margin-top: 10px;
+    top: 6px;
+    left: 0;
+
+    &::before {
+      width: 21px;
+      height: 20px;
+      top: 6px;
+      left: -2px;
+    }
   }
 
   .point__icon {
     position: absolute;
     width: 70px;
     height: 47px;
-    top: 35px;
-    left: 410px;
+    top: 15px;
+    left: 92.5%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .point {
+    min-width: 559px;
+    border-radius: 20px;
+
+    &:first-child::after {
+      left: -70px;
+      top: -85px;
+    }
+  }
+
+  .point__icon {
+    top: 20px;
+    left: 340px;
+  }
+
+  .point__title {
+    padding-top: 24px;
+  }
+
+  .point__text {
+    margin: 0;
+  }
+
+  .point__counter {
+    margin-left: 3px;
   }
 }

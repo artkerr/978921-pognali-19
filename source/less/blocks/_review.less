@@ -1,11 +1,13 @@
 .review {
-  max-width: 70%;
-  margin-bottom: 20px;
+  min-width: @mobile-width;
+  padding-bottom: 50px;
 }
 
 .review__citation {
+  min-height: 200px;
   margin: 0;
-  margin-left: 25%;
+  margin-left: 16%;
+  padding-top: 46px;
 }
 
 .review__text {
@@ -15,27 +17,39 @@
 
 .review_author {
   font-weight: bold;
+  max-width: 155px;
+  line-height: 1.38;
+  margin-top: 19px;
 }
 
 @media (min-width: @tablet-width) {
   .review {
-    max-width: 45%;
+    max-width: 250px;
+    margin-top: -10px;
+    margin-left: 22px;
+    background: transparent;
+    padding-top: 50px;
+    margin-bottom: 215px;
   }
 
   .review_author {
     font-size: 21px;
+    line-height: 1.2;
+    padding-top: 25px;
+    max-width: 245px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .review {
+    max-width: 20%;
     font-size: 28px;
-    width: 270px;
-    margin-left: 1100px;
-    margin-top: -200px;
+    margin-top: -297px;
+    transform: translateX(335%);
   }
 
   .review__citation {
+    width: 270px;
     margin: 0;
   }
 

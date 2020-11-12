@@ -1,0 +1,362 @@
+.entertainment {
+  width: 270px;
+  border-radius: 10px;
+  background-color: @white;
+  border: none;
+  padding: 25px;
+  margin-top: 10px;
+  padding-bottom: 5px;
+
+  .user-creation-plans__step-marker-list {
+    display: none;
+  }
+}
+
+.entertainment__wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    content: "";
+    width: 2px;
+    height: 281px;
+    background-color: @dark-slate-blue;
+  }
+}
+
+.entertainment__first-country {
+  margin-bottom: 5px;
+
+  &::before {
+    position: absolute;
+    top: 8px;
+    left: -15px;
+    content: "";
+    width: 15px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: @dark-slate-blue;
+  }
+
+  &::after {
+    position: absolute;
+    top: 6px;
+    left: -2px;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: @dark-slate-blue;
+    border-radius: 50%;
+  }
+}
+
+
+.entertainment__second-country {
+  margin-bottom: 50px;
+
+  &::before {
+    position: absolute;
+    top: 290px;
+    left: -15px;
+    content: "";
+    width: 15px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: @dark-slate-blue;
+  }
+
+  &::after {
+    position: absolute;
+    top: 288px;
+    left: -2px;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: @dark-slate-blue;
+    border-radius: 50%;
+  }
+}
+
+.entertainment__title {
+  font-size: 18px;
+  font-weight: 500;
+  color: @dark-slate-blue;
+  line-height: 1;
+  position: relative;
+  margin-left: 10px;
+  margin-top: 22px;
+  margin-bottom: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: -1px;
+    width: 49px;
+    height: 34px;
+    background-color: @white;
+    box-shadow: -7px 0 2px 0 @white-90;
+  }
+}
+
+.entertainment__bosnia {
+  &::after {
+    position: absolute;
+    content: "";
+    top: -3px;
+    right: 0;
+    width: 35px;
+    height: 24px;
+    background-image: url("../img/flag-bosnia.svg");
+    background-size: 35px 24px;
+  }
+}
+
+.entertainment__czech {
+  margin-bottom: 15px;
+
+  &::before {
+    content: none;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -3px;
+    right: 0;
+    width: 35px;
+    height: 24px;
+    background-image: url("../img/flag-czech.svg");
+    background-size: 35px 24px;
+  }
+}
+
+.entertainment__textarea {
+  width: 220px;
+  height: 220px;
+  border-radius: 4px;
+  border: solid 1px @cloudy-blue;
+  background-color: @white;
+  color: @greyish;
+  font-size: 16px;
+  font-family: "BloggerSans", "Open Sans", sans-serif;
+  padding: 13px 30px 15px 15px;
+
+  &::placeholder {
+    color: @greyish;
+    opacity: 0.3;
+  }
+
+  &:hover {
+    border-color: @bluey-grey;
+  }
+
+  &:active {
+    border-color: @dark-two;
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  &:required {
+    border-color: @blush;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .entertainment {
+    width: 618px;
+    border-radius: 30px;
+    padding: 43px;
+    padding-top: 47px;
+    padding-bottom: 75px;
+    margin-bottom: 60px;
+    margin-top: 0;
+
+    .user-creation-plans__btn--back {
+      margin-left: 359px;
+      margin-top: 10px;
+      padding-left: 26px;
+    }
+
+    .user-creation-plans__fieldset-title {
+      margin-bottom: 35px;
+    }
+  }
+
+  .entertainment__wrapper {
+    margin-top: 80px;
+    margin-bottom: 45px;
+
+    &::before {
+      top: 13px;
+      left: 526px;
+      content: "";
+      width: 3px;
+      height: 247px;
+    }
+  }
+
+  .entertainment__title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 0.6;
+    margin-left: 0;
+    margin-top: 24px;
+    margin-bottom: 40px;
+  }
+
+  .entertainment__bosnia {
+    &::after {
+      top: -17px;
+      right: 33px;
+      width: 70px;
+      height: 47px;
+      background-image: url("../img/flag-bosnia.svg");
+      background-size: 70px 47px;
+    }
+  }
+
+  .entertainment__czech {
+    &::after {
+      top: -17px;
+      right: 33px;
+      width: 70px;
+      height: 47px;
+      background-image: url("../img/flag-czech.svg");
+      background-size: 70px 47px;
+    }
+  }
+
+  .entertainment__textarea {
+    width: 505px;
+    height: 142px;
+    font-size: 20px;
+    line-height: 1.2;
+    padding: 17px 19px;
+    padding-right: 40px;
+  }
+
+
+  .entertainment__first-country {
+    margin-bottom: 50px;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      top: 0;
+      left: 520px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+
+  .entertainment__second-country {
+    margin-bottom: 0;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      top: 259px;
+      left: 520px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .entertainment {
+    width: 1320px;
+    border-radius: 60px;
+    padding: 100px 160px;
+    position: relative;
+    padding-bottom: 155px;
+
+
+    .user-creation-plans__btn--back {
+      margin-left: 750px;
+    }
+
+    .user-creation-plans__step-marker-list {
+      display: block;
+      top: 74px;
+      right: 285px;
+    }
+
+    .user-creation-plans__fieldset-description {
+      width: 480px;
+    }
+  }
+
+  .entertainment__wrapper {
+    width: 997px;
+    border-top: solid 1px @cloudy-blue;
+    margin-top: 50px;
+    margin-bottom: 19px;
+
+    &::before {
+      height: 261px;
+      top: 100px;
+      left: 772px;
+    }
+  }
+
+  .entertainment__first-country {
+    margin-top: 87px;
+
+    position: relative;
+
+    &::after {
+      top: 0;
+      left: 765px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .entertainment__title {
+    margin-bottom: 43px;
+    margin-left: -2px;
+  }
+
+  .entertainment__textarea {
+    width: 730px;
+    height: 142px;
+    padding: 25px 25px;
+    padding-right: 0;
+  }
+
+  .entertainment__second-country {
+    &::after {
+      top: 0;
+      left: 765px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .entertainment__bosnia {
+    &::after {
+      top: -11px;
+      right: 114px;
+    }
+  }
+
+  .entertainment__czech {
+    margin-bottom: 40px;
+
+    &::after {
+      top: -12px;
+      right: 114px;
+    }
+  }
+}

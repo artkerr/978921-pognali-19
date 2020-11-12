@@ -1,119 +1,250 @@
 .fellow-traveler {
-  background:
-    url("../img/smolov-back-desktop@1x.png") no-repeat 90% 1%,
-    url("../img/rogovaya-back-mobile@1x.png") no-repeat 0 20%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: relative;
+  margin-top: -30px;
+  z-index: 5;
   background-color: @dark-blue;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  text-align: center;
+}
+
+.fellow-traveler__wrapper {
+  max-width: @mobile-width;
+  margin: 0 auto;
+  padding: 60px 0 30px 0;
+  background:
+    url("../img/smolov-back-desktop@1x.png") no-repeat 87% 70px,
+    url("../img/rogovaya-back-mobile@1x.png") no-repeat -10px 340px;
+
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background:
+      url("../img/smolov-back-desktop@2x.png") no-repeat 87% 70px,
+      url("../img/rogovaya-back-mobile@2x.png") no-repeat 0 340px;
+    background-size: 143px, 61px 71px;
+  }
 }
 
 .fellow-traveler__text-wrapper {
-  max-width: 66%;
-  padding-left: 18%;
+  max-width: 220px;
+  margin-left: 50px;
+  margin-top: 18px;
+  margin-bottom: 55px;
 }
 
 .fellow-traveler__title {
   margin: 0;
-  padding-top: 20px;
+  padding-top: 22px;
   .title ();
 }
 
 .fellow-traveler__text {
   font-weight: 300;
   line-height: 1.38;
+  margin-top: 20px;
+}
+
+.fellow-traveler__text-br1 {
+  display: none;
 }
 
 .fellow-traveler__text-bold {
   font-weight: bold;
   line-height: 1.38;
+  margin-top: 22px;
 }
 
 .fellow-traveler__list {
-  max-width: 85%;
+  width: 270px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   list-style: none;
   padding: 0;
+  margin-bottom: 10px;
 }
 
 .fellow-traveler__item {
   margin-bottom: 10px;
 }
 
-.fellow-traveler-btn {
+.fellow-traveler__btn {
+  display: block;
+  position: relative;
   width: 270px;
-  line-height: 3;
+  line-height: 3.5;
   background-color: @light-gold;
   font-size: 18px;
   font-weight: bold;
   color: @dark-slate-blue;
   text-align: left;
   border-radius: 10px;
-}
+  padding-left: 25px;
+  margin: 0 auto;
 
+  &::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 7px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent @dark-slate-blue;
+  }
+
+  &:hover {
+    background-color: @mango-two;
+  }
+
+  &:active {
+    color: @dark-slate-blue-30;
+    background-color: @mango-two;
+  }
+
+  &:active::after {
+    color: @dark-slate-blue-30;
+    border-color: transparent transparent transparent @dark-slate-blue-30;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .fellow-traveler {
-    background:
-      url("../img/rogovaya-back-desktop@1x.png") no-repeat 90% 1%,
-      url("../img/smolov-back-desktop@1x.png") no-repeat 2% 20%;
     background-color: @dark-blue;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-bottom: 56px;
+    margin-top: -55px;
+  }
+
+  .fellow-traveler__wrapper {
+    max-width: @tablet-width;
+    margin-top: 5px;
+    background:
+      url("../img/rogovaya-back-desktop@1x.png") no-repeat 84% 130px,
+      url("../img/smolov-back-desktop@1x.png") no-repeat 6% 475px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background:
+        url("../img/rogovaya-back-desktop@1x.png") no-repeat 84% 130px,
+        url("../img/smolov-back-desktop@1x.png") no-repeat 6% 475px;
+      background-color: @dark-blue;
+      background-size: 285px, 143px;
+    }
   }
 
   .fellow-traveler__text-wrapper {
-    max-width: 55%;
-    padding-left: 10%;
+    max-width: 430px;
+    margin-top: 110px;
+    margin-left: 72px;
+    margin-bottom: 58px;
   }
 
   .fellow-traveler__text {
+    max-width: 430px;
     font-size: 28px;
     line-height: 1.18;
+    margin-left: 3px;
+    margin-top: 35px;
+    margin-bottom: 38px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .fellow-traveler__text-br {
+    display: none;
+  }
+
+  .fellow-traveler__text-br1 {
+    display: block;
   }
 
   .fellow-traveler__title {
     font-size: 45px;
     padding: 20px 0;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -39px;
+      left: -32px;
+      width: 213px;
+      height: 213px;
+      border-radius: 20px;
+      background-color: @dark-blue-grey-four;
+      z-index: -1;
+    }
   }
 
   .fellow-traveler__text-bold {
     font-size: 21px;
-    max-width: 55%;
+    max-width: 260px;
+    line-height: 1.2;
   }
 
   .fellow-traveler__list {
-    min-width: 85%;
-    display: flex;
+    width: 618px;
+    flex-direction: row;
+    flex-grow: 1;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
   }
 
   .fellow-traveler__item {
     margin: 0;
+    flex-basis: 285px;
   }
 
-  .fellow-traveler-btn {
-    min-width: 618px;
+  .fellow-traveler__btn {
+    width: 618px;
+    line-height: 3.45;
     font-size: 24px;
-    margin: 0 auto;
+    border-radius: 20px;
+    padding-left: 32px;
+
+    &::after {
+      right: 25px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .fellow-traveler {
+  .fellow-traveler__wrapper {
+    max-width: @desktop-width;
     display: flex;
-    text-align: left;
+    margin-left: 56px;
+    padding-bottom: 76px;
+  }
+
+  .fellow-traveler__text-wrapper {
+    margin-top: 100px;
+    margin-right: 190px;
   }
 
   .fellow-traveler__text {
     width: 480px;
-    padding-right: 20px;
   }
 
   .fellow-traveler__list {
-    max-width: 630px;
+    width: 630px;
+    margin: 0 auto;
+    margin-top: 125px;
     justify-content: flex-start;
+  }
+
+  .fellow-traveler__item {
+    width: 285px;
+  }
+
+  .fellow-traveler__btn {
+    position: absolute;
+    left: 130px;
+    bottom: 133px;
+    max-width: 280px;
+    border-radius: 20px;
   }
 }

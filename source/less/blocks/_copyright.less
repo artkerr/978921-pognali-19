@@ -1,8 +1,18 @@
 .copyright {
   display: flex;
-  padding: 0 30px;
-  margin-bottom: 10px;
   align-items: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-top: 1px solid @pale-grey-four;
+  max-width: 270px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
@@ -17,10 +27,14 @@
 @media (min-width: @tablet-width) {
   .copyright {
     padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 20px;
+    margin-top: 10px;
   }
 
   .copyright__text {
-    margin-right: 15px;
+    margin-right: 25px;
   }
 }
 

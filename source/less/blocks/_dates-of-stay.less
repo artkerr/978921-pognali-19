@@ -1,0 +1,437 @@
+.dates-of-stay {
+  width: 270px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: @white;
+  border: none;
+  padding: 25px;
+}
+
+.dates-of-stay__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.dates-of-stay__traveler {
+  position: relative;
+  margin-bottom: 19px;
+}
+
+.dates-of-stay__traveler-head {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.dates-of-stay__traveler-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.6px;
+  color: @dark-slate-blue;
+  text-transform: uppercase;
+  margin-right: auto;
+}
+
+.dates-of-stay__traveler-sum {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.6px;
+  color: @dark-slate-blue-30;
+  text-transform: uppercase;
+}
+
+.dates-of-stay__traveler-num {
+  width: 220px;
+  height: 43px;
+  border-radius: 4px;
+  border: solid 1px @cloudy-blue;
+  background-color: @white;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  color: @dark-slate-blue;
+
+  &:hover {
+    border: solid 1px @bluey-grey;
+  }
+}
+
+.dates-of-stay__traveler-del {
+  position: absolute;
+  bottom: 9px;
+  left: 7px;
+  cursor: pointer;
+}
+
+.dates-of-stay__traveler-add {
+  position: absolute;
+  bottom: 9px;
+  right: 7px;
+  cursor: pointer;
+}
+
+.dates-of-stay__duration {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.dates-of-stay__duration-num {
+  width: 220px;
+  height: 43px;
+  border-radius: 4px;
+  border: solid 1px @cloudy-blue;
+  background-color: @white;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  color: @dark-slate-blue;
+
+  &:hover {
+    border: solid 1px @bluey-grey;
+  }
+}
+
+.dates-of-stay__duration-del {
+  position: absolute;
+  bottom: 9px;
+  left: 7px;
+  cursor: pointer;
+}
+
+.dates-of-stay__duration-add {
+  position: absolute;
+  bottom: 9px;
+  right: 7px;
+  cursor: pointer;
+}
+
+.dates-of-stay__icon {
+  opacity: 0.3;
+}
+
+.dates-of-stay__checkbox {
+  margin-bottom: 18px;
+}
+
+.dates-of-stay__label {
+  font-size: 15px;
+  line-height: 1;
+  color: @greyish;
+  padding-left: 40px;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: -7px;
+    content: "";
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    border: solid 1px @cloudy-blue;
+    background-color: @white;
+  }
+
+  &:hover::before {
+    border-color: @bluey-grey;
+  }
+
+  &:active::before {
+    background-color: @pale-grey-three;
+  }
+}
+
+.dates-of-stay__input:checked + .dates-of-stay__label::before {
+  position: absolute;
+  left: 0;
+  top: -7px;
+  content: "";
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  border: solid 1px @cloudy-blue;
+  background-image: url("../img/tick.svg");
+  background-color: @white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9px 9px;
+}
+
+.dates-of-stay__input:checked + .dates-of-stay__label:hover::before {
+  border-color: @bluey-grey;
+}
+
+.dates-of-stay__input:checked + .dates-of-stay__label:active::before {
+  background-color: @pale-grey-three;
+  opacity: 0.3;
+}
+
+
+@media (min-width: @tablet-width) {
+  .dates-of-stay {
+    width: 618px;
+    height: 1435px;
+    border-radius: 30px;
+    padding: 44px;
+    padding-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .dates-of-stay__wrapper {
+    margin-bottom: 15px;
+  }
+
+  .dates-of-stay__traveler {
+    border-top: 1px solid @light-blue-grey-two;
+    padding: 24px 0;
+    order: 2;
+    margin-top: 21px;
+    margin-bottom: 0;
+  }
+
+  .dates-of-stay__traveler-head {
+    margin-bottom: 25px;
+  }
+
+  .dates-of-stay__traveler-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+  }
+
+  .dates-of-stay__traveler-sum {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+  }
+
+  .dates-of-stay__traveler-num {
+    width: 531px;
+    height: 70px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .dates-of-stay__traveler-del {
+    bottom: 44px;
+
+
+    &::before {
+      position: absolute;
+      top: -22px;
+      left: 20px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      opacity: 0.3;
+      background: url("../img/qty-minus.svg") no-repeat center / 20px 20px;
+    }
+  }
+
+  .dates-of-stay__traveler-add {
+    bottom: 45px;
+
+    &::before {
+      position: absolute;
+      top: -22px;
+      right: 10px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      opacity: 0.3;
+      background: url("../img/qty-plus.svg") no-repeat center / 20px 20px;
+    }
+  }
+
+  .dates-of-stay__icon {
+    display: none;
+  }
+
+  .dates-of-stay__duration {
+    border-top: 1px solid @light-blue-grey-two;
+    padding: 24px 0;
+    order: 4;
+    margin-bottom: 15px;
+  }
+
+  .dates-of-stay__duration-num {
+    width: 531px;
+    height: 70px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .dates-of-stay__duration-del {
+    bottom: 20px;
+
+    &::before {
+      position: absolute;
+      top: -46px;
+      left: 19px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      opacity: 0.3;
+      background: url("../img/qty-minus.svg") no-repeat center / 20px 20px;
+    }
+  }
+
+  .dates-of-stay__duration-add {
+    bottom: 20px;
+
+    &::before {
+      position: absolute;
+      top: -46px;
+      right: 10px;
+      content: "";
+      width: 20px;
+      height: 20px;
+      opacity: 0.3;
+      background: url("../img/qty-plus.svg") no-repeat center / 20px 20px;
+    }
+  }
+
+  .dates-of-stay__checkbox {
+    order: 3;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+  }
+
+  .dates-of-stay__label {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: @dark-slate-blue;
+    padding-left: 60px;
+
+    &::before {
+      width: 36px;
+      height: 36px;
+      top: -9px;
+    }
+  }
+
+  .dates-of-stay__input:checked + .dates-of-stay__label::before {
+    top: -9px;
+    width: 36px;
+    height: 36px;
+    background-size: 12px 12px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .dates-of-stay {
+    width: 1320px;
+    border-radius: 60px;
+    padding: 100px 160px;
+    padding-bottom: 0;
+  }
+
+  .dates-of-stay__wrapper {
+    margin-bottom: 0;
+  }
+
+  .dates-of-stay__checkbox {
+    position: absolute;
+    right: 160px;
+    top: 443px;
+  }
+
+  .dates-of-stay__traveler {
+    margin-top: 50px;
+    width: 550px;
+    height: 100px;
+    padding-top: 25px;
+    padding-bottom: 0;
+    margin-bottom: 9px;
+    border: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      width: 1000px;
+      height: 1px;
+      background-color: @light-blue-grey-two;
+    }
+  }
+
+  .dates-of-stay__duration {
+    width: 550px;
+    height: 75px;
+    margin: 0;
+    border: none;
+    padding: 0;
+
+    .dates-of-stay__traveler-title {
+      margin-right: 273px;
+      color: @dark-slate-blue;
+    }
+  }
+
+  .dates-of-stay__traveler-head {
+    margin-top: 20px;
+  }
+
+  .dates-of-stay__traveler-title {
+    margin-right: 246px;
+    color: @dark-slate-blue;
+  }
+
+  .dates-of-stay__traveler-num {
+    width: 181px;
+    height: 70px;
+  }
+
+  .dates-of-stay__traveler-input {
+    position: relative;
+    top: -70px;
+    left: 218px;
+    max-width: 181px;
+  }
+
+  .dates-of-stay__traveler-add {
+    right: 10px;
+    top: 45px;
+  }
+
+  .dates-of-stay__traveler-del {
+    left: 5px;
+    top: 45px;
+  }
+
+  .dates-of-stay__duration-num {
+    width: 181px;
+    height: 70px;
+  }
+
+  .dates-of-stay__duration-input {
+    position: relative;
+    top: -70px;
+    left: 218px;
+    max-width: 181px;
+  }
+
+  .dates-of-stay__duration-add {
+    right: 10px;
+    top: 45px;
+
+    &::before {
+      top: -22px;
+    }
+  }
+
+  .dates-of-stay__duration-del {
+    left: 10px;
+    top: 55px;
+
+    &::before {
+      top: -30px;
+    }
+  }
+}
