@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Направления - Погнали</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper page-header__wrapper-blue page-header__wrapper-sticky page-header__wrapper-sticky-static js-header">
+        <div class="page-header__wrapper-nav page-header__open  js-h-navs">
+          <a class="page-header__logo">
+            <picture>
+              <source class="js-logo-desktop-webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
+              <source class="js-logo-tablet-webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp, img/logo-tablet-blue@2x.webp 2x" type="image/webp">
+              <source class="js-logo-mobile-webp" media="(min-width: 320px)" srcset="img/logo-mobile-blue@1x.webp, img/logo-mobile-blue@2x.webp 2x" type="image/webp">
+              <source class="js-logo-desktop-png" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
+              <source class="js-logo-tablet-png" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
+              <img class="page-header__logo-image page-header__logo-image-js js-logo-main-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип Погнали">
+            </picture>
+          </a>
+          <button type="button" class="btn page-header__close-btn page-header__close-btn--hidden js-clouse-header" aria-label="Закрыть меню">
+            <svg class="page-header__close-btn-icon" width="19" height="19">
+              <use xlink:href="img/sprite.svg#menu-close"></use>
+            </svg>
+          </button>
+          <nav class="page-header__nav main-nav">
+            <button class="btn main-nav__toggle js-show-h-menu" aria-label="Кнопка меню">
+              <svg class="main-nav__toggle-icon" width="25" height="11">
+                <use xlink:href="img/sprite.svg#menu"></use>
+              </svg>
+            </button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__site-list site-list">
+                <li class="site-list__item">
+                  <a href="index.html" class="site-list__link" data-hover="О сервисе">О сервисе</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link" data-hover="Направления">Направления</a>
+                </li>
+                <li class="site-list__item">
+                  <a href="catalog.html" class="site-list__link" data-hover="Попутчики">Попутчики</a>
+                </li>
+              </ul>
+            </div>
+            <ul class="main-nav__user-list user-list">
+              <li class="user-list__item">
+                <a class="user-list__link" href="tel:88005558628">
+                  <svg class="user-list__icon" width="18" height="18">
+                    <use xlink:href="img/sprite.svg#topmenu-phone"></use>
+                  </svg>
+                  <span>8 800 555-86-28</span>
+                </a>
+              </li>
+              <li class="user-list__item">
+                <a class="user-list__link" href="mailto:mail@htmlacademy.ru">
+                  <svg class="user-list__icon" width="18" height="14">
+                    <use xlink:href="img/sprite.svg#topmenu-mail"></use>
+                  </svg>
+                  <span>mail@htmlacademy.ru</span>
+                </a>
+              </li>
+              <li class="user-list__item">
+                <a class="user-list__link" href="sign-in.html">Авторизация</a>
+              </li>
+            </ul>
+            <ul class="page-header__social-list">
+              <li class="page-header__social-item">
+                <a href="https://facebook.com" class="page-header__social-link" aria-label="facebook">
+                  <svg width="11" height="21" class="social__icon social__icon-facebook">
+                    <use xlink:href="img/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="page-header__social-item">
+                <a href="https://vk.com" class="page-header__social-link" aria-label="vk">
+                  <svg width="23" height="12" class="social__icon social__icon-vk">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="page-header__social-item">
+                <a href="https://instagram.com" class="page-header__social-link" aria-label="instagram">
+                  <svg width="18" height="18" class="social__icon social__icon-instagram">
+                    <use xlink:href="img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page-main form-page">
+      <header class="page-main__header">
+        <div class="page-main__header-wrapper">
+          <h1 class="page-main__title">Направления</h1>
+        </div>
+      </header>
+      <section class="user-info">
+        <div class="user-info__common-wrapper">
+          <div class="user-info__wrapper">
+            <div class="user-info__level user-info__progress-80">
+              <span class="user-info__score">80</span>
+              <p class="user-info__score-text">level</p>
+              <div class="user-info__progress-circle">
+                <div class="user-info__progress-left-side user-info__progress-half-circle"></div>
+                <div class="user-info__progress-right-side user-info__progress-half-circle"></div>
+              </div>
+            </div>
+            <div class="user-info__photo-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp, img/demin-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp, img/demin-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 320px)" srcset="img/demin-mobile@1x.webp, img/demin-mobile@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
+                <img class="user-info__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Димин" width="70" height="70">
+              </picture>
+            </div>
+          </div>
+          <div class="user-info__data-wrapper">
+            <button type="button" class="btn user-info__btn"><span>Сменить</span> фото</button>
+            <div class="user-info__tags">
+              <h3 class="user-info__sub-title"><span>Тэги</span></h3>
+              <textarea class="user-info__tags-area" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт
+              </textarea>
+            </div>
+            <div class="user-info__transport">
+              <h3 class="user-info__sub-title"><span>Транспорт</span></h3>
+              <ul class="user-info__transport-list">
+                <li class="user-info__item">
+                  <label class="user-info__checkbox-transport" for="plane">
+                    <input class="user-info__checkbox visually-hidden" type="checkbox" id="plane" checked="">
+                    <svg width="14" height="16" class="user-info__icon">
+                      <use xlink:href="img/sprite.svg#plane"></use>
+                    </svg>
+                  </label>
+                </li>
+                <li class="user-info__item">
+                  <label class="user-info__checkbox-transport" for="bus">
+                    <input class="user-info__checkbox visually-hidden" type="checkbox" id="bus" checked="">
+                    <svg width="13" height="16" class="user-info__icon">
+                      <use xlink:href="img/sprite.svg#bus"></use>
+                    </svg>
+                  </label>
+                </li>
+                <li class="user-info__item">
+                  <label class="user-info__checkbox-transport" for="bike">
+                    <input class="user-info__checkbox  visually-hidden" type="checkbox" id="bike">
+                    <svg width="19" height="17" class="user-info__icon user-info__icon-bike">
+                      <use xlink:href="img/sprite.svg#bike"></use>
+                    </svg>
+                  </label>
+                </li>
+                <li class="user-info__item">
+                  <label class="user-info__checkbox-transport" for="run">
+                  <input class="user-info__checkbox visually-hidden" type="checkbox" id="run" checked="">
+                  <svg width="15" height="17" class="user-info__icon">
+                    <use xlink:href="img/sprite.svg#run"></use>
+                  </svg>
+                </label>
+              </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="user-plans">
+        <div class="user-plans__wrapper">
+          <h2 class="user-plans__title">Мои планы</h2>
+          <ul class="user-plans__direction-list">
+            <li class="user-plans__direction-item">
+              <h3 class="user-plans__direction-title"><span>1.</span>Франция, Италия</h3>
+              <div class="user-plans__direction-value">
+                <p class="user-plans__direction-country">3 Попутчика</p>
+                <p class="user-plans__direction-date">26 Мар - 29 мар</p>
+                <button type="button" class="btn user-plans__direction-btn" aria-label="Изменить план">Изменить</button>
+              </div>
+            </li>
+            <li class="user-plans__direction-item">
+              <h3 class="user-plans__direction-title"><span>2.</span>Таиланд, Индонезия</h3>
+              <div class="user-plans__direction-value">
+                <p class="user-plans__direction-country">1 попутчик</p>
+                <p class="user-plans__direction-date">1 июл — 15 июл</p>
+                <button type="button" class="btn user-plans__direction-btn" aria-label="Изменить план">Изменить</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="user-creation-plans">
+        <div class="user-creation-plans__wrapper">
+          <form class="user-creation-plans__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="user-creation-plans__title-wrapper">
+              <h2 class="user-creation-plans__title">Добавить план</h2>
+              <ul class="user-creation-plans__step-marker-list">
+                <li class="user-creation-plans__step-marker-item user-creation-plans__step-marker-item--active"><span>Даты</span></li>
+                <li class="user-creation-plans__step-marker-item"><span>Маршрут</span></li>
+                <li class="user-creation-plans__step-marker-item"><span>Развлечения</span></li>
+              </ul>
+            </div>
+            <fieldset class="user-creation-plans__fieldset dates-of-stay">
+              <legend class="visually-hidden"></legend>
+              <div class="dates-of-stay__wrapper">
+                <div class="user-creation-plans__fieldset-header">
+                  <h3 class="user-creation-plans__fieldset-title"><span>Шаг 1.</span> <br>Даты пребывания</h3>
+                  <p class="user-creation-plans__fieldset-description">
+                    Укажите предпочтительное количество попутчиков, которых<br> вы
+                    хотели бы позвать в поездку и ее предполагаемую длительность.
+                  </p>
+                </div>
+                <div class="dates-of-stay__traveler">
+                  <div class="dates-of-stay__traveler-head">
+                    <span class="dates-of-stay__traveler-title">Ищу попутчиков:</span>
+                    <span class="dates-of-stay__traveler-sum">Чел.</span>
+                  </div>
+                  <div class="dates-of-stay__traveler-input">
+                    <button class="btn dates-of-stay__traveler-del" type="button" aria-label="Убавить">
+                      <svg class="dates-of-stay__icon" width="14" height="14">
+                        <use xlink:href="img/sprite.svg#qty-minus-mobile"></use>
+                      </svg>
+                    </button>
+                    <input type="text" class="dates-of-stay__traveler-num" value="2">
+                    <button class="btn dates-of-stay__traveler-add" type="button" aria-label="Прибавить">
+                      <svg class="dates-of-stay__icon" width="14" height="14">
+                        <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="dates-of-stay__duration">
+                  <div class="dates-of-stay__traveler-head">
+                    <span class="dates-of-stay__traveler-title">Длительность:</span>
+                    <span class="dates-of-stay__traveler-sum">Дн.</span>
+                  </div>
+                  <div class="dates-of-stay__duration-input">
+                    <button class="btn dates-of-stay__duration-del" type="button" aria-label="Убавить">
+                      <svg class="dates-of-stay__icon" width="14" height="14">
+                        <use xlink:href="img/sprite.svg#qty-minus-mobile"></use>
+                      </svg>
+                    </button>
+                    <input type="text" class="dates-of-stay__duration-num" value="2">
+                    <button class="btn dates-of-stay__duration-add" type="button" aria-label="Прибавить">
+                      <svg class="dates-of-stay__icon" width="14" height="14">
+                        <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="dates-of-stay__checkbox">
+                  <input class="dates-of-stay__input visually-hidden" type="checkbox" id="kids" checked="">
+                  <label class="dates-of-stay__label" for="kids">Можно с детьми</label>
+                </div>
+                <div class="dates-of-stay__calendar calendar">
+                  <div class="calendar__month">
+                    <button type="button" class="btn calendar__prev-btn" aria-label="Предидущий месяц">
+                      <svg class="calendar__icon" width="9" height="18">
+                        <use xlink:href="img/sprite.svg#month-arrow-left"></use>
+                      </svg>
+                    </button>
+                    <span class="calendar__month-value">Март 2019</span>
+                    <button type="button" class="btn calendar__next-btn" aria-label="Следующий месяц">
+                      <svg class="calendar__icon" width="9" height="18">
+                        <use xlink:href="img/sprite.svg#month-arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="calendar__days">
+                    <ul class="calendar__days-name-list">
+                      <li class="calendar__days-name-item">П<span>н</span></li>
+                      <li class="calendar__days-name-item">В<span>т</span></li>
+                      <li class="calendar__days-name-item">С<span>р</span></li>
+                      <li class="calendar__days-name-item">Ч<span>т</span></li>
+                      <li class="calendar__days-name-item">П<span>т</span></li>
+                      <li class="calendar__days-name-item calendar__days-name-item--output">С<span>б</span></li>
+                      <li class="calendar__days-name-item calendar__days-name-item--output">В<span>с</span></li>
+                    </ul>
+                    <ul class="calendar__days-date-list">
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2302" disabled="">
+                        <label class="calendar__days-label" for="2302">23</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2402" disabled="">
+                        <label class="calendar__days-label" for="2402">24</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2502" disabled="">
+                        <label class="calendar__days-label" for="2302">25</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2602" disabled="">
+                        <label class="calendar__days-label" for="2602">26</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2702" disabled="">
+                        <label class="calendar__days-label" for="2702">27</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2802" disabled="">
+                        <label class="calendar__days-label" for="2802">28</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0103" disabled="">
+                        <label class="calendar__days-label" for="0103">1</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0203" disabled="">
+                        <label class="calendar__days-label" for="0203">2</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0303" disabled="">
+                        <label class="calendar__days-label" for="0303">3</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0403" disabled="">
+                        <label class="calendar__days-label" for="0403">4</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0503" disabled="">
+                        <label class="calendar__days-label" for="0503">5</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0603" disabled="">
+                        <label class="calendar__days-label" for="0603">6</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0703" disabled="">
+                        <label class="calendar__days-label" for="0703">7</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0803" disabled="">
+                        <label class="calendar__days-label" for="0803">8</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0903" disabled="">
+                        <label class="calendar__days-label" for="0903">9</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="1003" disabled="">
+                        <label class="calendar__days-label" for="1003">10</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="1103" disabled="">
+                        <label class="calendar__days-label" for="1103">11</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="1203" disabled="">
+                        <label class="calendar__days-label" for="1203">12</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="1303" disabled="">
+                        <label class="calendar__days-label" for="1303">13</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="1403" disabled="">
+                        <label class="calendar__days-label" for="1403">14</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="1503" disabled="">
+                        <label class="calendar__days-label" for="1503">15</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="1603" disabled="">
+                        <label class="calendar__days-label" for="1603">16</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="1703" disabled="">
+                        <label class="calendar__days-label" for="1703">17</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="1803" disabled="">
+                        <label class="calendar__days-label" for="1803">18</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="1903" disabled="">
+                        <label class="calendar__days-label" for="1903">19</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2003" disabled="">
+                        <label class="calendar__days-label" for="2003">20</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2103" disabled="">
+                        <label class="calendar__days-label" for="2103">21</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2203" disabled="">
+                        <label class="calendar__days-label" for="2203">22</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2303" disabled="">
+                        <label class="calendar__days-label" for="2303">23</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2403" disabled="">
+                        <label class="calendar__days-label" for="2403">24</label>
+                      </li>
+                      <li class="calendar__days-date-item calendar__days-date-item--disabled">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2503" disabled="">
+                        <label class="calendar__days-label" for="2503">25</label>
+                      </li>
+                      <li class="calendar__days-date-item">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2603" checked="">
+                        <label class="calendar__days-label" for="2603">26</label>
+                      </li>
+                      <li class="calendar__days-date-item">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2703" checked="">
+                        <label class="calendar__days-label" for="2703">27</label>
+                      </li>
+                      <li class="calendar__days-date-item">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2803" checked="">
+                        <label class="calendar__days-label" for="2803">28</label>
+                      </li>
+                      <li class="calendar__days-date-item">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="2903">
+                        <label class="calendar__days-label" for="2903">29</label>
+                      </li>
+                      <li class="calendar__days-date-item">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="3003">
+                        <label class="calendar__days-label" for="3003">30</label>
+                      </li>
+                      <li class="calendar__days-date-item">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="3103">
+                        <label class="calendar__days-label" for="3103">31</label>
+                      </li>
+                      <li class="calendar__days-date-item">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0104">
+                        <label class="calendar__days-label" for="0104">1</label>
+                      </li>
+                      <li class="calendar__days-date-item">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0204">
+                        <label class="calendar__days-label" for="0204">2</label>
+                      </li>
+                      <li class="calendar__days-date-item">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0304">
+                        <label class="calendar__days-label" for="0304">3</label>
+                      </li>
+                      <li class="calendar__days-date-item">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0404">
+                        <label class="calendar__days-label" for="0404">5</label>
+                      </li>
+                      <li class="calendar__days-date-item">
+                        <input class="calendar__days-input visually-hidden" type="checkbox" id="0504">
+                        <label class="calendar__days-label" for="0504">6</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="user-creation-plans__btn">Следующий шаг</a>
+            </fieldset>
+            <fieldset class="user-creation-plans__fieldset route">
+              <div class="user-creation-plans__fieldset-header">
+                <h3 class="user-creation-plans__fieldset-title"><span>Шаг 2. </span><br>Маршрут</h3>
+                <p class="user-creation-plans__fieldset-description">
+                  Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
+                </p>
+                <ul class="user-creation-plans__step-marker-list">
+                  <li class="user-creation-plans__step-marker-item"><span>Даты</span></li>
+                  <li class="user-creation-plans__step-marker-item user-creation-plans__step-marker-item--active"><span>Маршрут</span></li>
+                  <li class="user-creation-plans__step-marker-item"><span>Развлечения</span></li>
+                </ul>
+              </div>
+              <div class="route__wrapper">
+                <ul class="route__list">
+                  <li class="route__item route__big-select">
+                    <div class="route__country">
+                      <select class="route__country-select" name="select-country" id="first-country">
+                        <option value="">Выберите страну</option>
+                        <option value="big" selected="">Босния и Герцеговина</option>
+                        <option value="cz">Чехия</option>
+                      </select>
+                      <svg width="12" height="7" class="route__country-icon">
+                        <use xlink:href="img/sprite.svg#dropdown-form"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="route__item route__cz-select">
+                    <div class="route__country">
+                      <select class="route__country-select" name="select-country" id="second-country">
+                        <option value="">Выберите страну</option>
+                        <option value="big">Босния и Герцеговина</option>
+                        <option value="cz" selected="">Чехия</option>
+                      </select>
+                      <svg width="12" height="7" class="route__country-icon">
+                        <use xlink:href="img/sprite.svg#dropdown-form"></use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="route__item route__country-empty">
+                    <div class="route__country">
+                      <button class="route__country-select route__country-empty-select" type="button">Выберите страну</button>
+                      <svg width="12" height="7" class="route__country-icon">
+                        <use xlink:href="img/sprite.svg#dropdown-form"></use>
+                      </svg>
+                      <div class="modal modal-calendar">
+                        <input class="visually-hidden modal-calendar__checkbox" type="checkbox" id="calendar">
+                        <label for="calendar" class="modal-calendar__input">Выберите страну</label>
+                        <button type="button" class="btn modal-calendar__close-btn" aria-label="Закрыть окно">
+                          <svg width="12" height="7" class="modal-calendar__icon">
+                            <use xlink:href="img/sprite.svg#menu-close"></use>
+                          </svg>
+                        </button>
+                        <ul class="modal-calendar__list">
+                          <li class="modal-calendar__item modal-calendar__item--selected">
+                            <a href="#" class="modal-calendar__link modal-calendar__link--selected">А</a>
+                            <ul class="modal-calendar__letter-list">
+                              <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Австралия</a></li>
+                              <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Австрия</a></li>
+                              <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Афганистан</a></li>
+                              <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Албания</a></li>
+                              <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Алгерия</a></li>
+                              <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Андорра</a></li>
+                              <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Аргентина</a></li>
+                              <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Армения</a></li>
+                              <li class="modal-calendar__letter-item"><a class="modal-calendar__letter-link" href="#">Азербайджан</a></li>
+                            </ul>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Б</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">В</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Г</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Д</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Е</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Ж</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">З</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">И</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">К</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Л</a>
+                          </li>
+                          <li class="modal-calendar__item modal-calendar__empty-item">
+                            <a href="#" class="modal-calendar__link">Й</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">М</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Н</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">О</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">П</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Р</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">С</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Т</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">У</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Ф</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Х</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Ц</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Ч</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Ш</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Щ</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Э</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Ю</a>
+                          </li>
+                          <li class="modal-calendar__item">
+                            <a href="#" class="modal-calendar__link">Я</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="route__item route__country-add">
+                    <button type="button" class="btn route__add-btn">
+                      Добавить страну
+                      <svg width="14" height="14" class="route__add-btn-icon">
+                        <use xlink:href="img/sprite.svg#qty-plus-mobile"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="user-creation-plans__btn">Следующий шаг</a>
+              <a href="#" class="user-creation-plans__btn user-creation-plans__btn--back">На шаг назад</a>
+            </fieldset>
+            <fieldset class="user-creation-plans__fieldset entertainment">
+              <div class="user-creation-plans__fieldset-header">
+                <h3 class="user-creation-plans__fieldset-title"><span>Шаг 3.</span><br> Развлечения</h3>
+                <p class="user-creation-plans__fieldset-description">
+                  Наконец, расскажите о своих планах времяпровождения.
+                  Можно писать в свободной форме и ставить тэги.
+                </p>
+                <ul class="user-creation-plans__step-marker-list">
+                  <li class="user-creation-plans__step-marker-item"><span>Даты</span></li>
+                  <li class="user-creation-plans__step-marker-item user-creation-plans__step-marker-item--active"><span>Маршрут</span></li>
+                  <li class="user-creation-plans__step-marker-item"><span>Развлечения</span></li>
+                </ul>
+              </div>
+              <div class="entertainment__wrapper">
+                <div class="entertainment__first-country">
+                  <h3 class="entertainment__title entertainment__bosnia">Босния и Герцеговина</h3>
+                  <textarea class="entertainment__textarea" name="first-country" placeholder="План действий" required="">
+
+                  </textarea>
+                </div>
+                <div class="entertainment__second-country">
+                  <h3 class="entertainment__title entertainment__czech">Чехия</h3>
+                  <textarea class="entertainment__textarea" name="second-country" placeholder="План действий" required="">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                  </textarea>
+                </div>
+              </div>
+              <a href="#" class="user-creation-plans__btn user-creation-plans__btn--back">На шаг назад</a>
+            </fieldset>
+            <button type="button" class="btn user-creation-plans__submit-btn">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a href="index.html" class="page-footer__logo">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp, img/logo-tablet-blue@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 320px)" srcset="img/logo-mobile-blue@1x.webp, img/logo-mobile-blue@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
+            <img class="page-header__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип Погнали">
+          </picture>
+        </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="https://facebook.com" class="social__link" aria-label="facebook">
+                <svg width="11" height="21" class="social__icon social__icon-facebook">
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="https://vk.com" class="social__link" aria-label="vk">
+                <svg width="23" height="12" class="social__icon social__icon-vk">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="https://instagram.com" class="social__link" aria-label="instagram">
+                <svg width="18" height="18" class="social__icon social__icon-instagram">
+                  <use xlink:href="img/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <p class="copyright__text">Разработано</p>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
+            <img src="img/htmlacademy.svg" alt="Htmlacademy" width="27" height="34">
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
